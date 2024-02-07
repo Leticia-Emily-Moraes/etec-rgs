@@ -1,0 +1,17 @@
+
+
+create database EtecRGS;
+use EtecRGS;
+create table noticias(
+id int NOT NULL AUTO_INCREMENT,
+titulo varchar(100),
+conteudo varchar(2000),
+imagem varchar(100),
+PRIMARY KEY (id)
+);
+
+INSERT INTO `noticias` (`id`, `titulo`, `conteudo`, `imagem`) VALUES
+(1, 
+'Vestibulinho das Etecs tem inscrições prorrogadas veja como participar do processo', 
+'O período de inscrição para o Vestibulinho das Etecs, que terminou na última sexta-feira (18), foi prorrogado. As inscrições seguem abertas até a próxima quarta-feira (23).\r\n\r\nNo vestibulinho para o primeiro semestre de 2023, são oferecidas mais de 88 mil vagas para ensino médio integrado ao técnico, cursos técnicos, especializações técnicas e para vagas remanescentes de segundo módulo.\r\n\r\nA inscrição deve ser feita exclusivamente pela internet, no site do Vestibulinho. O valor da taxa é de R$ 33, e a prova será aplicada no dia 18 de dezembro, de forma presencial.\r\n\r\nAs vagas são destinadas a turmas presenciais, semipresenciais e para cursos online das Etecs e classes descentralizadas, unidades que funcionam com um ou mais cursos técnicos, sob a administração de uma Etec, por meio de parcerias com as prefeituras.\r\n\r\nInformações sobre os pré-requisitos das vagas e orientações para realizar a inscrição podem ser acessadas no site do Vestibulinho.\r\n\r\nNo centro-oeste paulista, há Etecs em cidades como Assis, Bauru, Botucatu, Garça, Jaú, Lins, Marília, Ourinhos e Pompéia (SP). São cerca de 46 unidades espalhadas pela região.', 
+'../../assets/img/noticias/fatec.webp');
