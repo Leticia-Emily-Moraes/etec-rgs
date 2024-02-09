@@ -8,8 +8,82 @@ html{
     height: 100vh;
 }
 body{
-    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url(../img/fundos/hero-bg.jpg) center center no-repeat;
+    background: linear-gradient(45deg, #563afae6 0%, rgba(116, 15, 214, 0.9) 100%), url(../img/fundos/hero-bg.jpg) center center no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
+    font-family: "poppins", sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+section.login, section.imagem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 60vh;
+    /* border: 1px solid #ffffff; */
+}
+section.imagem img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+section.login h1{
+    color: #ffffff;
+    padding-bottom: 10px;
+    font-size: 35px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+form input{
+    width: 350px;
+    height: 40px;
+    margin: 10px;
+    padding: 5px;
+    border: 3px solid #100069;
+} 
+form label{
+    color: #ffffff;
+    text-align: justify;
+    font-size: 25px;
+
+}
+form input[type=submit]{
+    width: 150px;
+    padding: 10px;
+    border: 3px solid #100069;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+}
+form input[type=submit]:hover{
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    background-color:#100069 ;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.ErroLogin{
+    color: #690000;
 }

@@ -1,12 +1,15 @@
 <?php
+// Configurações de conexão com o banco de dados
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$bancoDeDados = "SiteEtec";
 
-$servidor = "mysql.etecrgs.com.br";
-$usuario = "etecrgs";
-$senha = "Inside2023";
-$dbnome = "etecrgs";
-$conecta = mysqli_connect( $servidor, $usuario, $senha, $dbnome);
+// Criando uma conexão com o banco de dados
+$conexao = new mysqli($servidor, $usuario, $senha, $bancoDeDados);
 
-if (!$conecta){
-    die ("Conexao falhou: " .mysqli_connect_errno());
-} 
-
+// Verificando se houve erro na conexão
+if ($conexao->connect_error) {
+    die("Falha na conexão: " . $conexao->connect_error);
+}
+?>
