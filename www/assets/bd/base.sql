@@ -14,8 +14,8 @@ CREATE TABLE usuarios (
 
 CREATE TABLE noticias (
 	IdNoticia INT AUTO_INCREMENT NOT NULL,
-    Tituto VARCHAR(50) NOT NULL,
-    Image BLOB NOT NULL,
+    Titulo VARCHAR(50) NOT NULL,
+    Imagem BLOB NOT NULL,
     Descricao VARCHAR(255) NOT NULL,
     Autor INT NOT NULL,
     HoraPublicado DATETIME NOT NULL DEFAULT NOW(),
@@ -23,6 +23,6 @@ CREATE TABLE noticias (
 PRIMARY KEY(IdNoticia)
 );
 
-INSERT INTO usuarios (Nome, Sobrenome, NomeUser, SenhaUser, Cargo) VALUES ('Rodrigo','Vicente','Root','Admin2024', 'Administrador');
+INSERT INTO usuarios (NomeCompleto, NomeUser, SenhaUser, Cargo) VALUES ('Rodrigo Vicente','Root','Admin2024', 'Administrador');
 
 SELECT * FROM usuarios;

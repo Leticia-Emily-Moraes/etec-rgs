@@ -3,7 +3,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
-$bancoDeDados = "SiteEtec";
+$bancoDeDados = "Siteetec";
 
 // Criando uma conexão com o banco de dados
 $conexao = new mysqli($servidor, $usuario, $senha, $bancoDeDados);
@@ -12,4 +12,5 @@ $conexao = new mysqli($servidor, $usuario, $senha, $bancoDeDados);
 if ($conexao->connect_error) {
     die("Falha na conexão: " . $conexao->connect_error);
 }
+
 ?>
