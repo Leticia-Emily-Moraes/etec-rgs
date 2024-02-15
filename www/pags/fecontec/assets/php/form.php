@@ -8,7 +8,9 @@
  $_rm= $_POST["rm"];
  $_rg= $_POST["rg"];
  $_curso= $_POST["curso"];
+
  /*$_script= $_POST "<script> var = scanner </script>";*/
+
  
 
 $sql = "INSERT INTO convidados (nome, tipoDoc, rm, rg, cursos) VALUES ( '$_nome', '$_tipoDoc', '$_rm', '$_rg', '$_curso')";
