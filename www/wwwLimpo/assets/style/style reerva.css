@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+:root {
+    --FontStandard: 'Roboto', sans-serif;
+    --Colorheader: #1806b9cc;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--FontStandard);
+    color: #2f2d2d;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Scroll*/
+body::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(187, 185, 185);
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(180, 179, 179, 0.24);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(45deg, #5846f9, #a68eff);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+    display: none;
+}
+
+nav.navPrincipal {
+    background-color: #1806b9cc;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+nav.navPrincipal .logo{
+    width: 125%;
+}
+
+nav.navPrincipal ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 70%;
+    box-sizing: content-box;
+}
+
+nav.navPrincipal ul li {
+    padding: 10px;
+}
+
+nav.navPrincipal ul li a {
+    text-decoration: none;
+    color: #ffffffb3;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(#ffffff 0%, #ffffff 98%);
+    background-size: 0px 2px;
+    background-repeat: no-repeat;
+    background-position: left 90%;
+    padding: 10px 0px;
+}
+
+nav.navPrincipal ul img{
+    width: 60px;
+    padding: 10px;
+}
+nav.navPrincipal ul img:hover{
+    cursor: pointer;
+}
+
+nav.navPrincipal ul li a:hover, nav.navPrincipal ul li a:active{
+    transition: 0.3s;
+    background-size: 100% 2px;
+    color: #ffffff;
+}
+nav.navPrincipal ul li a.BotaoNavDiferente{
+    background: none;
+    color: #ffffff;
+    border: 2px solid #ffffffb3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    justify-self: flex-start;
+}
+nav.navPrincipal ul li a.BotaoNavDiferente:hover{
+    border: 2px solid #ffffff;
+}
+
+nav.navPrincipal ul li.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav.navPrincipal ul li.dropdown ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 10px;
+}
+nav.navPrincipal ul li.dropdown ul li a{
+    color: #2c4964;
+    font-size: 0.9rem;
+}
+nav.navPrincipal ul li.dropdown ul li a:hover{
+    color: #5846f9;
+}
+
+nav.navPrincipal ul li.dropdown:hover ul{
+    display: block;
+}
+
+nav.navSegundaria {
+    background-color: #1806b9b7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    box-sizing: content-box;
+    padding: 5px;
+}
+
+nav.navSegundaria ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav.navSegundaria ul li {
+    padding: 10px;
+}
+
+nav.navSegundaria ul li a {
+    text-decoration: none;
+    color: #ffffffb3;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(#ffffff 0%, #ffffff 98%);
+    background-size: 0px 2px;
+    background-repeat: no-repeat;
+    background-position: left 90%;
+    padding: 10px 0px;
+}
+
+nav.navSegundaria ul li a:hover {
+    transition: 0.3s;
+    background-size: 100% 2px;
+    color: #ffffff;
+}

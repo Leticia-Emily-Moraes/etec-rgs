@@ -1,0 +1,179 @@
+@media screen and (min-width: 767px) {
+    .logo {
+        width: 100%;
+    }
+
+    nav#navPrincipal ul li#dropdown ul {
+        right: 75%;
+    }
+
+    nav#navPrincipal ul li a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #1806b9cc;
+        height: 15vh;
+    }
+
+    #menu,
+    #menuClose {
+        display: none;
+    }
+
+    nav#navPrincipal {
+        position: static;
+        font-size: 24px;
+        background-color: transparent;
+        height: 15vh;
+        width: 70%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav#navPrincipal .logo {
+        width: 20%;
+    }
+
+    nav#navPrincipal ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        list-style: none;
+        box-sizing: content-box;
+        gap: 20px;
+    }
+
+    nav#navPrincipal ul li#LiBotaoNavDiferente {
+        order: 6;
+    }
+
+    nav#navPrincipal ul li a {
+        text-decoration: none;
+        color: #ffffffb3;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        background: linear-gradient(#ffffff 0%, #ffffff 98%);
+        background-size: 0px 2px;
+        background-repeat: no-repeat;
+        background-position: left 90%;
+        padding: 10px 0px;
+    }
+
+    nav#navPrincipal ul img {
+        width: 60px;
+        padding: 10px;
+    }
+
+    nav#navPrincipal ul img:hover {
+        cursor: pointer;
+    }
+
+    nav#navPrincipal ul li a:hover,
+    nav#navPrincipal ul li a:active {
+        transition: 0.3s;
+        background-size: 100% 2px;
+        color: #ffffff;
+    }
+
+    nav#navPrincipal ul li a#BotaoNavDiferente {
+        background: none;
+        color: #ffffff;
+        border: 2px solid #ffffffb3;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    nav#navPrincipal ul li a#BotaoNavDiferente:hover {
+        border: 2px solid #ffffff;
+    }
+
+    nav#navPrincipal ul li#dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    nav#navPrincipal ul li#dropdown ul {
+        position: absolute;
+        top: 45px;
+        width: 200px;
+        left: -100%;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        padding: 5px;
+        z-index: 10;
+        transition: left 0.5s ease;
+    }
+
+    nav#navPrincipal ul li#dropdown ul li a {
+        color: #2c4964;
+        font-size: 0.9rem;
+    }
+
+    nav#navPrincipal ul li#dropdown ul li a:hover {
+        color: #5846f9;
+    }
+
+    nav#navPrincipal ul li#dropdown:hover ul {
+        display: block;
+    }
+
+    nav.navSegundaria {
+        background-color: #1806b9b7;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+        box-sizing: content-box;
+        padding: 5px;
+    }
+
+    nav.navSegundaria ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+
+    nav.navSegundaria ul li {
+        padding: 10px;
+    }
+
+    nav.navSegundaria ul li a {
+        text-decoration: none;
+        color: #ffffffb3;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        background: linear-gradient(#ffffff 0%, #ffffff 98%);
+        background-size: 0px 2px;
+        background-repeat: no-repeat;
+        background-position: left 90%;
+        padding: 10px 0px;
+    }
+
+    nav.navSegundaria ul li a:hover {
+        transition: 0.3s;
+        background-size: 100% 2px;
+        color: #ffffff;
+    }
+}
