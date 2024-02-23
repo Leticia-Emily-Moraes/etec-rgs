@@ -18,17 +18,16 @@
 <body>
     <!-- ======= Cabeçalho======= -->
     <header>
-        <a  href="index.html"><img class="logo" src="assets/img/icons/etecRgs.png" alt=""></a>
+        <a href="index.html"><img class="logo" src="assets/img/icons/etecRgs.png" alt=""></a>
         <img id="menu" src="assets/img/icons/Menu.svg" alt="">
         <img id="menuClose" src="assets/img/icons/CloseMenu.svg" alt="">
         <nav id="navPrincipal">
             <ul>
-                <li><a href="#hero">Início</a></li>
+                <li><a href="#container">Início</a></li>
                 <li><a href="pags/noticias/novidades.php">Notícias</a></li>
                 <li><a href="pags/faq.html">FAQ</a></li>
-                <li><a href="#testimonials">Quem somos</a></li>
+                <li><a href="#testimonials">Nossa História</a></li>
                 <li><a href="#contact">Contato</a></li>
-                <li id="LiBotaoNavDiferente"><a id="BotaoNavDiferente" href="#about">Conheça nossa Etec</a></li>
                 <li id="dropdown"><a href="#"><span>Documentação</span></a>
                     <ul>
                         <li><a href="assets/planos/Horarios.pdf">Horários</a></li>
@@ -36,6 +35,8 @@
                         <li><a href="assets/planos/calendario.pdf">Calendário Anual</a></li>
                     </ul>
                 </li>
+                <li class="RedesSociais"><a href=""><img src="assets/img/icons/instagram.svg" alt=""></a></li>
+                <li class="RedesSociais"><a href=""><img src="assets/img/icons/facebook.svg" alt=""></a></li>
             </ul>
         </nav><!-- Final da Navbar -->
     </header><!-- Final do Cabeçalho -->
@@ -48,9 +49,52 @@
             <li><a href="#features">APM</a></li>
         </ul>
     </nav>
-    <section>
-        <h1>Ultimas </h1>
-    </section>
+    <main>
+        <section id="container">
+            <button id="SetaAnterior"><img src="assets/img/icons/SetaVolta.svg" alt=""></button>
+            <section id="slider">
+                <a class="slides">
+                    <h1>Titulo da Noticia 1</h1>
+                    <img src="" alt="Banner da Noticia">
+                </a>
+                <a class="slides">
+                    <h1>Titulo da Noticia 2</h1>
+                    <img src="" alt="Banner da Noticia">
+                </a>
+                <a class="slides">
+                    <h1>Titulo da Noticia 3</h1>
+                    <p></p>
+                    <img src="" alt="Banner da Noticia">
+                </a>
+            </section>
+            <button id="SetaProxima"><img src="assets/img/icons/SetaProximo.svg" alt=""></button>
+        </section>
+        <section class="NoticiasR">
+            <h1>Novidades e atualizações</h1>
+            <hr>
+            <p>As últimas novidades da ETEC de Rio Grande da Serra</p>
+            <div class="separa">
+                <aside class="BlocoNoticia">
+                    <img src="" alt="">
+                    <span>
+                        <h2>Titulo</h2>
+                        <h4 class="data">Data:data</h4>
+                        <p>Breve Descrição</p>
+                        <a href="">Ler mais</a>
+                    </span>
+                </aside>
+                <aside class="BlocoNoticia">
+                    <img src="" alt="">
+                    <span>
+                        <h2>Titulo</h2>
+                        <h4 class="data">Data:data</h4>
+                        <p>Breve Descrição</p>
+                        <a href="">Ler mais</a>
+                    </span>
+                </aside>
+            </div>
+        </section>
+    </main>
     <script src="assets/js/script.js"></script>
 </body>
 
