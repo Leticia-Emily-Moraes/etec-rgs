@@ -16,6 +16,7 @@ body {
     color: #2f2d2d;
     width: calc(100vw - 15px);
     height: 100vh;
+    background-color: #F9F8FF;
 }
 
 /* Scroll*/
@@ -342,11 +343,19 @@ main {
     box-shadow: 0 0 5px #5846f995;
 }
 
-.BlocoNoticia  img {
+.BlocoNoticia img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+}
+.BlocoNoticia span {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
 }
 
 .BlocoNoticia span h2 {
@@ -379,4 +388,66 @@ main {
     border: 2px solid #5846f9;
     background-color: #5846F9;
     color: #ffffff;
+}
+.servicos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+    text-align: center;
+}
+.servicos aside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.servicos h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.servicos hr {
+    width: 50px;
+    height: 3px;
+    background-color: #5846F9;
+    border: none;
+    border-radius: 20px;
+}
+
+.servicos p {
+    text-align: center;
+    letter-spacing: .5px;
+}
+.cardsServ{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    color: #000000;
+}
+.cardsServ div{
+    width: 100px;
+    height: 100px;
+    background-color: #F9F8FF;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconsCards{
+    width: 50px;
 }

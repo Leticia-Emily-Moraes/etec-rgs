@@ -223,7 +223,7 @@
         object-fit: cover;
         border-radius: 10px;
     }
-    span{
+    .BlocoNoticia span{
         width: calc(100% - 220px);
         height: 100%;
         display: flex;
@@ -234,10 +234,9 @@
     }
 }
 
-@media screen and (min-width: 1039px){
+@media screen and (min-width: 1439px){
     .BlocoNoticia {
         height: 300px;
-        
     }
     .BlocoNoticia img {
         width: 300px;
@@ -245,8 +244,8 @@
         object-fit: cover;
         border-radius: 10px;
     }
-    span{
-        width: calc(100% - 320px);
+    .BlocoNoticia span{
+        width: calc(100% - 350px);
         height: 100%;
         display: flex;
         flex-direction: column;
