@@ -161,11 +161,6 @@ nav#navPrincipal ul li {
     width: 25px;
 }
 
-.RedesSociais img .iconHover {
-    display: none;
-    width: 25px;
-}
-
 nav#navPrincipal ul li a {
     text-decoration: none;
     color: #ffffffb3;
@@ -176,7 +171,6 @@ nav#navPrincipal ul li a {
     background-size: 0px 2px;
     background-repeat: no-repeat;
     background-position: left 90%;
-    display: flex;
 }
 
 nav#navPrincipal ul li a:hover,
@@ -190,14 +184,6 @@ nav#navPrincipal ul li.RedesSociais a:hover {
     transition: 0.3s;
     background-size: 0px 2px;
     color: #ffffff;
-}
-
-nav#navPrincipal ul li.RedesSociais a:hover img {
-    display: none;
-}
-
-nav#navPrincipal ul li.RedesSociais a:hover .iconHover {
-    display: block;
 }
 
 nav#navPrincipal ul li#dropdown {
@@ -242,12 +228,9 @@ nav.navSegundaria {
 
 main {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.container {
+#container {
     width: 100%;
     height: 70vh;
     display: flex;
@@ -256,7 +239,7 @@ main {
     align-items: center;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url('assets/img/fundos/hero-bg.jpg') center center no-repeat;
+    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url("../img/fundos/hero-bg.jpg") center center no-repeat;
     background-size: cover;
 }
 
@@ -425,7 +408,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
     padding: 50px 20px;
@@ -494,115 +477,83 @@ main {
     display: none;
 }
 
+#card01 {
+    background-image: var(--Svg-cadeado);
+
+}
+
 .cardsServ:hover {
     box-shadow: 0px 0px 10px #00000050;
-    transition: all .4s ease-out;
-}
-
-.cardsServ:hover .iconHover {
-    display: block;
-}
-
-.cardsServ:hover .iconsCards {
-    display: none;
 }
 
 #card01:hover div {
     background-color: #C3062C;
 }
 
+#card01:hover .iconHover {
+    display: block;
+}
+
+#card01:hover .iconsCards {
+    display: none;
+}
+
 #card02:hover div {
     background-color: #474085;
+}
+
+#card02:hover .iconHover {
+    display: block;
+}
+
+#card02:hover .iconsCards {
+    display: none;
 }
 
 #card03:hover div {
     background-color: #E07767;
 }
 
+#card03:hover .iconHover {
+    display: block;
+}
+
+#card03:hover .iconsCards {
+    display: none;
+}
+
 #card04:hover div {
     background-color: #022558;
+}
+
+#card04:hover .iconHover {
+    display: block;
+}
+
+#card04:hover .iconsCards {
+    display: none;
 }
 
 #card05:hover div {
     background-color: #A13866;
 }
 
+#card05:hover .iconHover {
+    display: block;
+}
+
+#card05:hover .iconsCards {
+    display: none;
+}
+
 #card06:hover div {
     background-color: #3a7b50;
 }
-.APM {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 50px 20px;
-    text-align: center;
+
+#card06:hover .iconHover {
+    display: block;
 }
 
-.APM h1 {
-    font-size: 1.75rem;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.APM hr {
-    width: 50px;
-    height: 3px;
-    background-color: #5846F9;
-    border: none;
-    border-radius: 20px;
-}
-
-.APM p {
-    text-align: center;
-    letter-spacing: .5px;
-    margin-bottom: 20px;
-}
-.APM aside {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-}
-.APM aside .infosApm {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-.APM aside .OrganizaIcons{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-}
-.APM aside .OrganizaIcons img{
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.APM aside .OrganizaIcons .descricaoApm{
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-.APM aside .imgApm{
-    width: 100%;
-}
-
-.APM aside .imgApm img{
-    max-width: 100%;
-    object-fit: contain;
-    border-radius: 10px;
+#card06:hover .iconsCards {
+    display: none;
 }

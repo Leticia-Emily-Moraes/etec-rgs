@@ -20,6 +20,7 @@ class Menu {
         this.menuBtn.addEventListener('click', this.toggleMenu.bind(this));
         this.menuCloseBtn.addEventListener('click', this.toggleMenu.bind(this));
         document.addEventListener('click', this.outsideClick.bind(this));
+        this.menuBtn.style.display = 'block';
     }
 
     disableMenu() {

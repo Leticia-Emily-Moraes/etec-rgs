@@ -13,14 +13,16 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <!-- Arquivo CSS responsivo -->
     <link rel="stylesheet" href="assets/style/styleR.css">
+    <link rel="stylesheet" href="assets/style/StylesSVG.css">
+
 </head>
 
 <body>
     <!-- ======= Cabeçalho======= -->
     <header>
-        <a href="index.html"><img class="logo" src="assets/img/icons/etecRgs.png" alt=""></a>
-        <img id="menu" src="assets/img/icons/Menu.svg" alt="">
-        <img id="menuClose" src="assets/img/icons/CloseMenu.svg" alt="">
+        <a href="index.html"><img class="logo" src="assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
+        <img id="menu" src="assets/img/icons/iconsNav/Menu.svg" alt="">
+        <img id="menuClose" src="assets/img/icons/iconsNav/CloseMenu.svg" alt="">
         <nav id="navPrincipal">
             <ul>
                 <li><a href="#container">Início</a></li>
@@ -35,8 +37,8 @@
                         <li><a href="assets/planos/calendario.pdf">Calendário Anual</a></li>
                     </ul>
                 </li>
-                <li class="RedesSociais"><a href=""><img src="assets/img/icons/instagram.svg" alt=""></a></li>
-                <li class="RedesSociais"><a href=""><img src="assets/img/icons/facebook.svg" alt=""></a></li>
+                <li class="RedesSociais"><a href=""><img src="assets/img/icons/iconsNav/instagram.svg" alt=""><img src="assets/img/icons/iconsNav/instagramHover.svg" alt="" class="iconHover"></a></li>
+                <li class="RedesSociais"><a href=""><img src="assets/img/icons/iconsNav/facebook.svg" alt=""><img src="assets/img/icons/iconsNav/facebookHover.svg" alt="" class="iconHover"></a></li>
             </ul>
         </nav><!-- Final da Navbar -->
     </header><!-- Final do Cabeçalho -->
@@ -51,7 +53,7 @@
         </ul>
     </nav>
     <main>
-        <section id="container">
+        <section class="container">
             <button id="SetaAnterior"><img src="assets/img/icons/SetaVolta.svg" alt=""></button>
             <section id="slider">
                 <a class="slides">
@@ -100,36 +102,76 @@
             <hr>
             <p>Este são todos os Serviços que a Etec de Rio Grande da Serra fornece para seus alunos.</p>
             <aside>
-                <a href="" class="cardsServ">
-                    <div><img src="assets/img/icons/CadeadoCard.svg" alt="" class="iconsCards"></div>
+                <a href="" class="cardsServ" id="card01">
+                    <div><img src="assets/img/icons/iconsCardsServicos/CadeadoCard.svg" alt="" class="iconsCards"><img src="assets/img/icons/iconsCardsServicos/CadeadoCardHover.svg" alt="" class="iconHover"></div>
                     <h2>NSA</h2>
                     <p>Sistema da escola para visualizar presenças, boletim etc.</p>
                 </a>
-                <a href="" class="cardsServ">
-                    <div><img src="assets/img/icons/TeamsCard.svg" alt="" class="iconsCards"></div>
+                <a href="" class="cardsServ" id="card02">
+                    <div><img src="assets/img/icons/iconsCardsServicos/TeamsCard.svg" alt="" class="iconsCards"><img src="assets/img/icons/iconsCardsServicos/TeamsCardHover.svg" alt="" class="iconHover"></div>
                     <h2>Teams</h2>
                     <p>Sistema utilizado pelos professores para dar aula a distância</p>
                 </a>
-                <a href="" class="cardsServ">
-                    <div><img src="assets/img/icons/EnvelopeCard.svg" alt="" class="iconsCards"></div>
+                <a href="" class="cardsServ" id="card03">
+                    <div><img src="assets/img/icons/iconsCardsServicos/EnvelopeCard.svg" alt="" class="iconsCards"><img src="assets/img/icons/iconsCardsServicos/EnvelopeCardHover.svg" alt="" class="iconHover"></div>
                     <h2>Email da Secretaria</h2>
                     <p>Aqui você pode pedir todos os documentos que precisa refente a escola</p>
                 </a>
-                <a href="" class="cardsServ">
-                    <div><img src="assets/img/icons/DesktopCard.svg" alt="" class="iconsCards"></div>
+                <a href="" class="cardsServ" id="card04">
+                    <div><img src="assets/img/icons/iconsCardsServicos/DesktopCard.svg" alt="" class="iconsCards"><img src="assets/img/icons/iconsCardsServicos/DesktopCardHover.svg" alt="" class="iconHover"></div>
                     <h2>Fecontec</h2>
                     <p>Sistema para informações e cadastros para o evento da Fecontec</p>
                 </a>
-                <a href="" class="cardsServ">
-                    <div><img src="assets/img/icons/InstagramCard.svg" alt="" class="iconsCards"></div>
+                <a href="" class="cardsServ" id="card05">
+                    <div><img src="assets/img/icons/iconsCardsServicos/InstagramCard.svg" alt="" class="iconsCards"><img src="assets/img/icons/iconsCardsServicos/InstagramCardHover.svg" alt="" class="iconHover"></div>
                     <h2>Redes Sociais</h2>
                     <p>Acesso a todas as redes socias da Etec de Rio Grande da Serra</p>
                 </a>
-                <a href="" class="cardsServ">
-                    <div><img src="assets/img/icons/LivroCard.svg" alt="" class="iconsCards"></div>
+                <a href="" class="cardsServ" id="card06">
+                    <div><img src="assets/img/icons/iconsCardsServicos/LivroCard.svg" alt="" class="iconsCards"><img src="assets/img/icons/iconsCardsServicos/LivroCardHover.svg" alt="" class="iconHover"></div>
                     <h2>Etec/Vestibulinho</h2>
                     <p>Acesso as incrições e as provas para o vestibulinho das Etecs</p>
                 </a>
+            </aside>
+        </section>
+        <section class="APM">
+            <h1>APM</h1>
+            <hr>
+            <p>Associação de Pais e Mestres da Etec de Rio Grande da Serra tem como intuito de recadar dinheiro para fins de manutenção da escola e melhorias</p>
+            <aside>
+                <div class="infosApm">
+                    <span class="OrganizaIcons"><img src="assets/img/icons/iconsApm/TelefoneIcon.svg" alt="" class="iconApm">
+                        <span class="descricaoApm">
+                            <h2>1º Passo</h2>
+                            <p>Pegue seu celular abra sua conta de banco</p>
+                        </span>
+                    </span>
+                    <span class="OrganizaIcons"><img src="assets/img/icons/iconsApm/QrcodeIcon.svg" alt="" class="iconApm">
+                        <span class="descricaoApm">
+                            <h2>2º Passo</h2>
+                            <p>Abra sua câmera e aponte para o qrcode</p>
+                        </span>
+                    </span>
+                    <span class="OrganizaIcons"><img src="assets/img/icons/iconsApm/DinheiroIcon.svg" alt="" class="iconApm">
+                        <span class="descricaoApm">
+                            <h2>3º Passo</h2>
+                            <p>Transfira a quantia que seu coração desejar</p>
+                        </span>
+                    </span>
+                    <span class="OrganizaIcons"><img src="assets/img/icons/iconsApm/ChaveIcon.svg" alt="" class="iconApm">
+                        <span class="descricaoApm">
+                            <h2>Chave Pix</h2>
+                            <p>A chave Pix da APM: 24 041 358 0001-20</p>
+                        </span>
+                    </span>
+                </div>
+                <div class="imgApm">
+                    <picture>
+                        <source srcset="assets/img/QrcodePix/qrcodePixDesktop.png" media="(min-width: 1023px)" />
+                        <source srcset="assets/img/QrcodePix/qrcodePixTablet.png" media="(min-width: 600px)" />
+                        <img src="assets/img/QrcodePix/qrcodePixMobile.png" alt="" />
+                      </picture>
+                </div>
             </aside>
         </section>
     </main>
