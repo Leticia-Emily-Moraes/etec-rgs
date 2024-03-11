@@ -61,10 +61,40 @@ class Menu {
         this.menuCloseBtn.style.display = 'none';
     }
 }
-
-// Inicializando o menu
 document.addEventListener('DOMContentLoaded', () => {
     const menu = new Menu('#navPrincipal', '#menu', '#menuClose');
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            preloader.remove()
+        });
+    }
+    const backtotop = document.getElementById('backToTop');
+    if (backtotop) {
+        const toggleBacktotop = () => {
+            if (window.scrollY >= 100) {
+                backtotop.classList.add('active')
+            } else {
+                backtotop.classList.remove('active')
+            }
+        }
+        window.addEventListener('scroll', function(){
+            toggleBacktotop()
+        })
+    }
+    const header = document.querySelector('#header')
+    if (header) {
+        const HeaderFixo = () => {
+            if (window.scrollY >= 90) {
+                header.classList.add('headerFixo')
+            } else {
+                header.classList.remove('headerFixo')
+            }
+        }
+        window.addEventListener('scroll', function(){
+            HeaderFixo()
+        })
+    }
 });
 
 const slider = document.getElementById('slider');
@@ -77,7 +107,6 @@ let interval;
 function atualizarSlider() {
     const slideWidth = slide[0].clientWidth;
     slider.style.transform = `translateX(-${currentIndex * (slideWidth)}px)`;
-    atualizarIndicadores();
 }
 
 function slidePara(index) {
@@ -117,3 +146,5 @@ interval = setInterval(() => {
         }, 500); // Atraso para criar um efeito suave de rolagem infinita
     }
 }, 10000);
+
+

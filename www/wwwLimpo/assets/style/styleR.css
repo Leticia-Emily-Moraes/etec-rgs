@@ -2,9 +2,11 @@
     .logo {
         width: 100%;
     }
-    #navPrincipal{
+
+    #navPrincipal {
         width: 30%;
     }
+
     nav#navPrincipal ul li#dropdown ul {
         right: 75%;
     }
@@ -12,13 +14,15 @@
     nav#navPrincipal ul li a {
         font-size: 20px;
     }
-    #slider{
+
+    #slider {
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: row;
     }
-    .slides{
+
+    .slides {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -27,7 +31,8 @@
         padding: 10px 50px;
         flex: 0 0 100%;
     }
-    .slides h1{
+
+    .slides h1 {
         width: 30%;
         font-size: 1.6rem;
         font-weight: 500;
@@ -35,39 +40,47 @@
         margin: 20px 0px;
         color: #ffffff;
     }
-    .slides img{
+
+    .slides img {
         width: 70%;
         object-fit: cover;
     }
-    .separa{
+
+    .separa {
         width: 100%;
         display: flex;
         flex-direction: row;
         gap: 0px;
     }
+
     .BlocoNoticia {
         width: 45%;
         height: 100%;
     }
-    .servicos aside{
+
+    .servicos aside {
         width: 100%;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
+
     .APM aside {
         width: 100%;
         height: 400px;
         flex-direction: row;
     }
+
     .APM aside .infosApm {
         width: 50%;
         gap: 15px;
     }
-    .APM aside .OrganizaIcons .iconApm{
+
+    .APM aside .OrganizaIcons .iconApm {
         width: 40px;
     }
-    .APM aside .OrganizaIcons .descricaoApm{
+
+    .APM aside .OrganizaIcons .descricaoApm {
         max-width: 80%;
         display: flex;
         flex-direction: column;
@@ -75,22 +88,64 @@
         align-items: center;
         text-align: left;
     }
-    .APM aside .imgApm{
+
+    .APM aside .imgApm {
         width: 50%;
     }
-    
-    .APM aside .imgApm img{
+
+    .APM aside .imgApm img {
         width: 100%;
         object-fit: contain;
         border-radius: 10px;
     }
-    
+
+    .contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .contato aside {
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 5px;
+        gap: 10px;
+    }
+
+    .contato aside.telefone,
+    .contato aside.email {
+        width: calc(100%/2 - 10px);
+    }
+
+    .contato .enviarEmail form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .enviarEmail input {
+        width: 45%;
+    }
+
+    .enviarEmail form input#grande {
+        width: calc(95% - 15px);
+    }
+
+    .enviarEmail textarea {
+        width: calc(95% - 15px);
+    }
 }
 
 @media screen and (min-width: 1023px) {
-    p{
+    p {
         font-size: 1.2rem;
     }
+
     header {
         width: 100%;
         display: flex;
@@ -119,6 +174,7 @@
         align-items: center;
         padding: 10px;
     }
+
     .logo {
         width: 110%;
     }
@@ -152,6 +208,7 @@
         padding: 10px 0px;
         white-space: nowrap;
     }
+
     .RedesSociais a:hover {
         background-size: 0px 2px;
     }
@@ -165,7 +222,7 @@
         cursor: pointer;
     }
 
-    
+
     nav#navPrincipal ul li#dropdown {
         position: relative;
         display: inline-block;
@@ -207,6 +264,8 @@
         height: 5vh;
         box-sizing: content-box;
         padding: 5px;
+        position: relative;
+        top: 15vh;
     }
 
     nav.navSegundaria ul {
@@ -239,9 +298,11 @@
         background-size: 100% 2px;
         color: #ffffff;
     }
-    .NoticiasR{
+
+    .NoticiasR {
         width: 90%;
     }
+
     .BlocoNoticia {
         width: 45%;
         height: 250px;
@@ -255,13 +316,15 @@
         background-color: #ffffff;
         box-shadow: 0 0 5px #5846f995;
     }
+
     .BlocoNoticia img {
         width: 90%;
         width: 200px;
         object-fit: cover;
         border-radius: 10px;
     }
-    .BlocoNoticia span{
+
+    .BlocoNoticia span {
         width: calc(100% - 220px);
         height: 100%;
         display: flex;
@@ -270,17 +333,20 @@
         align-items: flex-start;
         gap: 10px;
     }
-    .servicos aside{
+
+    .servicos aside {
         width: 90%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
+
     .APM aside {
         width: 90%;
         height: 100%;
         flex-direction: row;
     }
+
     .APM aside .infosApm {
         width: 50%;
         height: 100%;
@@ -290,7 +356,8 @@
         align-items: center;
         gap: 50px;
     }
-    .APM aside .OrganizaIcons{
+
+    .APM aside .OrganizaIcons {
         width: 70%;
         display: flex;
         flex-direction: row;
@@ -298,11 +365,12 @@
         align-items: center;
         gap: 20px;
     }
-    
-    .APM aside .OrganizaIcons .iconApm{
+
+    .APM aside .OrganizaIcons .iconApm {
         width: 60px;
     }
-    .APM aside .OrganizaIcons .descricaoApm{
+
+    .APM aside .OrganizaIcons .descricaoApm {
         max-width: 80%;
         display: flex;
         flex-direction: column;
@@ -310,31 +378,87 @@
         align-items: center;
         text-align: left;
     }
-    .APM aside .imgApm{
+
+    .APM aside .imgApm {
         width: 50%;
         height: 100%;
         border-radius: 10px;
     }
-    
-    .APM aside .imgApm img{
+
+    .APM aside .imgApm img {
         max-width: 80%;
         object-fit: contain;
         border-radius: 10px;
     }
+
+    .contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .contato aside {
+        width: 50%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 5px;
+        gap: 10px;
+    }
+
+    .contato aside.iframe{
+        height: 421px;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+    }
     
+    aside.enviarEmail{
+        width: calc(2*(50%/2 - 10px));
+    }
+    .contato aside.telefone,
+    .contato aside.email {
+        width: calc(50%/2 - 20px);
+    }
+
+    .contato .enviarEmail form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .enviarEmail input {
+        width: 45%;
+    }
+
+    .enviarEmail form input#grande {
+        width: calc(95% - 15px);
+    }
+
+    .enviarEmail textarea {
+        width: calc(95% - 15px);
+    }
+
 }
 
-@media screen and (min-width: 1439px){
+@media screen and (min-width: 1439px) {
     .BlocoNoticia {
         height: 300px;
     }
+
     .BlocoNoticia img {
         width: 300px;
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
     }
-    .BlocoNoticia span{
+
+    .BlocoNoticia span {
         width: calc(100% - 350px);
         height: 100%;
         display: flex;
