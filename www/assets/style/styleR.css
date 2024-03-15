@@ -1,0 +1,570 @@
+@media screen and (min-width: 767px) {
+    .logo {
+        width: 100%;
+    }
+
+    #navPrincipal {
+        width: 30%;
+    }
+
+    nav#navPrincipal ul li#dropdown ul {
+        right: 75%;
+    }
+
+    nav#navPrincipal ul li a {
+        font-size: 20px;
+    }
+
+    #slider {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .slides {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease;
+        padding: 10px 50px;
+        flex: 0 0 100%;
+    }
+
+    .slides h1 {
+        width: 30%;
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin: 20px 0px;
+        color: #ffffff;
+    }
+
+    .slides img {
+        width: 70%;
+        object-fit: cover;
+    }
+
+    .separa {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+    }
+
+    .BlocoNoticia {
+        width: 45%;
+        height: 100%;
+    }
+
+    .servicos aside {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .APM aside {
+        width: 100%;
+        height: 400px;
+        flex-direction: row;
+    }
+
+    .APM aside .infosApm {
+        width: 50%;
+        gap: 15px;
+    }
+
+    .APM aside .OrganizaIcons .iconApm {
+        width: 40px;
+    }
+
+    .APM aside .OrganizaIcons .descricaoApm {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .APM aside .imgApm {
+        width: 50%;
+    }
+
+    .APM aside .imgApm img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .contato aside {
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 5px;
+        gap: 10px;
+    }
+
+    .contato aside.telefone,
+    .contato aside.email {
+        width: calc(100%/2 - 10px);
+    }
+
+    .contato .enviarEmail form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .enviarEmail input {
+        width: 45%;
+    }
+
+    .enviarEmail form input#grande {
+        width: calc(95% - 15px);
+    }
+
+    .enviarEmail textarea {
+        width: calc(95% - 15px);
+    }
+    .containerCards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .containerCards h2 {
+        cursor: auto;
+    }
+
+    .containerCards h2 img {
+        display: none;
+    }
+
+    .containerCards article {
+        width: 550px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        visibility: visible;
+        position: static;
+        transition: visibility 0s, max-height 0.5s ease-in-out;
+        max-height: 600px;
+        overflow: hidden;
+    }
+    footer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    p {
+        font-size: 1.2rem;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #1806b9cc;
+        height: 15vh;
+    }
+
+    #menu,
+    #menuClose {
+        display: none;
+    }
+
+    nav#navPrincipal {
+        position: static;
+        font-size: 24px;
+        background-color: transparent;
+        height: 15vh;
+        width: 70%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 110%;
+    }
+
+    nav#navPrincipal ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        list-style: none;
+        box-sizing: content-box;
+        gap: 20px;
+        width: auto;
+    }
+
+    nav#navPrincipal ul li#LiBotaoNavDiferente {
+        order: 6;
+    }
+
+    nav#navPrincipal ul li a {
+        text-decoration: none;
+        color: #ffffffb3;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        background: linear-gradient(#ffffff 0%, #ffffff 98%);
+        background-size: 0px 2px;
+        background-repeat: no-repeat;
+        background-position: left 90%;
+        padding: 10px 0px;
+        white-space: nowrap;
+    }
+
+    .RedesSociais a:hover {
+        background-size: 0px 2px;
+    }
+
+    nav#navPrincipal ul img {
+        width: 60px;
+        padding: 10px;
+    }
+
+    nav#navPrincipal ul img:hover {
+        cursor: pointer;
+    }
+
+
+    nav#navPrincipal ul li#dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    nav#navPrincipal ul li#dropdown ul {
+        position: absolute;
+        top: 50px;
+        width: 200px;
+        left: -100%;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 10;
+        transition: left 0.5s ease;
+        text-align: center;
+    }
+
+    nav#navPrincipal ul li#dropdown ul li a {
+        color: #2c4964;
+        font-size: 15px;
+    }
+
+    nav#navPrincipal ul li#dropdown ul li a:hover {
+        color: #5846f9;
+    }
+
+    nav#navPrincipal ul li#dropdown:hover ul {
+        display: block;
+    }
+
+    nav.navSegundaria {
+        background-color: #1806b9b7;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+        box-sizing: content-box;
+        padding: 5px;
+        position: relative;
+        top: 15vh;
+    }
+
+    nav.navSegundaria ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+
+    nav.navSegundaria ul li {
+        padding: 10px;
+    }
+
+    nav.navSegundaria ul li a {
+        text-decoration: none;
+        color: #ffffffb3;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        background: linear-gradient(#ffffff 0%, #ffffff 98%);
+        background-size: 0px 2px;
+        background-repeat: no-repeat;
+        background-position: left 90%;
+        padding: 10px 0px;
+    }
+
+    nav.navSegundaria ul li a:hover {
+        transition: 0.3s;
+        background-size: 100% 2px;
+        color: #ffffff;
+    }
+
+    .NoticiasR {
+        width: 90%;
+    }
+
+    .BlocoNoticia {
+        width: 45%;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px #5846f995;
+    }
+
+    .BlocoNoticia img {
+        width: 90%;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .BlocoNoticia span {
+        width: calc(100% - 220px);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .servicos aside {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .APM aside {
+        width: 90%;
+        height: 100%;
+        flex-direction: row;
+    }
+
+    .APM aside .infosApm {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .APM aside .OrganizaIcons {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .APM aside .OrganizaIcons .iconApm {
+        width: 60px;
+    }
+
+    .APM aside .OrganizaIcons .descricaoApm {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .APM aside .imgApm {
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .APM aside .imgApm img {
+        max-width: 80%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    .Cursos hr{
+        display: block;
+    }
+
+    .containerCards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .containerCards article {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .card-cursos {
+        width: 250px;
+        height: 250px;
+        border: 1px solid #5846F9;
+        border-radius: 20px;
+    }
+    .contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .contato aside {
+        width: 50%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 5px;
+        gap: 10px;
+    }
+
+    .contato aside.iframe {
+        height: 421px;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+    }
+
+    aside.enviarEmail {
+        width: calc(2*(50%/2 - 10px));
+    }
+
+    .contato aside.telefone,
+    .contato aside.email {
+        width: calc(50%/2 - 20px);
+    }
+
+    .contato .enviarEmail form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .enviarEmail input {
+        width: 45%;
+    }
+
+    .enviarEmail form input#grande {
+        width: calc(95% - 15px);
+    }
+
+    .enviarEmail textarea {
+        width: calc(95% - 15px);
+    }
+    footer {
+        margin-top: 15vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 50px;
+    
+    }
+    footer span{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    footer span.FRedesSociais div{
+        width: 100%;
+        flex-direction: row;
+        gap: 20px;
+    }
+    footer span.FRedesSociais h2{
+        width: 100%;
+    }
+    footer span.FRedesSociais img{
+        width: 40px;
+    }
+    .FRedesSociais div a .iconHover{
+        display: none;
+        width: 40px;
+    }
+    .FRedesSociais a:hover img {
+        display: none;
+    }
+    
+    .FRedesSociais a:hover .iconHover {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 1439px) {
+    .BlocoNoticia {
+        height: 300px;
+    }
+
+    .BlocoNoticia img {
+        width: 300px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .BlocoNoticia span {
+        width: calc(100% - 350px);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
