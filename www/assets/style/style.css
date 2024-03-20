@@ -714,6 +714,8 @@ main {
     align-items: center;
     overflow: hidden;
     background-color: #ffffff;
+    color: #190087;
+    text-decoration: none;
 }
 .card-cursos p{
     font-weight: 600;
