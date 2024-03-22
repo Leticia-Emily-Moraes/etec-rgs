@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 backtotop.classList.remove('active')
             }
         }
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function () {
             toggleBacktotop()
         })
     }
@@ -91,8 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('headerFixo')
             }
         }
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function () {
             HeaderFixo()
         })
     }
+});
+
+const nomesMaterias = document.querySelectorAll('.materias > h2');
+const containersMaterias = document.querySelectorAll('.materias > aside');
+
+nomesMaterias.forEach((nomeMateria, index) => {
+    nomeMateria.addEventListener('click', () => {
+        const containerMaterias = containersMaterias[index];
+        if(!containerMaterias.classList.contains('cardvisivel')) {
+            containerMaterias.classList.add('cardvisivel');
+        } else {
+            containerMaterias.classList.remove('cardvisivel');
+        }
+    });
 });

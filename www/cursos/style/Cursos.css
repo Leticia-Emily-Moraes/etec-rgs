@@ -272,18 +272,117 @@ main hr {
     border: none;
     border-radius: 20px;
 }
+main p{
+    text-align: justify;
+    line-height: 1.25;
+}
 main section{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;
-    margin-top: 20px;
 }
 main section article{
-    width: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+/* main section article aside {
+
+} */
+main section article aside h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+main section article aside p{
+    text-align: justify;
+}
+
+.imagens{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.imagens img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.coord{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    gap: 10px;
+    padding: 20px;
+}
+.coord .imgCoord{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #cccccc;
+}
+.coord .InfoCoord{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 10px;
+}
+.materias{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.materias h2{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 5px;
+}
+.materias aside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    visibility: hidden;
+    position: absolute;
+    transition: visibility 0s, max-height 0.5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+.materias aside.cardvisivel {
+    visibility: visible;
+    position: static;
+    max-height: 1180px; 
+    transition: visibility 0s, max-height 0.5s ease-in-out;
+}
+.materias aside p{
+    width: 80%;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid#5846F9;
+    border-radius: 5px;
 }
 footer {
     margin-top: 15vh;
@@ -294,7 +393,7 @@ footer {
     align-items: flex-start;
     gap: 20px;
     padding: 50px;
-    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url('../img/fundos/footer-bg.jpg') center center no-repeat;
+    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url('../img/footer-bg.jpg') center center no-repeat;
     background-size: cover;
     color: #ffffff;
 }
