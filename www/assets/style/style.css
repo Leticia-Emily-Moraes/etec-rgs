@@ -678,6 +678,9 @@ main {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 5px;
 }
 .containerCards h2 img{
     display: inline;
@@ -714,6 +717,8 @@ main {
     align-items: center;
     overflow: hidden;
     background-color: #ffffff;
+    color: #190087;
+    text-decoration: none;
 }
 .card-cursos p{
     font-weight: 600;

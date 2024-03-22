@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 backtotop.classList.remove('active')
             }
         }
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function () {
             toggleBacktotop()
         })
     }
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('headerFixo')
             }
         }
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function () {
             HeaderFixo()
         })
     }
@@ -151,10 +151,11 @@ const nomesCursos = document.querySelectorAll('.containerCards > h2');
 const containersCards = document.querySelectorAll('.containerCards > article');
 
 if (window.innerWidth < 768) {
+    
     nomesCursos.forEach((nomeCurso, index) => {
         nomeCurso.addEventListener('click', () => {
             const containerCard = containersCards[index];
-            if(!containerCard.classList.contains('cardvisivel')){
+            if (!containerCard.classList.contains('cardvisivel')) {
                 containerCard.classList.add('cardvisivel');
             } else {
                 containerCard.classList.remove('cardvisivel');
