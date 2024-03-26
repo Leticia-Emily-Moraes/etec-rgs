@@ -151,7 +151,7 @@ const nomesCursos = document.querySelectorAll('.containerCards > h2');
 const containersCards = document.querySelectorAll('.containerCards > article');
 
 if (window.innerWidth < 768) {
-    
+
     nomesCursos.forEach((nomeCurso, index) => {
         nomeCurso.addEventListener('click', () => {
             const containerCard = containersCards[index];
@@ -163,3 +163,15 @@ if (window.innerWidth < 768) {
         });
     });
 }
+
+
+const Servicos = document.querySelector('.servicos > h1');
+const AsideServicos = document.querySelector('.servicos > aside');
+
+Servicos.addEventListener('click', () => {
+    if (!AsideServicos.classList.contains('active')) {
+        AsideServicos.classList.add('active');
+    } else {
+        AsideServicos.classList.remove('active');
+    }
+});
