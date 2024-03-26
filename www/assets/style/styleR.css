@@ -20,6 +20,7 @@
         height: 100%;
         display: flex;
         flex-direction: row;
+        gap: 20px;
     }
 
     .slides {
@@ -30,6 +31,7 @@
         transition: transform 0.5s ease;
         padding: 10px 50px;
         flex: 0 0 100%;
+        text-decoration: none;
     }
 
     .slides h1 {
@@ -38,6 +40,10 @@
         letter-spacing: 1px;
         margin: 20px 0px;
         color: #ffffff;
+    }
+    .slides picture{
+        height: 100%;
+        width: auto;
     }
 
     .slides img {
@@ -338,6 +344,16 @@
     .slides span{
         max-width: 700px;
         width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .slides span {
+        width: 40%;
+        max-width: 700px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;

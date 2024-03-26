@@ -269,9 +269,8 @@ main {
 
 .container {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
@@ -320,8 +319,7 @@ main {
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #000000;
-}
+    padding: 10px;
 .slides span p{
     color: #000000;
     letter-spacing: 1px;
