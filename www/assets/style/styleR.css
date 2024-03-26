@@ -20,6 +20,7 @@
         height: 100%;
         display: flex;
         flex-direction: row;
+        gap: 20px;
     }
 
     .slides {
@@ -30,19 +31,24 @@
         transition: transform 0.5s ease;
         padding: 10px 50px;
         flex: 0 0 100%;
+        text-decoration: none;
     }
 
     .slides h1 {
-        width: 30%;
         font-size: 1.6rem;
         font-weight: 500;
         letter-spacing: 1px;
         margin: 20px 0px;
         color: #ffffff;
     }
+    .slides picture{
+        height: 100%;
+        width: auto;
+    }
 
     .slides img {
-        width: 70%;
+        height: 100%;
+        width: auto;
         object-fit: cover;
     }
 
@@ -336,6 +342,16 @@
         color: #ffffff;
     }
 
+    .slides span {
+        width: 40%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+
     .NoticiasR {
         width: 90%;
     }
@@ -566,9 +582,9 @@
     }
 
     .BlocoNoticia img {
-        width: 300px;
-        height: 100%;
-        object-fit: cover;
+        height: 250px;
+        width: auto;
+        object-fit: contain;
         border-radius: 10px;
     }
 
