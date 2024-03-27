@@ -127,13 +127,13 @@ function prevSlide() {
 setaAnterior.addEventListener('click', () => {
     prevSlide();
     clearInterval(interval);
-    interval = setInterval(nextSlide, 10000);
+    interval = setInterval(nextSlide, 50000);
 });
 
 setaProxima.addEventListener('click', () => {
     nextSlide();
     clearInterval(interval);
-    interval = setInterval(nextSlide, 10000);
+    interval = setInterval(nextSlide, 50000);
 });
 
 // Adicione uma verificação para rolagem infinita
@@ -145,7 +145,7 @@ interval = setInterval(() => {
             atualizarSlider();
         }, 500); // Atraso para criar um efeito suave de rolagem infinita
     }
-}, 10000);
+}, 50000);
 
 
 // const Servicos = document.querySelector('.servicos > h1');
