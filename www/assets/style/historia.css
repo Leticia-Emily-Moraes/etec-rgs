@@ -22,9 +22,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-h2{
+
+h2 {
     font-size: 1.5rem;
 }
+
 body::-webkit-scrollbar {
     width: 15px;
     height: 15px;
@@ -87,6 +89,7 @@ body::-webkit-scrollbar-thumb {
         transform: rotate(360deg);
     }
 }
+
 #header {
     width: 100%;
     display: flex;
@@ -99,7 +102,8 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     z-index: 20;
 }
-#header.headerFixo{
+
+#header.headerFixo {
     position: fixed;
     top: 0;
     left: 0;
@@ -137,14 +141,14 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     top: 15vh;
     background-color: #4637C7;
-    width: 50%;
+    width: 40%;
     font-size: 14px;
     text-align: right;
     align-self: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     padding-right: 25px;
     transition: right 0.5s ease;
     height: 100%;
@@ -249,7 +253,8 @@ nav.navSegundaria {
     display: none;
     transition: top 0.5s;
 }
-main{
+
+main {
     position: relative;
     top: 15vh;
     padding: 20px;
@@ -260,6 +265,7 @@ main{
     align-items: center;
     gap: 20px;
 }
+
 main h1 {
     font-size: 1.75rem;
     text-align: center;
@@ -273,11 +279,13 @@ main hr {
     border: none;
     border-radius: 20px;
 }
-main p{
+
+main p {
     text-align: justify;
     line-height: 1.25;
 }
-main section{
+
+main section {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -285,7 +293,8 @@ main section{
     align-items: center;
     gap: 20px;
 }
-.Historia article{
+
+.Historia article {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -293,30 +302,36 @@ main section{
     align-items: center;
     gap: 10px;
 }
-.Historia article span{
+
+.Historia article span {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.Historia article span h2{
+
+.Historia article span h2 {
     text-align: center;
 }
-.Historia article img{
+
+.Historia article img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
-.TEA{
+
+.TEA {
     display: none;
 }
-.Infraestrutura .navInfra{
+
+.Infraestrutura .navInfra {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-.Infraestrutura .navInfra button{
+
+.Infraestrutura .navInfra button {
     text-decoration: none;
     color: #000000;
     text-transform: uppercase;
@@ -327,8 +342,9 @@ main section{
     background-color: transparent;
     border: none;
 }
+
 .Infraestrutura .navInfra button:hover,
-.Infraestrutura .navInfra button.btnActive{
+.Infraestrutura .navInfra button.btnActive {
     text-decoration: none;
     color: #ffffff;
     text-transform: uppercase;
@@ -336,7 +352,8 @@ main section{
     font-weight: 700;
     background-color: #5846F9;
 }
-.Infraestrutura .ImgsInfra{
+
+.Infraestrutura .ImgsInfra {
     width: 100%;
     padding: 10px;
     display: flex;
@@ -345,14 +362,16 @@ main section{
     align-items: center;
     gap: 20px;
 }
-.Infraestrutura .ImgsInfra img{
+
+.Infraestrutura .ImgsInfra img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0px 0px 8px #000000c1;
 }
-.QuemFez{
+
+.QuemFez {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -360,10 +379,12 @@ main section{
     align-items: center;
     gap: 20px;
 }
-.QuemFez p{
+
+.QuemFez p {
     max-width: 1000px;
 }
-.QuemFez article{
+
+.QuemFez article {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -371,7 +392,8 @@ main section{
     align-items: center;
     gap: 20px;
 }
-.QuemFez article aside{
+
+.QuemFez article aside {
     width: 100%;
     height: 200px;
     display: flex;
@@ -384,13 +406,15 @@ main section{
     background-color: #5846f930;
     box-shadow: 0px 0px 8px #5846f9;
 }
-.QuemFez article aside img{
+
+.QuemFez article aside img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 5px solid #ffffff;
 }
-.QuemFez article aside span{
+
+.QuemFez article aside span {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -398,11 +422,13 @@ main section{
     width: 50%;
     height: 60%;
 }
-.QuemFez article aside span h3{
+
+.QuemFez article aside span h3 {
     font-size: 25px;
     font-weight: 500;
 }
-.QuemFez article aside span p{
+
+.QuemFez article aside span p {
     font-size: 20px;
     text-align: left;
 }
@@ -420,7 +446,8 @@ footer {
     background-size: cover;
     color: #ffffff;
 }
-footer span{
+
+footer span {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -428,10 +455,12 @@ footer span{
     align-items: flex-start;
     gap: 15px;
 }
-footer span p strong{
+
+footer span p strong {
     font-weight: 700;
 }
-footer span a{
+
+footer span a {
     text-decoration: none;
     color: #ffffffb3;
     font-size: 16px;
@@ -444,6 +473,7 @@ footer span a{
     display: flex;
     padding: 5px 0px;
 }
+
 footer span a:hover,
 footer span a:active {
     transition: 0.3s;
@@ -451,27 +481,32 @@ footer span a:active {
     color: #ffffff;
 }
 
-footer span.FRedesSociais div{
+footer span.FRedesSociais div {
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-footer span.FRedesSociais h2{
+
+footer span.FRedesSociais h2 {
     width: 100%;
 }
-footer span.FRedesSociais img{
+
+footer span.FRedesSociais img {
     width: 40px;
 }
-.FRedesSociais div a .iconHover{
+
+.FRedesSociais div a .iconHover {
     display: none;
     width: 40px;
 }
+
 .FRedesSociais div a:hover {
     transition: 0.3s;
     background-size: 0px 2px;
     color: #ffffff;
 }
+
 .FRedesSociais a:hover img {
     display: none;
 }
@@ -508,4 +543,4 @@ footer span.FRedesSociais img{
 #backToTop.active {
     visibility: visible;
     opacity: 1;
-  }
+}

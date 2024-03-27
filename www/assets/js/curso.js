@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 backtotop.classList.remove('active')
             }
         }
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function(){
             toggleBacktotop()
         })
     }
@@ -91,70 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('headerFixo')
             }
         }
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function(){
             HeaderFixo()
         })
     }
 });
-
-const slider = document.getElementById('slider');
-const slide = document.querySelectorAll('.slides');
-const setaAnterior = document.getElementById('SetaAnterior');
-const setaProxima = document.getElementById('SetaProxima');
-let currentIndex = 0;
-let interval;
-
-function atualizarSlider() {
-    const slideWidth = slide[0].clientWidth;
-    slider.style.transform = `translateX(-${currentIndex * (slideWidth)}px)`;
-}
-
-function slidePara(index) {
-    currentIndex = index;
-    atualizarSlider();
-}
-
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slide.length;
-    atualizarSlider();
-}
-
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + slide.length) % slide.length;
-    atualizarSlider();
-}
-
-setaAnterior.addEventListener('click', () => {
-    prevSlide();
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 10000);
-});
-
-setaProxima.addEventListener('click', () => {
-    nextSlide();
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 10000);
-});
-
-// Adicione uma verificação para rolagem infinita
-interval = setInterval(() => {
-    nextSlide();
-    if (currentIndex === slide.length - 1) {
-        setTimeout(() => {
-            currentIndex = 0;
-            atualizarSlider();
-        }, 500); // Atraso para criar um efeito suave de rolagem infinita
-    }
-}, 10000);
-
-
-// const Servicos = document.querySelector('.servicos > h1');
-// const AsideServicos = document.querySelector('.servicos > aside');
-
-// Servicos.addEventListener('click', () => {
-//     if (!AsideServicos.classList.contains('active')) {
-//         AsideServicos.classList.add('active');
-//     } else {
-//         AsideServicos.classList.remove('active');
-//     }
-// });

@@ -266,144 +266,106 @@ main {
     gap: 10px;
 }
 
-main h1 {
+.Cursos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.Cursos h1 {
     font-size: 1.75rem;
     text-align: center;
     text-transform: uppercase;
 }
 
-main hr {
+.Cursos hr {
     width: 50px;
     height: 3px;
     background-color: #5846F9;
     border: none;
     border-radius: 20px;
+    display: none;
 }
 
-main p {
-    text-align: justify;
-    line-height: 1.25;
-}
-
-main section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-}
-
-main section article {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-}
-
-/* main section article aside {
-
-} */
-main section article aside h2 {
+.Cursos p {
     text-align: center;
-    margin-bottom: 10px;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
 }
 
-main section article aside p {
-    text-align: justify;
-}
-
-.imagens {
+.containerCards {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.imagens img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.coord {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: start;
-    gap: 10px;
-    padding: 20px;
-}
-
-.coord .imgCoord {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #cccccc;
-}
-
-.coord .InfoCoord {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: start;
-    gap: 10px;
-}
-
-.materias {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    position: relative;
-    overflow: hidden;
 }
 
-.materias h2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: baseline;
-    align-items: center;
-    gap: 10px;
+.containerCards h2 {
+    width: 100%;
     cursor: pointer;
-    border: 1px solid #000000;
-    padding: 10px;
-    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.materias aside {
+.containerCards h2 img {
+    display: inline;
+}
+
+.containerCards article {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
-    visibility: hidden;
-    position: absolute;
-    transition: visibility 0s, max-height 0.5s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
+    gap: 20px;
 }
 
-.materias aside.cardvisivel {
-    visibility: visible;
-    position: static;
-    max-height: 1180px;
-    transition: visibility 0s, max-height 0.5s ease-in-out;
-}
-
-.materias aside p {
-    width: 80%;
-    text-align: center;
+.card-cursos {
+    width: 250px;
+    height: 250px;
+    border: 1px solid #5846F9;
+    border-radius: 20px;
     padding: 5px;
-    border: 2px solid#5846F9;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #190087;
+    text-decoration: none;
+}
+
+.card-cursos p {
+    font-weight: 600;
+}
+
+.card-cursos span {
+    width: 250px;
+    height: 210px;
+    border-radius: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-cursos span img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.card-cursos:hover span img {
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 footer {
@@ -415,7 +377,7 @@ footer {
     align-items: flex-start;
     gap: 20px;
     padding: 50px;
-    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url('../img/footer-bg.jpg') center center no-repeat;
+    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url('../img/fundos/footer-bg.jpg') center center no-repeat;
     background-size: cover;
     color: #ffffff;
 }

@@ -22,9 +22,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-h2{
+
+h2 {
     font-size: 1.5rem;
 }
+
 body::-webkit-scrollbar {
     width: 15px;
     height: 15px;
@@ -87,6 +89,7 @@ body::-webkit-scrollbar-thumb {
         transform: rotate(360deg);
     }
 }
+
 #header {
     width: 100%;
     display: flex;
@@ -99,7 +102,8 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     z-index: 20;
 }
-#header.headerFixo{
+
+#header.headerFixo {
     position: fixed;
     top: 0;
     left: 0;
@@ -137,14 +141,14 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     top: 15vh;
     background-color: #4637C7;
-    width: 50%;
+    width: 40%;
     font-size: 14px;
     text-align: right;
     align-self: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     padding-right: 25px;
     transition: right 0.5s ease;
     height: 100%;
@@ -185,6 +189,7 @@ nav#navPrincipal ul li a {
     background-repeat: no-repeat;
     background-position: left 90%;
     display: flex;
+    padding: 5px 0px;
 }
 
 nav#navPrincipal ul li a:hover,
@@ -248,6 +253,7 @@ nav.navSegundaria {
     display: none;
     transition: top 0.5s;
 }
+
 footer {
     margin-top: 15vh;
     width: 100%;
@@ -261,7 +267,8 @@ footer {
     background-size: cover;
     color: #ffffff;
 }
-footer span{
+
+footer span {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -269,10 +276,12 @@ footer span{
     align-items: flex-start;
     gap: 15px;
 }
-footer span p strong{
+
+footer span p strong {
     font-weight: 700;
 }
-footer span a{
+
+footer span a {
     text-decoration: none;
     color: #ffffffb3;
     font-size: 16px;
@@ -285,6 +294,7 @@ footer span a{
     display: flex;
     padding: 5px 0px;
 }
+
 footer span a:hover,
 footer span a:active {
     transition: 0.3s;
@@ -292,27 +302,32 @@ footer span a:active {
     color: #ffffff;
 }
 
-footer span.FRedesSociais div{
+footer span.FRedesSociais div {
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-footer span.FRedesSociais h2{
+
+footer span.FRedesSociais h2 {
     width: 100%;
 }
-footer span.FRedesSociais img{
+
+footer span.FRedesSociais img {
     width: 40px;
 }
-.FRedesSociais div a .iconHover{
+
+.FRedesSociais div a .iconHover {
     display: none;
     width: 40px;
 }
+
 .FRedesSociais div a:hover {
     transition: 0.3s;
     background-size: 0px 2px;
     color: #ffffff;
 }
+
 .FRedesSociais a:hover img {
     display: none;
 }
@@ -349,4 +364,4 @@ footer span.FRedesSociais img{
 #backToTop.active {
     visibility: visible;
     opacity: 1;
-  }
+}

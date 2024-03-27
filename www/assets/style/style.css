@@ -144,14 +144,14 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     top: 15vh;
     background-color: #4637C7;
-    width: 50%;
+    width: 40%;
     font-size: 14px;
     text-align: right;
     align-self: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     padding-right: 25px;
     transition: right 0.5s ease;
     height: 100%;
@@ -291,27 +291,25 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 20px;
+    gap: 5px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     transition: transform 0.5s ease;
-    padding: 50px;
+    padding: 10px 50px;
     flex: 0 0 100%;
     color: #ffffff;
     text-decoration: none;
 }
 .slides span{
     width: 100%;
-    height: 95%;
+    max-height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    color: #000000;
+    padding: 5px 10px;
+    color: #ffffff;
     border: 15px solid #574ACC;
     border-radius: 10px;
 }
@@ -320,15 +318,21 @@ main {
     font-weight: 500;
     letter-spacing: 1px;
     padding: 10px;
+}
 .slides span p{
-    color: #000000;
     letter-spacing: 1px;
     text-align: justify;
 }
+.slides picture{
+    max-height: 65%;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 .slides img {
-    height: 60%;
-    object-fit: contain;
+    height: 95%;
+    width: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -470,24 +474,23 @@ main {
     padding: 50px 20px;
     text-align: center;
 }
-.servicos h1{
+/* .servicos h1{
     cursor: pointer;
-}
+} */
 .servicos aside {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
-    transition: max-height 0.5s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
+    gap: 30px;
+    /* max-height: 0;
+    overflow: hidden; */
 }
-.servicos aside.active{
+/* .servicos aside.active{
     position: static;
     max-height: 1180px; 
-}
+} */
 
 .servicos h1 {
     font-size: 1.75rem;
@@ -662,115 +665,7 @@ main {
     border-radius: 10px;
 }
 
-.Cursos {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 50px 20px;
-    text-align: center;
-}
 
-.Cursos h1 {
-    font-size: 1.75rem;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.Cursos hr {
-    width: 50px;
-    height: 3px;
-    background-color: #5846F9;
-    border: none;
-    border-radius: 20px;
-    display: none;
-}
-
-.Cursos p {
-    text-align: center;
-    letter-spacing: .5px;
-    margin-bottom: 20px;
-}
-.containerCards{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    position: relative;
-    overflow: hidden;
-}
-.containerCards h2{
-    width: 100%;
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #000000;
-    padding: 10px;
-    border-radius: 5px;
-}
-.containerCards h2 img{
-    display: inline;
-}
-.containerCards article {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    visibility: hidden;
-    position: absolute;
-    transition: visibility 0s, max-height 0.5s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
-}
-
-.containerCards article.cardvisivel {
-    visibility: visible;
-    position: static;
-    max-height: 1180px; 
-    transition: visibility 0s, max-height 0.5s ease-in-out;
-}
-.card-cursos{
-    width: 250px;
-    height: 250px;
-    border: 1px solid #5846F9;
-    border-radius: 20px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-    background-color: #ffffff;
-    color: #190087;
-    text-decoration: none;
-}
-.card-cursos p{
-    font-weight: 600;
-}
-.card-cursos span{
-    width: 250px;
-    height: 210px;
-    border-radius: 20px;
-    overflow: hidden;
-    border-radius: 20px;
-}
-.card-cursos span img{
-    object-fit: cover;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-}
-.card-cursos:hover span img{
-    transform: scale(1.1);
-    transition: all 0.5s;
-}
 .contato {
     width: 100%;
     height: 100%;
@@ -981,4 +876,4 @@ footer span.FRedesSociais img{
 #backToTop.active {
     visibility: visible;
     opacity: 1;
-  }
+}

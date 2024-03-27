@@ -26,14 +26,15 @@
         <nav id="navPrincipal">
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="pags/noticias/novidades.php">Notícias</a></li>
+                <li><a href="manutencao.html">Notícias</a></li>
                 <li><a href="historiaEtec.html">Nossa História</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="index.html#contato">Contato</a></li>
                 <li id="dropdown"><a href="#"><span>Documentação</span></a>
                     <ul>
-                        <li><a href="assets/planos/Horarios.pdf">Horários</a></li>
-                        <li><a href="assets/planos/etec-regimento-comum-2022.pdf">Regimento Comum das Etecs</a></li>
-                        <li><a href="assets/planos/calendario.pdf">Calendário Anual</a></li>
+                        <li><a href="#">Horários</a></li>
+                        <li><a href="assets/docs/RegimentoComumDasEtecs.pdf" target="_blank">Regimento Comum das Etecs</a></li>
+                        <li><a href="assets/docs/Calendario2024.pdf" target="_blank">Calendário Anual</a></li>
                     </ul>
                 </li>
                 <li class="RedesSociais"><a href="https://www.instagram.com/etecrgs/" target="_blank"><img
@@ -48,26 +49,28 @@
             </ul>
         </nav>
         <!-- Final da Navbar -->
-    </header><!-- Final do Cabeçalho -->
+    </header>
     <nav class="navSegundaria" id="navSegundaria">
         <ul>
             <li><a href="#container">Home</a></li>
             <li><a href="#NoticiasR">Novidades e atualizações</a></li>
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#APM">APM</a></li>
-            <li><a href="#contato">Cursos</a></li>
         </ul>
     </nav>
     <main>
         <section class="container" id="container">
             <button id="SetaAnterior"><img src="assets/img/icons/SetaVolta.svg" alt=""></button>
             <section id="slider">
-                <a class="slides">
+                <a class="slides" href="https://urhsistemas.cps.sp.gov.br/dgsdad/selecaopublica/ETEC/PSS/Abertos.aspx " target="_blank">
                     <span>
                         <h1>Processo Seletivo</h1>
                         <p>Começa o processo seletivo para docentes determinados na etec de Rio Grande da Serra</p>
                     </span>
-                    <img src="" alt="Banner da Noticia">
+                    <picture>
+                        <source srcset="assets/img/Noticias/ProcessoSeletivoDesktop.png" media="(min-width: 767px)" />
+                        <img src="assets/img/Noticias/ProcessoSeletivo.png" alt="">
+                    </picture>
                 </a>
                 <a class="slides">
                     <span>
@@ -75,8 +78,8 @@
                         <p>Entre os dias 7 e 14 de março de 2024, a primeira reunião de pais do ano e da nova gestão, aconteceu. As novas políticas e propostas da direção referente ao administrativo e pedagógico foram apresentadas aos responsáveis dos alunos. Um novo capítulo surge na história da Escola Técnica Estadual de Rio Grande da Serra.</p>
                     </span>
                     <picture>
-                        <source srcset="assets/img/Noticias/DiaDasMulheres.png" media="(min-width: 1023px)" />
-                        <img src="assets/img/Noticias/DiaDasMulheresMobile.png" alt="">
+                        <source srcset="assets/img/Noticias/ReuniaoDePais.png" media="(min-width: 767px)" />
+                        <img src="assets/img/Noticias/ReuniaoDePaisMobile.png" alt="">
                     </picture>
                 </a>
                 <a class="slides" href="https://www.instagram.com/p/C4TyNXnPLRD/" target="_blank">
@@ -85,7 +88,7 @@
                         <p>No dia 8 de março de 2024, dia internacional das mulheres, as portas foram abertas para troca de homenagens entre as mulheres. As estudantes, professoras e funcionárias da ETEC de Rio Grande da Serra tiveram o seu dia marcado por lembranças, decorações, palestras e muitos sorrisos.</p>
                     </span>
                     <picture>
-                        <source srcset="assets/img/Noticias/DiaDasMulheres.png" media="(min-width: 1023px)" />
+                        <source srcset="assets/img/Noticias/DiaDasMulheres.png" media="(min-width: 767px)" />
                         <img src="assets/img/Noticias/DiaDasMulheresMobile.png" alt="">
                     </picture>
                 </a>
@@ -106,7 +109,7 @@
                         <h2>Lá vem o Grêmio</h2>
                         <h4 class="data">22/03</h4>
                         <p>Abertura para o grêmio da Etec de Rio Grande da Serra, se atentem as datas</p>
-                        <a href="">Ler mais</a>
+                        <a href="assets/docs/EstatutoDoGremio.html" target="_blank">Ler mais</a>
                     </span>
                 </aside>
                 <aside class="BlocoNoticia">
@@ -116,9 +119,9 @@
                     </picture>
                     <span>
                         <h2>Escuta Ativa</h2>
-                        <h4 class="data">Data:data</h4>
-                        <p>Breve Descrição</p>
-                        <a href="">Ler mais</a>
+                        <h4 class="data">22/03</h4>
+                        <p>Projeto da gestão do Professor Felipe com a Professora Madalena com intuito de ouvir os alunos, projeto feito mensalmente</p>
+                        <!-- <a href="">Ler mais</a> -->
                     </span>
                 </aside>
             </article>
@@ -135,34 +138,34 @@
                     <h2>NSA</h2>
                     <p>Sistema da escola para visualizar presenças, boletim etc.</p>
                 </a>
-                <a href="" class="cardsServ" id="card02">
+                <a href="https://teams.microsoft.com/v2/" target="_blank" class="cardsServ" id="card02">
                     <div><img src="assets/img/icons/iconsCardsServicos/TeamsCard.svg" alt="" class="iconsCards"><img
                             src="assets/img/icons/iconsCardsServicos/TeamsCardHover.svg" alt="" class="iconHover"></div>
                     <h2>Teams</h2>
                     <p>Sistema utilizado pelos professores para dar aula a distância</p>
                 </a>
-                <a href="" class="cardsServ" id="card03">
+                <a href="mailto:e282acad@cps.sp.gov.br" target="_blank" class="cardsServ" id="card03">
                     <div><img src="assets/img/icons/iconsCardsServicos/EnvelopeCard.svg" alt="" class="iconsCards"><img
                             src="assets/img/icons/iconsCardsServicos/EnvelopeCardHover.svg" alt="" class="iconHover">
                     </div>
                     <h2>Email da Secretaria</h2>
                     <p>Aqui você pode pedir todos os documentos que precisa refente a escola</p>
                 </a>
-                <a href="" class="cardsServ" id="card04">
+                <a href="http://www.etec.sp.gov.br/view/" target="_blank" class="cardsServ" id="card04">
                     <div><img src="assets/img/icons/iconsCardsServicos/DesktopCard.svg" alt="" class="iconsCards"><img
                             src="assets/img/icons/iconsCardsServicos/DesktopCardHover.svg" alt="" class="iconHover">
                     </div>
-                    <h2>Fecontec</h2>
-                    <p>Sistema para informações e cadastros para o evento da Fecontec</p>
+                    <h2>Email Institucional</h2>
+                    <p>Sistema para informações do Email Institucional</p>
                 </a>
-                <a href="" class="cardsServ" id="card05">
+                <a href="#" class="cardsServ" id="card05">
                     <div><img src="assets/img/icons/iconsCardsServicos/InstagramCard.svg" alt="" class="iconsCards"><img
                             src="assets/img/icons/iconsCardsServicos/InstagramCardHover.svg" alt="" class="iconHover">
                     </div>
                     <h2>Redes Sociais</h2>
                     <p>Acesso a todas as redes socias da Etec de Rio Grande da Serra</p>
                 </a>
-                <a href="" class="cardsServ" id="card06">
+                <a href="https://www.vestibulinhoetec.com.br/home/" target="_blank" class="cardsServ" id="card06">
                     <div><img src="assets/img/icons/iconsCardsServicos/LivroCard.svg" alt="" class="iconsCards"><img
                             src="assets/img/icons/iconsCardsServicos/LivroCardHover.svg" alt="" class="iconHover"></div>
                     <h2>Etec/Vestibulinho</h2>
@@ -213,82 +216,6 @@
                         <img src="assets/img/QrcodePix/qrcodePixMobile.png" alt="" />
                     </picture>
                 </div>
-            </aside>
-        </section>
-        <section class="Cursos" id="Cursos">
-            <h1>Cursos</h1>
-            <hr>
-            <p>Informações sobre os cursos fornecidos pela Etec de Rio Grande da Serra.</p>
-            <aside class="containerCards">
-                <h2>Matutinos e Vespertinos<img src="assets/img/icons/SemiSetaBaixo.svg" alt=""></h2>
-                <hr>
-                </hr>
-                <article>
-                    <a class="card-cursos" href="cursos/Administracao.html">
-                        <span><img src="assets/img/cursos/ImgAdm.png" alt=""></span>
-                        <p>Administração com Ensino Médio (Manhã)</p>
-                    </a>
-                    <a class="card-cursos" href="cursos/DesenvolvimentoDeSistemas.html">
-                        <span><img src="assets/img/cursos/ImgDs.png" alt=""></span>
-                        <p>Desenvolvimento de Sistemas com Ensino Médio (Integral)</p>
-                    </a>
-                    <a class="card-cursos" href="cursos/Edificacoes.html">
-                        <span><img src="assets/img/cursos/ImgEdifi.png" alt=""></span>
-                        <p>Edificações com Ensino Médio (Manhã)</p>
-                    </a>
-                    <a class="card-cursos" href="cursos/InformaticaParaInformatica.html">
-                        <span><img src="assets/img/cursos/ImgInfo.png" alt=""></span>
-                        <p>Informática para Internet com Ensino Médio (Tarde)</p>
-                    </a>
-                </article>
-            </aside>
-            <aside class="containerCards">
-                <h2>Noturno <img src="assets/img/icons/SemiSetaBaixo.svg" alt=""></h2>
-                <hr>
-                </hr>
-                <article>
-                    <a class="card-cursos" href="cursos/Administracao.html">
-                        <span><img src="assets/img/cursos/ImgAdm.png" alt=""></span>
-                        <p>Administração com Ensino Médio</p>
-                    </a>
-                    <a class="card-cursos" href="cursos/DesenvolvimentoDeSistemas.html">
-                        <span><img src="assets/img/cursos/ImgDs.png" alt=""></span>
-                        <p>Desenvolvimento de Sistemas com Ensino Médio</p>
-                    </a>
-                    <a class="card-cursos" href="cursos/Administracao.html">
-                        <span><img src="assets/img/cursos/ImgAdm.png" alt=""></span>
-                        <p>Administração - Modular</p>
-                    </a>
-                    <a class="card-cursos" href="cursos/RecursosHumanos.html">
-                        <span><img src="assets/img/cursos/ImgRecursos.png" alt=""></span>
-                        <p>Recursos Humanos - Modular</p>
-                    </a>
-                </article>
-            </aside>
-            <aside class="containerCards">
-                <h2>Onlines <img src="assets/img/icons/SemiSetaBaixo.svg" alt=""></h2>
-                <hr>
-                </hr>
-                <article>
-                    <a class="card-cursos" href="cursos/Comercio.html">
-                        <span><img src="assets/img/cursos/ImgComercio.png" alt=""></span>
-                        <p>Comércio</p>
-                    </a>
-                    <a class="card-cursos" href="cursos/GestaoDeProjetos.html">
-                        <span><img src="assets/img/cursos/ImgGestao.png" alt=""></span>
-                        <p>Gestão de Projetos</p>
-                    </a>
-                    <a class="card-cursos" href="cursos/TransacoesImobiliarias.html">
-                        <span><img src="assets/img/cursos/ImgTranslacoes.png" alt=""></span>
-                        <p>Transações Imobiliárias</p>
-                    </a>
-                    <a class="card-cursos" href="cursos/Secretariado.html">
-                        <span>
-                            <img src="assets/img/cursos/ImgSecretariado.png" alt="">
-                        </span>
-                        <p>Secretariado</p>
-                    </a>
-                </article>
             </aside>
         </section>
         <section class="contato" id="contato">
