@@ -1,282 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
-
-:root {
-    --FontStandard: 'Roboto', sans-serif;
-    --Colorheader: #1806b9cc;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-html{
-    scroll-behavior: smooth;
-}
-body {
-    font-family: var(--FontStandard);
-    color: #2f2d2d;
-    width: 100%;
-    height: 100vh;
-    background-color: #F9F8FF;
-    transition: all 0.5s;
-}
-h2{
-    font-size: 1.5rem;
-}
-
-/* Scroll*/
-body::-webkit-scrollbar {
-    width: 15px;
-    height: 15px;
-    background-color: rgb(187, 185, 185);
-}
-
-body::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: rgba(180, 179, 179, 0.24);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(45deg, #5846f9, #a68eff);
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    overflow: hidden;
-    background: #fff;
-}
-
-#preloader:before {
-    content: "";
-    position: fixed;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border: 6px solid #5846f9;
-    border-top-color: #e7e4fe;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    -webkit-animation: animate-preloader 1s linear infinite;
-    animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animate-preloader {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-#header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #1806b9cc;
-    height: 15vh;
-    transition: top 0.5s;
-    position: fixed;
-    z-index: 20;
-}
-#header.headerFixo{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
-#menu {
-    width: 40px;
-    display: block;
-    cursor: pointer;
-}
-
-#menuClose {
-    width: 40px;
-    display: none;
-    cursor: pointer;
-}
-
-.rotate {
-    transition: transform 0.5s ease;
-    transform: rotate(180deg);
-}
-
-.rotateBack {
-    transition: transform 0.5s ease;
-    transform: rotate(0deg);
-}
-
-.logo {
-    width: 80%;
-}
-
-#navPrincipal {
-    position: fixed;
-    top: 15vh;
-    background-color: #4637C7;
-    width: 40%;
-    font-size: 14px;
-    text-align: right;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-right: 25px;
-    transition: right 0.5s ease;
-    height: 100%;
-    right: -100%;
-    z-index: 20;
-}
-
-nav#navPrincipal ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    list-style: none;
-    width: auto;
-    box-sizing: content-box;
-}
-
-nav#navPrincipal ul li {
-    padding: 15px 0px;
-}
-
-.RedesSociais a img {
-    width: 50px;
-}
-
-.RedesSociais img .iconHover {
-    display: none;
-    width: 25px;
-}
-
-nav#navPrincipal ul li a {
-    text-decoration: none;
-    color: #ffffffb3;
-    font-size: 16px;
-    font-weight: 500;
-    transition: background-size 0.3s ease;
-    background: linear-gradient(#ffffff 0%, #ffffff 98%);
-    background-size: 0px 2px;
-    background-repeat: no-repeat;
-    background-position: left 90%;
-    display: flex;
-    padding: 5px 0px;
-}
-
-nav#navPrincipal ul li a:hover,
-nav#navPrincipal ul li a:active {
-    transition: 0.3s;
-    background-size: 100% 2px;
-    color: #ffffff;
-}
-
-nav#navPrincipal ul li.RedesSociais a:hover {
-    transition: 0.3s;
-    background-size: 0px 2px;
-    color: #ffffff;
-}
-
-nav#navPrincipal ul li.RedesSociais a:hover img {
-    display: none;
-}
-
-nav#navPrincipal ul li.RedesSociais a:hover .iconHover {
-    display: block;
-}
-
-nav#navPrincipal ul li#dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-nav#navPrincipal ul li#dropdown ul {
-    position: absolute;
-    top: 80%;
-    right: 70%;
-    width: auto;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: none;
-    padding: 10px;
-    z-index: 15;
-    transition: right 0.5s ease;
-}
-
-nav#navPrincipal ul li#dropdown ul li a {
-    color: #2c4964;
-    font-size: 0.9rem;
-}
-
-nav#navPrincipal ul li#dropdown ul li a:hover {
-    color: #5846f9;
-}
-
-nav#navPrincipal ul li#dropdown:hover ul {
-    display: block;
-}
-
-nav#navPrincipal.open {
-    right: 0;
-}
-
-nav.navSegundaria {
-    display: none;
-    transition: top 0.5s;
-}
-
-main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 15vh;
-}
-
 .container {
     width: 100%;
-    height: 80vh;
+    height: 80%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(45deg, rgba(86, 58, 250, 0.5) 0%, rgba(116, 15, 214, 0.5) 100%), url('assets/img/fundos/hero-bg.jpg') center center no-repeat;
-    background-size: cover;
 }
 
 #slider {
@@ -300,18 +29,20 @@ main {
     flex: 0 0 100%;
     color: #ffffff;
     text-decoration: none;
+    border-bottom: 5px solid #574ACC;
 }
 .slides span{
-    width: 100%;
+    width: 96%;
     max-height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
-    color: #ffffff;
-    border: 15px solid #574ACC;
+    color: #000000;
+    border: 5px solid #574ACC;
     border-radius: 10px;
+    overflow: hidden;
 }
 .slides span h1 {
     font-size: 1.5rem;
@@ -430,6 +161,7 @@ main {
     align-items: center;
     gap: 15px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .BlocoNoticia span h2 {
@@ -725,7 +457,7 @@ main {
 }
 
 .contato .enviarEmail {
-    height: 100%;
+    height: auto;
 }
 
 .contato .enviarEmail form {
@@ -735,13 +467,12 @@ main {
     justify-content: center;
     align-items: center;
     gap: 20px;
-
 }
 
 .enviarEmail input {
     padding: 10px 15px;
     display: block;
-    width: 80%;
+    width: 100%;
     font-family: var(--FontStandard);
     color: #212529;
     background-color: #fff;
@@ -752,7 +483,7 @@ main {
 .enviarEmail textarea {
     font-family: var(--FontStandard);
     padding: 10px 15px;
-    width: 80%;
+    width: 100%;
     color: #212529;
     background-color: #fff;
     border: 1px solid #ced4da;
@@ -775,105 +506,364 @@ main {
     background-color: #7b27d8;
 }
 
-footer {
-    margin-top: 15vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 50px;
-    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url('../img/fundos/footer-bg.jpg') center center no-repeat;
-    background-size: cover;
-    color: #ffffff;
-}
-footer span{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    gap: 15px;
-}
-footer span p strong{
-    font-weight: 700;
-}
-footer span a{
-    text-decoration: none;
-    color: #ffffffb3;
-    font-size: 16px;
-    font-weight: 500;
-    transition: background-size 0.3s ease;
-    background: linear-gradient(#ffffff 0%, #ffffff 98%);
-    background-size: 0px 2px;
-    background-repeat: no-repeat;
-    background-position: left 90%;
-    display: flex;
-    padding: 5px 0px;
-}
-footer span a:hover,
-footer span a:active {
-    transition: 0.3s;
-    background-size: 100% 2px;
-    color: #ffffff;
+@media screen and (min-width: 767px) {
+    .separa {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+    }
+
+    .BlocoNoticia {
+        width: 45%;
+        height: 450px;
+    }
+
+    .servicos aside {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .APM aside {
+        width: 100%;
+        height: 400px;
+        flex-direction: row;
+    }
+
+    .APM aside .infosApm {
+        width: 50%;
+        gap: 15px;
+    }
+
+    .APM aside .OrganizaIcons .iconApm {
+        width: 40px;
+    }
+
+    .APM aside .OrganizaIcons .descricaoApm {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .APM aside .imgApm {
+        width: 50%;
+    }
+
+    .APM aside .imgApm img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .contato aside {
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 5px;
+        gap: 10px;
+    }
+
+    .contato aside.telefone,
+    .contato aside.email {
+        width: calc(100%/2 - 10px);
+    }
+
+    .contato .enviarEmail form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .enviarEmail input {
+        width: 45%;
+    }
+
+    .enviarEmail form input#grande {
+        width: calc(95% - 15px);
+    }
+
+    .enviarEmail textarea {
+        width: calc(95% - 15px);
+    }
 }
 
-footer span.FRedesSociais div{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-footer span.FRedesSociais h2{
-    width: 100%;
-}
-footer span.FRedesSociais img{
-    width: 40px;
-}
-.FRedesSociais div a .iconHover{
-    display: none;
-    width: 40px;
-}
-.FRedesSociais div a:hover {
-    transition: 0.3s;
-    background-size: 0px 2px;
-    color: #ffffff;
-}
-.FRedesSociais a:hover img {
-    display: none;
+@media screen and (min-width: 1023px) {
+
+    nav.navSegundaria {
+        background-color: #1806b9b7;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+        box-sizing: content-box;
+        padding: 5px;
+        position: relative;
+        top: 15vh;
+    }
+
+    nav.navSegundaria ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+
+    nav.navSegundaria ul li {
+        padding: 10px;
+    }
+
+    nav.navSegundaria ul li a {
+        text-decoration: none;
+        color: #ffffffb3;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+        background: linear-gradient(#ffffff 0%, #ffffff 98%);
+        background-size: 0px 2px;
+        background-repeat: no-repeat;
+        background-position: left 90%;
+        padding: 10px 0px;
+    }
+
+    nav.navSegundaria ul li a:hover {
+        transition: 0.3s;
+        background-size: 100% 2px;
+        color: #ffffff;
+    }
+
+    #slider {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .slides {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        transition: transform 0.5s ease;
+        padding: 10px 50px;
+        flex: 0 0 100%;
+        text-decoration: none;
+    }
+
+    .slides span {
+        min-height: 70%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .slides span h1 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin: 20px 0px;
+        color: #000000;
+    }
+
+    .slides picture {
+        height: 100%;
+        width: auto;
+    }
+
+    .slides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .NoticiasR {
+        width: 90%;
+    }
+
+    .BlocoNoticia {
+        width: 45%;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 5px #5846f995;
+    }
+
+    .BlocoNoticia img {
+        width: 90%;
+        width: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .BlocoNoticia span {
+        width: calc(100% - 220px);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .servicos aside {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .APM aside {
+        width: 90%;
+        height: 100%;
+        flex-direction: row;
+    }
+
+    .APM aside .infosApm {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .APM aside .OrganizaIcons {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .APM aside .OrganizaIcons .iconApm {
+        width: 60px;
+    }
+
+    .APM aside .OrganizaIcons .descricaoApm {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    .APM aside .imgApm {
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .APM aside .imgApm img {
+        max-width: 80%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .contato aside {
+        width: 50%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 5px;
+        gap: 10px;
+    }
+
+    .contato aside.iframe {
+        height: 421px;
+        width: 50%;
+        padding: 0;
+        margin: 0;
+    }
+
+    aside.enviarEmail {
+        width: calc(2*(50%/2 - 10px));
+    }
+
+    .contato aside.telefone,
+    .contato aside.email {
+        width: calc(50%/2 - 20px);
+    }
+
+    .contato .enviarEmail form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .enviarEmail input {
+        width: 45%;
+    }
+
+    .enviarEmail form input#grande {
+        width: calc(95% - 15px);
+    }
+
+    .enviarEmail textarea {
+        width: calc(95% - 15px);
+    }
+
 }
 
-.FRedesSociais a:hover .iconHover {
-    display: block;
-}
+@media screen and (min-width: 1439px) {
+    .BlocoNoticia {
+        height: 300px;
+    }
 
-#backToTop {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 30px;
-    bottom: 30px;
-    width: 50px;
-    z-index: 996;
-    height: 50px;
-    background-color: #5846f9;
-    border-radius: 5px;
-    border: 2px solid #ffffff;
-    font-size: 2em;
-    transition: all 0.4s;
-}
+    .BlocoNoticia img {
+        height: 250px;
+        width: auto;
+        object-fit: contain;
+        border-radius: 10px;
+    }
 
-#backToTop img {
-    width: 100%;
-    height: 100%;
-}
-
-#backToTop:hover {
-    background-color: #7b27d8;
-}
-
-#backToTop.active {
-    visibility: visible;
-    opacity: 1;
+    .BlocoNoticia span {
+        width: calc(100% - 350px);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }
