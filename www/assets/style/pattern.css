@@ -261,6 +261,8 @@ main {
     align-items: center;
     position: relative;
     top: 15vh;
+    gap: 10px;
+    padding-top: 20px;
 }
 
 footer {

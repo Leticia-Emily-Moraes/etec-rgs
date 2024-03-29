@@ -42,6 +42,7 @@
     color: #000000;
     border: 5px solid #574ACC;
     border-radius: 10px;
+    overflow: hidden;
 }
 .slides span h1 {
     font-size: 1.5rem;
@@ -160,6 +161,7 @@
     align-items: center;
     gap: 15px;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .BlocoNoticia span h2 {
@@ -455,7 +457,7 @@
 }
 
 .contato .enviarEmail {
-    height: 100%;
+    height: auto;
 }
 
 .contato .enviarEmail form {
@@ -465,13 +467,12 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-
 }
 
 .enviarEmail input {
     padding: 10px 15px;
     display: block;
-    width: 80%;
+    width: 100%;
     font-family: var(--FontStandard);
     color: #212529;
     background-color: #fff;
@@ -482,7 +483,7 @@
 .enviarEmail textarea {
     font-family: var(--FontStandard);
     padding: 10px 15px;
-    width: 80%;
+    width: 100%;
     color: #212529;
     background-color: #fff;
     border: 1px solid #ced4da;
@@ -506,7 +507,6 @@
 }
 
 @media screen and (min-width: 767px) {
-
     .separa {
         width: 100%;
         display: flex;
@@ -683,7 +683,7 @@
         font-weight: 500;
         letter-spacing: 1px;
         margin: 20px 0px;
-        color: #ffffff;
+        color: #000000;
     }
 
     .slides picture {
