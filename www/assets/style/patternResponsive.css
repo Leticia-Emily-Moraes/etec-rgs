@@ -1,0 +1,176 @@
+@media screen and (min-width: 767px) {
+    .logo {
+        width: 100%;
+    }
+
+    #navPrincipal {
+        width: 40%;
+    }
+
+    nav#navPrincipal ul li#dropdown ul {
+        right: 75%;
+    }
+
+    nav#navPrincipal ul li a {
+        font-size: 20px;
+    }
+    footer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+}
+
+@media screen and (min-width: 1023px){
+    p {
+        font-size: 1.2rem;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #1806b9cc;
+        height: 15vh;
+    }
+
+    header #menu,
+    header #menuClose {
+        display: none;
+        visibility: hidden;
+    }
+
+    nav#navPrincipal {
+        position: static;
+        font-size: 24px;
+        background-color: transparent;
+        height: 15vh;
+        width: 70%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 110%;
+    }
+
+    nav#navPrincipal ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        list-style: none;
+        box-sizing: content-box;
+        gap: 20px;
+        width: auto;
+    }
+
+    nav#navPrincipal ul li a {
+        text-decoration: none;
+        color: #ffffffb3;
+        font-size: 16px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+        background: linear-gradient(#ffffff 0%, #ffffff 98%);
+        background-size: 0px 2px;
+        background-repeat: no-repeat;
+        background-position: left 90%;
+        padding: 10px 0px;
+        white-space: nowrap;
+    }
+
+    .RedesSociais a:hover {
+        background-size: 0px 2px;
+    }
+
+    nav#navPrincipal ul img {
+        width: 60px;
+        padding: 10px;
+    }
+
+    nav#navPrincipal ul img:hover {
+        cursor: pointer;
+    }
+
+
+    nav#navPrincipal ul li#dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    nav#navPrincipal ul li#dropdown ul {
+        position: absolute;
+        top: 50px;
+        width: 200px;
+        left: -100%;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 10;
+        transition: left 0.5s ease;
+        text-align: center;
+    }
+
+    nav#navPrincipal ul li#dropdown ul li a {
+        color: #2c4964;
+        font-size: 15px;
+    }
+
+    nav#navPrincipal ul li#dropdown ul li a:hover {
+        color: #5846f9;
+    }
+
+    nav#navPrincipal ul li#dropdown:hover ul {
+        display: block;
+    }
+    footer {
+        margin-top: 15vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 50px;
+    
+    }
+    footer span{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    footer span.FRedesSociais div{
+        width: 100%;
+        flex-direction: row;
+        gap: 20px;
+    }
+    footer span.FRedesSociais h2{
+        width: 100%;
+    }
+    footer span.FRedesSociais img{
+        width: 40px;
+    }
+    .FRedesSociais div a .iconHover{
+        display: none;
+        width: 40px;
+    }
+    .FRedesSociais a:hover img {
+        display: none;
+    }
+    
+    .FRedesSociais a:hover .iconHover {
+        display: block;
+    }
+}

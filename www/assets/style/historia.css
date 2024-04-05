@@ -1,0 +1,248 @@
+main {
+    position: relative;
+    top: 15vh;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+main h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main hr {
+    width: 50px;
+    height: 3px;
+    background-color: #5846F9;
+    border: none;
+    border-radius: 20px;
+}
+
+main p {
+    text-align: justify;
+    line-height: 1.25;
+}
+
+main section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.Historia article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Historia article span {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Historia article span h2 {
+    text-align: center;
+}
+
+.Historia article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.TEA {
+    display: none;
+}
+
+.Infraestrutura .navInfra {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Infraestrutura .navInfra button {
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+}
+
+.Infraestrutura .navInfra button:hover,
+.Infraestrutura .navInfra button.btnActive {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: #5846F9;
+}
+
+.Infraestrutura .ImgsInfra {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Infraestrutura .ImgsInfra img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 0px 8px #000000c1;
+}
+
+.QuemFez {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.QuemFez p {
+    max-width: 1000px;
+}
+
+.QuemFez article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.QuemFez article aside {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #5846f930;
+    box-shadow: 0px 0px 8px #5846f9;
+}
+
+.QuemFez article aside img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+}
+
+.QuemFez article aside span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    height: 60%;
+}
+
+.QuemFez article aside span h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.QuemFez article aside span p {
+    font-size: 20px;
+    text-align: left;
+}
+@media screen and (min-width: 767px) {
+    .Infraestrutura .ImgsInfra{
+        width: 100%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .QuemFez article{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1023px){
+    .Historia{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+    
+    }
+    .Historia article{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    .Historia article:nth-of-type(even){
+        width: 90%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    .Historia article span{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .Historia article span h2{
+        text-align: center;
+    }
+    .Historia article img{
+        width: 40%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .QuemFez article{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    .Infraestrutura .ImgsInfra{
+        width: 90%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
