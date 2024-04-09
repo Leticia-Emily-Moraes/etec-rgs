@@ -13,14 +13,14 @@
         <section class="login">
             <h1>Entrar para publicar</h1>
             <form method="post" action="">
-                    <p class="ErroLogin"></p>
+                <p class="ErroLogin"></p>
                 <div>
                     <label for="login">Nome de Login:</label>
                     <input type="text" name="login" id="login" placeholder="Digite seu nome de usuario" required>
                 </div>
                 <div>
                     <label for="senha">Senha de Login:</label>
-                    <input type="password" name="Senha" id="senha" placeholder="Digite seu nome de usuario" required>
+                    <span><input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required minlength="8"><a href="#"><img src="../assets/img/icons/Visivel.svg" alt=""></a></span>
                 </div>
                 <div>
                     <input type="submit" value="Entrar">
@@ -28,9 +28,22 @@
             </form>
         </section>
         <section class="imagem">
-            <img src="../assets/img/pandoras/raposa etec 2.png" class="img-fluid animated" alt="">
+            <img src="../assets/img/pandoras/raposaEtec.png" class="img-fluid animated" alt="">
         </section>
     </main>
+    <script>
+        const inputSenha = document.querySelector('input[type="password"]');
+        const imgVisivel = document.querySelector('img');
+        imgVisivel.addEventListener('click', () => {
+            if (inputSenha.type === 'password') {
+                inputSenha.type = 'text';
+                imgVisivel.src = '../assets/img/icons/Invisivel.svg';
+            } else {
+                inputSenha.type = 'password';
+                imgVisivel.src = '../assets/img/icons/Visivel.svg';
+            }
+        });
+    </script>
 </body>
 
 </html>
