@@ -23,25 +23,24 @@ function prevSlide() {
 setaAnterior.addEventListener('click', () => {
     prevSlide();
     clearInterval(interval);
-    interval = setInterval(nextSlide, 5000);
+    interval = setInterval(nextSlide, 8000);
 });
 
 setaProxima.addEventListener('click', () => {
     nextSlide();
     clearInterval(interval);
-    interval = setInterval(nextSlide, 5000);
+    interval = setInterval(nextSlide, 8000);
 });
 
-// Adicione uma verificação para rolagem infinita
 interval = setInterval(() => {
     nextSlide();
     if (currentIndex === slide.length - 1) {
         setTimeout(() => {
             currentIndex = 0;
             atualizarSlider();
-        }, 500); // Atraso para criar um efeito suave de rolagem infinita
+        }, 8000);
     }
-}, 5000);
+}, 8000);
 
 
 // const Servicos = document.querySelector('.servicos > h1');
