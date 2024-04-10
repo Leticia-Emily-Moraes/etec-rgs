@@ -6,98 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postagem Rgs</title>
 
-    <link rel="shortcut icon" href="assets/img/Favicons/etecRgs.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/Favicons/etecRgs.ico" type="image/x-icon">
     <!-- Arquivo reset CSS -->
-    <link rel="stylesheet" href="assets/style/reset.css">
+    <link rel="stylesheet" href="../assets/style/reset.css">
     <!-- Arquivo CSS -->
-    <link rel="stylesheet" href="assets/style/pattern.css">
+    <link rel="stylesheet" href="../assets/style/pattern.css">
     <!-- Arquivo CSS responsivo -->
-    <link rel="stylesheet" href="assets/style/patternResponsive.css">
+    <link rel="stylesheet" href="../assets/style/patternResponsive.css">
 
 
 </head>
 
 <body>
     <header id="header">
-        <a href="index.html"><img class="logo" src="assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
-        <img id="menu" src="assets/img/icons/iconsNav/Menu.svg" alt="">
-        <img id="menuClose" src="assets/img/icons/iconsNav/CloseMenu.svg" alt="">
+        <a href="#"><img class="logo" src="../assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
+        <img id="menu" src="../assets/img/icons/iconsNav/Menu.svg" alt="">
+        <img id="menuClose" src="../assets/img/icons/iconsNav/CloseMenu.svg" alt="">
         <nav id="navPrincipal">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="manutencao.html">Postar Noticia</a></li>
-                <li><a href="historiaEtec.html">Ver Postagens</a></li>
-                <li><a href="cursos.html">Autores</a></li>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Postar Noticia</a></li>
+                <li><a href="#">Ver Postagens</a></li>
+                <li><a href="#">Autores</a></li>
             </ul>
         </nav>
         <!-- Final da Navbar -->
     </header>
     <main>
+        <section>
 
+        </section>
+        <section>
+            
+        </section>
     </main>
-    <script>
-        class Menu {
-            constructor(menuSelector, menuBtnSelector, menuCloseBtnSelector) {
-                this.menu = document.querySelector(menuSelector);
-                this.menuBtn = document.querySelector(menuBtnSelector);
-                this.menuCloseBtn = document.querySelector(menuCloseBtnSelector);
-                this.outsideClick = this.outsideClick.bind(this);
-                this.toggleMenu = this.toggleMenu.bind(this);
-                this.menuBtn.addEventListener('click', this.toggleMenu);
-                this.menuCloseBtn.addEventListener('click', this.toggleMenu);
-            }
-
-            outsideClick(event) {
-                const isClickInsideMenu = this.menu.contains(event.target);
-                const isClickInsideMenuBtn = this.menuBtn.contains(event.target) || this.menuCloseBtn.contains(event.target);
-                if (!isClickInsideMenu && !isClickInsideMenuBtn) {
-                    this.closeMenu();
-                }
-            }
-
-            toggleMenu() {
-                const isOpen = this.menu.classList.contains('open');
-                isOpen ? this.closeMenu() : this.openMenu();
-            }
-
-            openMenu() {
-                this.menu.classList.add('open');
-                this.menuBtn.style.display = 'none';
-                this.menuCloseBtn.style.display = 'block';
-            }
-
-            closeMenu() {
-                this.menu.classList.remove('open');
-                this.menuBtn.style.display = 'block';
-                this.menuCloseBtn.style.display = 'none';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const menu = new Menu('#navPrincipal', '#menu', '#menuClose');
-
-            const preloader = document.getElementById('preloader');
-            if (preloader) {
-                window.addEventListener('load', () => {
-                    preloader.remove();
-                });
-            }
-
-            const backToTop = document.getElementById('backToTop');
-            if (backToTop) {
-                const toggleBackToTop = () => {
-                    backToTop.classList.toggle('active', window.scrollY >= 100);
-                };
-                backToTop.addEventListener('click', () => {
-                    // Rolagem suave para o topo
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-                window.addEventListener('scroll', toggleBackToTop);
-            }
-
-        });
-    </script>
+    <script src="../assets/js/pattern.js"></script>
 </body>

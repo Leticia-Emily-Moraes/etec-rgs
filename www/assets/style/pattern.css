@@ -133,8 +133,9 @@ body::-webkit-scrollbar-thumb {
     transform: rotate(0deg);
 }
 
-.logo {
-    width: 80%;
+header a img.logo {
+    height: 80%;
+    object-fit: cover;
 }
 
 #navPrincipal {
