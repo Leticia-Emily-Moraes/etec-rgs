@@ -1,0 +1,183 @@
+main{
+    padding: 20px 0px;
+}
+nav ul li a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+nav ul li a img{
+    width: 20px;
+    height: 20px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+hr {
+    width: 50px;
+    height: 3px;
+    background-color: #5846F9;
+    border: none;
+    border-radius: 20px;
+}
+.DashBoard{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.DashBoard .perfil{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.DashBoard .perfil aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.DashBoard .perfil aside img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.DashBoard .perfil aside:last-child{
+    width: 60%;
+    gap: 10px;
+}
+.DashBoard .dados{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.DashBoard .dados aside {
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #887bff;
+    box-shadow: 0 5px 5px #5846f995;
+}
+.DashBoard .dados aside h2{
+    background-color: #aea5ff;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 40px;
+    border-bottom: 5px solid #5846F9;
+    border-radius: 20px 20px 0 0;
+}
+
+.DashBoard .dados aside p{
+    height: 140px;
+    text-align: center;
+    line-height: 140px;
+    font-size: 60px;
+}
+.Postagens{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.Postagens article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+.Postagens article aside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #5846f995;
+}
+
+@media screen and (min-width: 767px){
+    .DashBoard .dados{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .Postagens article{
+        flex-direction: row;
+    }
+    .Postagens article aside{
+        width: calc(50% - 20px);
+        height: 450px;
+    }
+    
+}
+
+@media screen and (min-width: 1023px){
+    nav ul li a{
+        display: flex;
+        align-items: center;
+        gap: -10px;
+    }
+    nav ul li a img{
+        height: 40px;
+    }
+    main{
+        flex-direction: row;
+        gap: 0;
+        align-items: flex-start;
+    }
+    section{
+        width: 50%;
+    }
+    .DashBoard .perfil aside img{
+        width: 150px;
+        height: 150px;
+    }
+    .DashBoard .dados{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:  repeat(3, 1fr);
+        gap: 20px;
+    }
+    .Postagens{
+        width: 70%;
+    }
+    .Postagens article{
+        flex-direction: column;
+    }
+    .Postagens article aside{
+        height: 350px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1439px){
+    .DashBoard .dados{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}

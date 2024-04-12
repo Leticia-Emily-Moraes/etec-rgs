@@ -1,72 +1,18 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+:root {
+    --FontStandard: 'Roboto', sans-serif;
+    --Colorheader: #1806b9cc;
 }
-html{
-    width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-}
-body{
-    background: linear-gradient(45deg, #563afae6 0%, rgba(116, 15, 214, 0.9) 100%), url(../img/fundos/hero-bg.jpg) center center no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    font-family: "poppins", sans-serif;
-}
-header{
-    background-color: #2410C3;
-    width: 100%;
-    height: 120px;
+
+nav ul li a{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0px 50px;
+    gap: 5px;
 }
-header h1{
-    color: white;
-    font-size: 30px;
-    font-weight: 600;
-}
-header #Perfil{
-    width: 15%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-header #Perfil p{
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-
-}
-header #Perfil a{
-    display: block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    border: #c9c2ff;
-}
-
-header nav{
-    width: 20%;
-}
-header nav ul{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-header nav ul li{
-    list-style: none;
-}
-header nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-
+nav ul li a img{
+    width: 20px;
+    height: 20px;
 }
 main{
     width: 100%;
@@ -74,9 +20,10 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--FontStandard);
 }
 main section{
-    width: 50%;
+    width: 100%;
     height: 100%;
     padding: 0 50px;
     display: flex;
@@ -85,7 +32,6 @@ main section{
     align-items: center;
 }
 section h2{
-    color: white;
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -103,16 +49,24 @@ section form div{
     justify-content: center;
 }
 section form div label{
-    color: #ffffff;
     text-align: justify;
     font-size: 25px;
+}
+section form div select{
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border: 3px solid #7e74d8;
 }
 section form div input[type="text"]{
     width: 300px;
     height: 30px;
     margin: 10px;
     padding: 5px;
-    border: 3px solid #100069;
+    border: 3px solid #7e74d8;
+    font-size: 16px;
+    font-family: var(--FontStandard);
 } 
 section form div input[type="file"]{
     display: none;
@@ -123,8 +77,8 @@ section form div label#imagem{
     height: 100px;
     margin: 10px;
     padding: 5px;
-    border: 3px dashed #100069;
-    color: #100069;
+    border: 3px dashed #7e74d8;
+    color: #7e74d8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,7 +86,7 @@ section form div label#imagem{
     overflow: hidden;
 }
 section form div label#imagem:hover{
-    background-color: #10006950;
+    background-color: #7e74d8cc;
     color: #ffffff;
     border: 3px dashed #ffffff;
     transition: all 200ms ease-in-out;
@@ -143,23 +97,25 @@ section form div label#imagem:active{
     border: 3px dashed #ffffff;
 }
 section form div label#imagem:focus{
-    outline: 3px solid #100069;
+    outline: 3px solid #7e74d8;
 }
 section form div label .ImagemPreview .ImgViewer{
     max-width: 100%;
 }
 section form div textarea{
     width: 300px;
-    height: 150px;
+    height: 70px;
     margin: 10px;
     padding: 5px;
-    border: 3px solid #100069;
+    border: 3px solid #7e74d8;
     resize: none;
+    font-size: 16px;
+    font-family: var(--FontStandard);
 }
 section form div input[type=submit]{
     width: 150px;
     padding: 10px;
-    border: 3px solid #100069;
+    border: 3px solid #7e74d8;
     border-radius: 5px;
     background-color: #ffffff;
     color: #000000;
@@ -169,7 +125,7 @@ section form div input[type=submit]{
 section form div input[type=submit]:hover{
     border: 3px solid #ffffff;
     border-radius: 5px;
-    background-color:#100069 ;
+    background-color:#7e74d8 ;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
