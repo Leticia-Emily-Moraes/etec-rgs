@@ -14,7 +14,7 @@
     <!-- Arquivo CSS responsivo -->
     <link rel="stylesheet" href="../assets/style/patternResponsive.css">
     <!-- Arquivo CSS proprio -->
-    <link rel="stylesheet" href="../assets/style/postagemConteudo.css">
+    <link rel="stylesheet" href="../assets/style/postagemCapa.css">
 
 
 </head>
@@ -37,35 +37,39 @@
     </header>
     <main>
         <section class="cadastraPostagem">
-            <h2>Conteúdo da Noticia</h2>
+            <h2>Capa da Noticia</h2>
             <form action="" method="post" enctype="multipart/form-data">
                 <div>
-                    <label for="Titulo">Texto:</label>
-                    <textarea name="Desc" id="Desc" cols="20" rows="5"
-                        placeholder="Texto da sua Noticia"
-                        required></textarea>
-                        <button type="button">Adicionar Texto</button>
+                    <label for="Titulo">Titulo:</label>
+                    <input type="text" name="Titulo" id="Titulo" maxlength="30" placeholder="Titulo da Notícia"
+                        required>
                 </div>
                 <div>
-                    <label for="img">Imagens:</label>
+                    <label for="Desc">Resumo:</label>
+                    <textarea name="Desc" id="Desc" cols="20" rows="5"
+                        placeholder="Seu resumo da notícia com no máximo 100 caracteres" maxlength="100"
+                        required></textarea>
+                </div>
+                <div>
+                    <label for="img">Imagem principal: </label>
                     <label for="img" translate="0" tabindex="0" id="imagem">
                         <span class="ImagemPreview"></span>
                     </label>
-                    <input type="file" accept="image/*" id="img" name="img">
-                    <button type="button">Adicionar imagem</button>
+                    <input type="file" accept="image/*" id="img" name="img" required>
+                </div>
+                <div>
+                    <label for="Temas">Essa Postagem é sobre: </label>
+                    <select name="Temas" id="Temas" required>
+                        <option value="Direção">Direção</option>
+                        <option value="Grêmio">Grêmio</option>
+                        <option value="Biblioteca">Biblioteca</option>
+                        <option value="Esportes">Esportes</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Próximo">
                 </div>
             </form>
-        </section>
-        <section>
-            <h2>Preview</h2>
-            <article class="PreviewPost">
-
-            </article>
-            <article class="Previewbutton">
-                <button>Limpar</button>
-                <button>Limpar tudo</button>
-                <button>Publicar</button>
-            </article>
         </section>
     </main>
     <script src="../assets/js/postagem.js"></script>
