@@ -13,6 +13,7 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -20,41 +21,46 @@
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 5px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     transition: transform 0.5s ease;
-    padding: 10px 50px;
+    padding: 0 50px;
     flex: 0 0 100%;
     color: #ffffff;
     text-decoration: none;
-    border-bottom: 5px solid #574ACC;
+    background: linear-gradient(45deg, rgba(146,36,255,1) 18%, rgba(91,53,255,1) 39%, rgba(71,118,255,1) 67%, rgba(77,185,255,1) 89%);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
 }
-.slides span{
-    width: 96%;
+
+.slides span {
+    width: 80%;
     max-height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 5px 10px;
-    color: #000000;
-    border: 5px solid #574ACC;
+    color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
 }
+
 .slides span h1 {
+    color: #ffffff !important;
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 1px;
     padding: 10px;
 }
-.slides span p{
+
+.slides span p {
     letter-spacing: 1px;
     text-align: justify;
 }
-.slides picture{
+
+.slides picture {
     max-height: 65%;
     object-fit: cover;
     border-radius: 10px;
@@ -65,6 +71,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: 0 0 10px #00000050;
 }
 
 #SetaAnterior,
@@ -77,10 +84,9 @@
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 24px;
-    height: 90%;
+    height: 100%;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 4em;
     font-weight: 700;
     z-index: 9;
 }
@@ -206,6 +212,7 @@
     padding: 50px 20px;
     text-align: center;
 }
+
 /* .servicos h1{
     cursor: pointer;
 } */
@@ -219,6 +226,7 @@
     /* max-height: 0;
     overflow: hidden; */
 }
+
 /* .servicos aside.active{
     position: static;
     max-height: 1180px; 
@@ -401,7 +409,7 @@
 .contato {
     width: 100%;
     height: 100%;
-    background-color: #752cdd;
+    background-color: #3863ff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -605,7 +613,8 @@
 @media screen and (min-width: 1023px) {
 
     nav.navSegundaria {
-        background-color: #1806b9b7;
+        border-top: 5px solid #ffffff;
+        background-color: #3863ff;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -653,7 +662,6 @@
         height: 100%;
         display: flex;
         flex-direction: row;
-        gap: 20px;
     }
 
     .slides {
@@ -865,5 +873,19 @@
         justify-content: space-around;
         align-items: flex-start;
         gap: 10px;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
