@@ -39,7 +39,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(45deg, #5846f9, #a68eff);
+    background-image: linear-gradient(45deg, #112cf8, #58bfff);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
 }
@@ -61,7 +61,7 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     top: calc(50% - 30px);
     left: calc(50% - 30px);
-    border: 6px solid #5846f9;
+    border: 6px solid #3863ff;
     border-top-color: #e7e4fe;
     border-radius: 50%;
     width: 60px;
@@ -96,7 +96,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #1806b9cc;
+    background-color: #3863ff;
     height: 15vh;
     transition: top 0.5s;
     position: fixed;
@@ -134,13 +134,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .logo {
-    width: 80%;
+    width: 100%;
 }
 
 #navPrincipal {
     position: fixed;
     top: 15vh;
-    background-color: #4637C7;
+    background-color: #3266ff;
     width: 50%;
     font-size: 14px;
     text-align: right;
@@ -148,7 +148,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     padding-right: 25px;
     transition: right 0.5s ease;
     height: 100%;
@@ -159,7 +159,8 @@ body::-webkit-scrollbar-thumb {
 nav#navPrincipal ul {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     list-style: none;
     width: auto;
@@ -168,18 +169,19 @@ nav#navPrincipal ul {
 
 nav#navPrincipal ul li {
     padding: 15px 0px;
+    width: 50%;
 }
 
 .RedesSociais a img {
-    width: 50px;
+    width: 40%;
 }
-
 .RedesSociais a img.iconHover {
     display: none;
 }
 
 nav#navPrincipal ul li a {
     text-decoration: none;
+    width: auto;
     color: #ffffffb3;
     font-size: 16px;
     font-weight: 500;
@@ -258,11 +260,11 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     top: 15vh;
     gap: 10px;
-    padding-top: 20px;
 }
 
 footer {
@@ -274,7 +276,7 @@ footer {
     align-items: flex-start;
     gap: 20px;
     padding: 50px;
-    background: linear-gradient(45deg, rgba(86, 58, 250, 0.9) 0%, rgba(116, 15, 214, 0.9) 100%), url('../img/fundos/footer-bg.jpg') center center no-repeat;
+    background: linear-gradient(45deg, rgba(146,36,255,0.9) 18%, rgba(91,53,255,0.9) 39%, rgba(71,118,255,0.9) 67%, rgba(77,185,255,0.9) 89%), url('../img/fundos/footer-bg.jpg') center center no-repeat;
     background-size: cover;
     color: #ffffff;
 }
@@ -356,7 +358,7 @@ footer span.FRedesSociais img {
     width: 50px;
     z-index: 996;
     height: 50px;
-    background-color: #5846f9;
+    background-color: #3863ff;
     border-radius: 5px;
     border: 2px solid #ffffff;
     font-size: 2em;
@@ -369,7 +371,7 @@ footer span.FRedesSociais img {
 }
 
 #backToTop:hover {
-    background-color: #7b27d8;
+    background-color:#002093;
 }
 
 #backToTop.active {
