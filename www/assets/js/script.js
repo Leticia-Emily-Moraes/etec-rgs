@@ -7,7 +7,7 @@ let interval;
 
 function atualizarSlider() {
     const slideWidth = slide[0].clientWidth;
-    slider.style.transform = `translateX(-${currentIndex * (slideWidth)}px)`;
+    slider.style.transform = `translateX(-${currentIndex * (slideWidth)}px)`; 
 }
 
 function nextSlide() {

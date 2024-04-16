@@ -1,3 +1,14 @@
+main {
+    position: relative;
+    top: 15vh;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
 main h1 {
     font-size: 1.75rem;
     text-align: center;
@@ -93,8 +104,6 @@ main section article aside p {
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    position: relative;
-    overflow: hidden;
 }
 
 .materias h2 {
@@ -104,7 +113,6 @@ main section article aside p {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    border: 1px solid #000000;
     padding: 10px;
     border-radius: 5px;
 }
@@ -116,26 +124,16 @@ main section article aside p {
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    visibility: hidden;
-    position: absolute;
-    transition: visibility 0s, max-height 0.5s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
-}
-
-.materias aside.cardvisivel {
-    visibility: visible;
-    position: static;
-    max-height: 1180px;
-    transition: visibility 0s, max-height 0.5s ease-in-out;
 }
 
 .materias aside p {
     width: 80%;
     text-align: center;
     padding: 5px;
-    border: 2px solid#5846F9;
-    border-radius: 5px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #000000;
+    border-right: 2px solid #000000;
+    box-shadow: 5px 5px 5px #00000033;
 }
 @media screen and (min-width: 1023px) {
 
@@ -160,13 +158,11 @@ main section article aside p {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 20px;
         margin-top: 20px;
     }
 
     main section article{
         width: 48%;
-        padding: 20px;
     }
     
     article.imagens{
@@ -179,5 +175,20 @@ main section article aside p {
     article.imagens img{
         width: 100%;
         margin: 5px;
+    }
+    .materias h1{
+        width: 100%;
+        display: block;
+    }
+    .materias {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .materias aside{
+        width: 300px;
     }
 }
