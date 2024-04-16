@@ -5,6 +5,7 @@ nav ul li a{
     display: flex;
     align-items: center;
     gap: 5px;
+    width: 150px !important;
 }
 nav ul li a img{
     width: 20px;
@@ -28,7 +29,7 @@ h1 {
 hr {
     width: 50px;
     height: 3px;
-    background-color: #5846F9;
+    background-color: #3863ff;
     border: none;
     border-radius: 20px;
 }
@@ -45,13 +46,14 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     gap: 10px;
 }
 .DashBoard .perfil aside{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    padding: 10px;
 }
 .DashBoard .perfil aside img{
     width: 100px;
@@ -67,22 +69,22 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 .DashBoard .dados aside {
     height: 200px;
     width: 100%;
     border-radius: 20px;
-    background-color: #887bff;
-    box-shadow: 0 5px 5px #5846f995;
+    background-color: #6ea8fe;
+    box-shadow: 0 0 5px 2px #3d8aff95;
 }
 .DashBoard .dados aside h2{
-    background-color: #aea5ff;
+    background-color: #9adcff;
     height: 60px;
     text-align: center;
     line-height: 60px;
-    font-size: 40px;
-    border-bottom: 5px solid #5846F9;
+    font-size: 30px;
+    border-bottom: 5px solid #46abf9;
     border-radius: 20px 20px 0 0;
 }
 
@@ -117,7 +119,7 @@ hr {
     padding: 20px;
     border-radius: 10px;
     background-color: #ffffff;
-    box-shadow: 0 0 5px #5846f995;
+    box-shadow: 0 0 5px #3d8aff95;
 }
 
 @media screen and (min-width: 767px){
@@ -139,6 +141,7 @@ hr {
 
 @media screen and (min-width: 1023px){
     nav ul li a{
+        width:auto !important;
         display: flex;
         align-items: center;
         gap: -10px;

@@ -38,11 +38,7 @@ interval = setInterval(() => {
         setTimeout(() => {
             currentIndex = 0;
             atualizarSlider();
-<<<<<<< HEAD
         }, 8000);
-=======
-        }, 5000); // Atraso para criar um efeito suave de rolagem infinita
->>>>>>> 0fdd71d52af9e7c31da933502cb2fa3ff0ad85d3
     }
 }, 8000);
 
