@@ -11,17 +11,12 @@ if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > 
     // Sessão expirada, destrói a sessão e redireciona para a página de login
     session_unset();
     session_destroy();
-    header('Location: login.php?timeout=true');
+    header('Location: LoginPost.php?timeout=true');
     exit();
 }
 
 // Atualiza o tempo da última atividade na sessão
 $_SESSION['last_activity'] = time();
-
-if(isset($_SESSION['userName'])) {
-    header('Location: postagem.php');
-    exit();
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userName = $_POST['login'];
@@ -35,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($Nomebd == $userName && $Senhabd == $senha) {
         $_SESSION['userName'] = $userName;
-        header('Location: postagem.php');
+        header('Location: LoginPost.html');
         exit();
     } else {
         $erroLogin = "Usuário ou senha incorretos.";
@@ -45,30 +40,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postagens RGS</title>
-    <link rel="stylesheet" href="../assets/css/LoginPost.css">
+    <title>Postagens RGS - Login</title>
+    <link rel="stylesheet" href="../assets/style/LoginPost.css">
 </head>
 
 <body>
     <main>
         <section class="login">
             <h1>Entrar para publicar</h1>
+            <?php if(isset($erroLogin)): ?>
+                <p class="ErroLogin"><?php echo $erroLogin; ?></p>
+            <?php endif; ?>
             <form method="post" action="">
-                <p class="ErroLogin"></p>
                 <div>
                     <label for="login">Nome de Login:</label>
                     <input type="text" name="login" id="login" placeholder="Digite seu nome de usuario" required>
                 </div>
                 <div>
                     <label for="senha">Senha de Login:</label>
-                    <span><input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required minlength="8"><a href="#"><img src="../assets/img/icons/Visivel.svg" alt=""></a></span>
+                    <span><input type="password" name="senha" id="senha" placeholder="Digite sua senha" required minlength="8"><a href="#"><img src="../assets/img/icons/Visivel.svg" alt=""></a></span>
                 </div>
                 <div>
                     <input type="submit" value="Entrar">
