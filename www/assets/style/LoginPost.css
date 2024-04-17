@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    background: linear-gradient(45deg, #563afae6 0%, rgba(116, 15, 214, 0.9) 100%), url(../img/fundos/hero-bg.jpg) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-family: "poppins", sans-serif;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.login, section.imagem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+section.imagem img{
+    max-width: 50%;
+    object-fit: contain;
+    animation: animacaoRaposa 2s infinite alternate;
+}
+section.login h1{
+    color: #ffffff;
+    padding-bottom: 10px;
+    font-size: 35px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    position: relative;
+}
+form div input{
+    width: 350px;
+    height: 40px;
+    margin: 10px;
+    padding: 5px;
+    border: 3px solid #100069;
+} 
+form div label{
+    color: #ffffff;
+    text-align: justify;
+    font-size: 25px;
+
+}
+form div input[type=submit]{
+    width: 150px;
+    padding: 10px;
+    border: 3px solid #100069;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    transition: all .5s ease;
+
+}
+form div input[type=submit]:hover{
+    border: 3px solid #ffffff;
+    background-color:#1f00cf;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+form div span a{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+form div span img{
+    height: 30px;
+}
+.ErroLogin{
+    color: #690000;
+}
+@media screen and (min-width: 767px){
+    section.imagem img{
+        max-width: 30%;
+        object-fit: contain;
+    }
+}
+@media screen and (min-width: 1023px){
+    main{
+        flex-direction: row;
+    }
+    section.imagem img{
+        max-width: 50%;
+        object-fit: contain;
+        position: absolute;
+        animation: animacaoRaposa 2s infinite alternate;
+    }
+}
+@keyframes animacaoRaposa {
+    0%{
+       transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(30px);
+    }
+}

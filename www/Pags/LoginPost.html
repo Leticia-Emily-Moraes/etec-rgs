@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postagens RGS - Login</title>
+    <link rel="stylesheet" href="../assets/style/LoginPost.css">
+</head>
+
+<body>
+    <main>
+        <section class="login">
+            <h1>Entrar para publicar</h1>
+            <form method="post" action="">
+                <p class="ErroLogin"></p>
+                <div>
+                    <label for="login">Nome de Login:</label>
+                    <input type="text" name="login" id="login" placeholder="Digite seu nome de usuario" required>
+                </div>
+                <div>
+                    <label for="senha">Senha de Login:</label>
+                    <span><input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required minlength="8"><a href="#"><img src="../assets/img/icons/Visivel.svg" alt=""></a></span>
+                </div>
+                <div>
+                    <input type="submit" value="Entrar">
+                </div>
+            </form>
+        </section>
+        <section class="imagem">
+            <img src="../assets/img/pandoras/raposaEtec.png" class="img-fluid animated" alt="">
+        </section>
+    </main>
+    <script>
+        const inputSenha = document.querySelector('input[type="password"]');
+        const imgVisivel = document.querySelector('img');
+        imgVisivel.addEventListener('click', () => {
+            if (inputSenha.type === 'password') {
+                inputSenha.type = 'text';
+                imgVisivel.src = '../assets/img/icons/Invisivel.svg';
+            } else {
+                inputSenha.type = 'password';
+                imgVisivel.src = '../assets/img/icons/Visivel.svg';
+            }
+        });
+    </script>
+</body>
+
+</html>
