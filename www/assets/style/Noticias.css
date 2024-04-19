@@ -1,3 +1,6 @@
+main{
+    padding: 20px;
+}
 section {
     width: 100%;
     height: auto;
@@ -69,7 +72,7 @@ h1 {
 hr {
     width: 50px;
     height: 3px;
-    background-color: #5846F9;
+    background-color: #3266ff;
     border: none;
     border-radius: 20px;
 }
@@ -77,6 +80,20 @@ hr {
 section article p {
     text-align: center;
     letter-spacing: .5px;
+}
+section article button{
+    padding: 10px 15px;
+    background-color: #3266ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--FontStandard);
+    font-size: 1rem;
+    transition: background-color .5s;
+}
+section article button:hover{
+    background-color: #1a4fbd;
 }
 
 section article .container {
