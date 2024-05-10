@@ -1,17 +1,20 @@
-main{
+main {
     padding: 20px 0px;
 }
-nav ul li a{
+
+nav ul li a {
     display: flex;
     align-items: center;
     gap: 5px;
     width: 150px !important;
 }
-nav ul li a img{
+
+nav ul li a img {
     width: 20px;
     height: 20px;
 }
-section{
+
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,68 +36,88 @@ hr {
     border: none;
     border-radius: 20px;
 }
-.DashBoard{
+
+.DashBoard {
     width: 90%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
     padding: 20px;
 }
-.DashBoard .perfil{
+
+.DashBoard .perfil {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 10px;
 }
-.DashBoard .perfil aside{
+
+.DashBoard .perfil aside {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    padding: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
 }
-.DashBoard .perfil aside img{
+
+.DashBoard .perfil aside img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
-.DashBoard .perfil aside:last-child{
+
+.DashBoard .perfil aside:last-child {
     width: 60%;
     gap: 10px;
 }
-.DashBoard .dados{
+
+.DashBoard .dados {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    color: #000000;
 }
+
 .DashBoard .dados aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
     height: 200px;
     width: 100%;
     border-radius: 20px;
     background-color: #6ea8fe;
     box-shadow: 0 0 5px 2px #3d8aff95;
 }
-.DashBoard .dados aside h2{
+
+.DashBoard .dados aside h2 {
     background-color: #9adcff;
     height: 60px;
     text-align: center;
     line-height: 60px;
-    font-size: 30px;
+    font-size: 25px;
     border-bottom: 5px solid #46abf9;
     border-radius: 20px 20px 0 0;
 }
 
-.DashBoard .dados aside p{
-    height: 140px;
+.DashBoard .dados aside p.FraseGrande {
     text-align: center;
-    line-height: 140px;
+    font-size: 40px;
+    text-wrap: balance;
+}
+
+.DashBoard .dados aside p {
+    text-align: center;
     font-size: 60px;
 }
-.Postagens{
+
+.Postagens {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -102,7 +125,8 @@ hr {
     gap: 20px;
     padding: 20px;
 }
-.Postagens article{
+
+.Postagens #CardsPostagens {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -110,76 +134,169 @@ hr {
     align-items: center;
     gap: 20px;
 }
-.Postagens article aside{
+
+.Postagens #CardsPostagens aside {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: start;
     padding: 20px;
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 0 5px #3d8aff95;
+    gap: 20px;
 }
 
-@media screen and (min-width: 767px){
-    .DashBoard .dados{
+.Postagens #CardsPostagens aside .title-img,
+.Postagens #CardsPostagens aside .content-noticia {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    gap: 20px;
+}
+
+.Postagens #CardsPostagens aside .title-img img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.Postagens #CardsPostagens aside .title-img h1,
+.Postagens #CardsPostagens aside .content-noticia p {
+    color: #000000;
+    text-align: left;
+}
+
+.Postagens #CardsPostagens aside .content-noticia span {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.Postagens #CardsPostagens aside .content-noticia span p:nth-child(1) {
+    background-color: #9adcff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Postagens #CardsPostagens aside .content-noticia span p:nth-child(2) {
+    display: flex;
+    align-items: center;
+}
+
+.Postagens #CardsPostagens aside .content-noticia span p:nth-child(2)::before {
+    content: url('../img/icons/data.svg');
+    padding-right: 5px;
+    align-self: baseline;
+}
+
+.Postagens #CardsPostagens aside .content-noticia p {
+    font-size: 16px;
+
+}
+
+.Postagens #CardsPostagens aside .content-noticia p:last-child {
+    font-size: 14px;
+
+}
+
+@media screen and (min-width: 767px) {
+    .DashBoard .dados {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 20px;
     }
-    .Postagens article{
+
+    .Postagens #CardsPostagens {
         flex-direction: row;
     }
-    .Postagens article aside{
+
+    .Postagens #CardsPostagens aside {
         width: calc(50% - 20px);
         height: 450px;
     }
-    
+
+    .Postagens #CardsPostagens aside .title-img {
+        height: 50%;
+    }
+    .Postagens #CardsPostagens aside .title-img img {
+        height: 100%;
+    }
+
 }
 
-@media screen and (min-width: 1023px){
-    nav ul li a{
-        width:auto !important;
+@media screen and (min-width: 1023px) {
+    nav ul li a {
+        width: auto !important;
         display: flex;
         align-items: center;
         gap: -10px;
     }
-    nav ul li a img{
+
+    nav ul li a img {
         height: 40px;
     }
-    main{
+
+    main {
         flex-direction: row;
         gap: 0;
         align-items: flex-start;
     }
-    section{
+
+    section {
         width: 50%;
     }
-    .DashBoard .perfil aside img{
+
+    .DashBoard .perfil aside img {
         width: 150px;
         height: 150px;
     }
-    .DashBoard .dados{
+
+    .DashBoard .dados {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows:  repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         gap: 20px;
     }
-    .Postagens{
+
+    .Postagens {
         width: 70%;
     }
-    .Postagens article{
+
+    .Postagens #CardsPostagens {
         flex-direction: column;
     }
-    .Postagens article aside{
+
+    .Postagens #CardsPostagens aside {
+        display: flex;
+        flex-direction: row;
         height: 350px;
         width: 100%;
     }
+
+    .Postagens #CardsPostagens aside .title-img,
+    .Postagens #CardsPostagens aside .content-noticia{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        gap: 20px;
+    }
+    .Postagens #CardsPostagens aside .title-img img {
+        height: 100%;
+    }
 }
-@media screen and (min-width: 1439px){
-    .DashBoard .dados{
+
+@media screen and (min-width: 1439px) {
+    .DashBoard .dados {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
