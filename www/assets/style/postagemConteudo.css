@@ -40,6 +40,10 @@ main section .PreviewPost{
     border: 3px solid #7e74d8;
     background-color: #ffffff;
 }
+main section .PreviewPost img{
+    width: 100%;
+    height: auto;
+}
 section form{
     display: flex;
     flex-direction: column;
@@ -125,6 +129,19 @@ section form div input[type=submit], button{
     font-weight: bold;
     align-self: center;
     margin: 5px 0px;
+}
+section form div input[type=submit]:disabled, button:disabled{
+    background-color: #ffffff;
+    color: #000000;
+    cursor: not-allowed;
+    border: none;
+}
+section form div input[type=submit]:disabled:hover, button:disabled:hover{
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    cursor: not-allowed;
+
 }
 section form div input[type=submit]:hover, button:hover{
     border: 3px solid #ffffff;

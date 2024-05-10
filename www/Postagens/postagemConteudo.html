@@ -42,9 +42,9 @@
                 <div>
                     <label for="Titulo">Texto:</label>
                     <textarea name="Desc" id="Desc" cols="20" rows="5"
-                        placeholder="Texto da sua Noticia"
-                        required></textarea>
-                        <button type="button">Adicionar Texto</button>
+                        placeholder="Texto da sua Noticia - máximo 200 caracteres"
+                        required maxlength="200"></textarea>
+                        <button type="button" id="add-Text">Adicionar Texto</button>
                 </div>
                 <div>
                     <label for="img">Imagens:</label>
@@ -52,7 +52,7 @@
                         <span class="ImagemPreview"></span>
                     </label>
                     <input type="file" accept="image/*" id="img" name="img">
-                    <button type="button">Adicionar imagem</button>
+                    <button type="button" id="add-Img">Adicionar imagem</button>
                 </div>
             </form>
         </section>
@@ -62,13 +62,13 @@
 
             </article>
             <article class="Previewbutton">
-                <button>Limpar</button>
-                <button>Limpar tudo</button>
+                <button id="Limpar">Limpar</button>
+                <button id="LimparTudo">Limpar tudo</button>
                 <button>Publicar</button>
             </article>
         </section>
     </main>
-    <script src="../assets/js/postagem.js"></script>
+    <script src="../assets/js/postagemConteudo.js"></script>
     <script src="../assets/js/pattern.js"></script>
 </body>
 

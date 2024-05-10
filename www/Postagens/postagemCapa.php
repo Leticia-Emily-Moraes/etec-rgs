@@ -65,13 +65,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erro ao enviar a imagem.";
         exit();
     }
+    
     $sql_insert = "INSERT INTO noticias (Titulo, Resumo, Categoria, ImagemCapa, Autor) VALUES ('$titulo_original', '$resumo', '$temas', '$caminho_imagem', $autorID);";
 
     // Salvar a query em um arquivo SQL
     $arquivo_sql = fopen("../assets/bd/baseData.sql", "a");
     fwrite($arquivo_sql, $sql_insert . "\n");
     fclose($arquivo_sql);
-
+    
     // Prepara o comando SQL para inserir os dados na tabela
     $query = "INSERT INTO noticias (Titulo, Resumo, Categoria, ImagemCapa, Autor) VALUES (?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conexao, $query);
@@ -82,15 +83,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erro ao inserir dados no banco de dados.";
         exit();
     }
+    
 }
 // Função para formatar o título
-function removeAcentos($str) {
+function removeAcentos($str)
+{
     $acentos = array('á', 'à', 'ã', 'â', 'é', 'ê', 'í', 'ó', 'ô', 'õ', 'ú', 'ç', 'ü', 'ñ');
     $semAcentos = array('a', 'a', 'a', 'a', 'e', 'e', 'i', 'o', 'o', 'o', 'u', 'c', 'u', 'n');
     return str_replace($acentos, $semAcentos, $str);
 }
 
-function toCamelCase($str) {
+function toCamelCase($str)
+{
     $str = removeAcentos($str); // Remove os acentos da string
     $words = explode(' ', strtolower($str)); // Divide a string em palavras e as converte para minúsculas
     $camelCase = lcfirst(implode('', array_map('ucfirst', $words))); // Capitaliza a primeira letra de cada palavra e as junta

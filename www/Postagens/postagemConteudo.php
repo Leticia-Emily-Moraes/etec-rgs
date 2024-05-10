@@ -1,43 +1,9 @@
-<?php 
+<?php
 
-
-
-
-
-
-
-
-
+session_start();
+include_once('../assets/bd/conexao.php');
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -81,10 +47,8 @@
             <form action="" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="Titulo">Texto:</label>
-                    <textarea name="Desc" id="Desc" cols="20" rows="5"
-                        placeholder="Texto da sua Noticia"
-                        required></textarea>
-                        <button type="button">Adicionar Texto</button>
+                    <textarea name="Desc" id="Desc" cols="20" rows="5" placeholder="Texto da sua Noticia" required></textarea>
+                    <button type="button">Adicionar Texto</button>
                 </div>
                 <div>
                     <label for="img">Imagens:</label>

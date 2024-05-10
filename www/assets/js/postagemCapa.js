@@ -52,7 +52,7 @@ document.getElementById('postForm').addEventListener('submit', function (event) 
     })
         .then(response => {
             if (response.ok) {
-                window.location.href = 'Principal.html'; // Redirecionar após o sucesso
+                window.location.href = '../Postagens/postagemConteudo.php'; // Redirecionar após o sucesso
             } else {
                 throw new Error('Erro ao enviar os dados.');
             }

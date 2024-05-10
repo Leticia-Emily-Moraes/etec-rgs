@@ -29,13 +29,13 @@ CREATE TABLE noticias (
 CREATE TABLE noticiasConteudo (
 	IdConteudo INT AUTO_INCREMENT NOT NULL,
     FkNoticia INT NOT NULL,
-    Text1 VARCHAR(100) NOT NULL,
+    Text1 VARCHAR(200) NOT NULL,
     Imagem1 VARCHAR(255) NOT NULL,
-	Text2 VARCHAR(100),
+	Text2 VARCHAR(200),
     Imagem2 VARCHAR(255),
-    Text3 VARCHAR(100),
+    Text3 VARCHAR(200),
     Imagem3 VARCHAR(255),
-    Text4 VARCHAR(100),
+    Text4 VARCHAR(200),
     Imagem4 VARCHAR(255),
     FOREIGN KEY (FkNoticia) REFERENCES noticias(IdNoticia),
     PRIMARY KEY(IdConteudo)
