@@ -36,12 +36,17 @@ main section article{
 }
 main section .PreviewPost{
     width: 90%;
-    min-height: 10rem;
+    min-height: 28rem;
     border: 3px solid #7e74d8;
     background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
 }
 main section .PreviewPost img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 section form{
@@ -111,8 +116,7 @@ section form div label .ImagemPreview .ImgViewer{
 }
 section form div textarea{
     width: 300px;
-    height: 400px;
-    margin: 10px;
+    height: 15rem;
     padding: 5px;
     border: 3px solid #7e74d8;
     resize: none;

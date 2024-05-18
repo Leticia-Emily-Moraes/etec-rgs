@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") //Verifica se o método de form é POS
     {
         $_SESSION['userName'] = $userName; // Cria uma sessão com o nome do usuário
         $_SESSION['expire_time'] = time() + $session_timeout; // Define o tempo de expiração da sessão
-        header('Location: Principal.php');
+        header('Location: Principal.html');
         exit();
     } else {
         $erroLogin = "Usuário ou senha incorretos.";

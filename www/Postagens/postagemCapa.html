@@ -26,8 +26,8 @@
         <img id="menuClose" src="../assets/img/icons/iconsNav/CloseMenu.svg" alt="">
         <nav id="navPrincipal">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Postar Noticia</a></li>
+                <li><a href="Principal.html">Início</a></li>
+                <li><a href="postagemCapa.html">Postar Noticia</a></li>
                 <li><a href="#">Ver Postagens</a></li>
                 <li><a href="#">Autores</a></li>
                 <li><a href="#">Logout<img src="../assets/img/icons/IconLogout.svg" alt=""></a></li>
@@ -38,17 +38,14 @@
     <main>
         <section class="cadastraPostagem">
             <h2>Capa da Noticia</h2>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form id="postForm" action="" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="Titulo">Titulo:</label>
-                    <input type="text" name="Titulo" id="Titulo" maxlength="30" placeholder="Titulo da Notícia"
-                        required>
+                    <input type="text" name="Titulo" id="Titulo" maxlength="30" placeholder="Titulo da Notícia" required>
                 </div>
                 <div>
                     <label for="Resumo">Resumo:</label>
-                    <textarea name="Resumo" id="Resumo" cols="20" rows="5"
-                        placeholder="Seu resumo da notícia com no máximo 100 caracteres" maxlength="100"
-                        required></textarea>
+                    <textarea name="Resumo" id="Resumo" cols="20" rows="5" placeholder="Seu resumo da notícia com no máximo 200 caracteres" maxlength="200" required></textarea>
                 </div>
                 <div>
                     <label for="img">Imagem principal: </label>
@@ -60,10 +57,12 @@
                 <div>
                     <label for="Temas">Essa Postagem é sobre: </label>
                     <select name="Temas" id="Temas" required>
-                        <option value="Direção">Direção</option>
-                        <option value="Grêmio">Grêmio</option>
                         <option value="Biblioteca">Biblioteca</option>
+                        <option value="Direção">Direção</option>
                         <option value="Esportes">Esportes</option>
+                        <option value="Esportes">Eventos</option>
+                        <option value="Grêmio">Grêmio</option>
+                        <option value="Esportes">Vestibulinho</option>
                     </select>
                 </div>
                 <div>
@@ -72,7 +71,7 @@
             </form>
         </section>
     </main>
-    <script src="../assets/js/postagem.js"></script>
+    <script src="../assets/js/postagemCapa.js"></script>
     <script src="../assets/js/pattern.js"></script>
 </body>
 

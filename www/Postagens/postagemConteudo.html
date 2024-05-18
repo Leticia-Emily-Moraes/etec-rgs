@@ -21,13 +21,13 @@
 
 <body>
     <header id="header">
-        <a href="#"><img class="logo" src="../assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
+        <a href="Principal.html"><img class="logo" src="../assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
         <img id="menu" src="../assets/img/icons/iconsNav/Menu.svg" alt="">
         <img id="menuClose" src="../assets/img/icons/iconsNav/CloseMenu.svg" alt="">
         <nav id="navPrincipal">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Postar Noticia</a></li>
+                <li><a href="Principal.html">Início</a></li>
+                <li><a href="postagemCapa.html">Postar Noticia</a></li>
                 <li><a href="#">Ver Postagens</a></li>
                 <li><a href="#">Autores</a></li>
                 <li><a href="#">Logout<img src="../assets/img/icons/IconLogout.svg" alt=""></a></li>
@@ -40,18 +40,15 @@
             <h2>Conteúdo da Noticia</h2>
             <form action="" method="post" enctype="multipart/form-data">
                 <div>
-                    <label for="Titulo">Texto:</label>
                     <textarea name="Desc" id="Desc" cols="20" rows="5"
-                        placeholder="Texto da sua Noticia - máximo 200 caracteres"
-                        required maxlength="200"></textarea>
-                        <button type="button" id="add-Text">Adicionar Texto</button>
+                        placeholder="Texto da sua Noticia - máximo 300 caracteres" required maxlength="300"></textarea>
+                    <button type="button" id="add-Text">Adicionar Texto</button>
                 </div>
                 <div>
-                    <label for="img">Imagens:</label>
-                    <label for="img" translate="0" tabindex="0" id="imagem">
+                    <label for="imgConteudo" translate="0" tabindex="0" id="imagem">
                         <span class="ImagemPreview"></span>
                     </label>
-                    <input type="file" accept="image/*" id="img" name="img">
+                    <input type="file" accept="image/*" id="imgConteudo" name="imgConteudo">
                     <button type="button" id="add-Img">Adicionar imagem</button>
                 </div>
             </form>
@@ -64,12 +61,13 @@
             <article class="Previewbutton">
                 <button id="Limpar">Limpar</button>
                 <button id="LimparTudo">Limpar tudo</button>
-                <button>Publicar</button>
+                <button id="PublicarNoticia">Publicar</button>
             </article>
         </section>
     </main>
     <script src="../assets/js/postagemConteudo.js"></script>
     <script src="../assets/js/pattern.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>

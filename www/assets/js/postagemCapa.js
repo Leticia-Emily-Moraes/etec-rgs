@@ -6,9 +6,8 @@ function formatarTitulo(titulo) {
 }
 
 // Evento de envio do formulário
-document.getElementById('postForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Impedir envio padrão do formulário
-
+const form = document.getElementById('postForm')
+form.addEventListener('submit', function (event) {
     // Obter dados do formulário
     const titulo = document.getElementById('Titulo').value;
     const resumo = document.getElementById('Resumo').value;
@@ -18,12 +17,14 @@ document.getElementById('postForm').addEventListener('submit', function (event) 
     // Validar se todos os campos estão preenchidos
     if (!titulo || !resumo || !temas || !imagem) {
         alert("Por favor, preencha todos os campos.");
+        event.preventDefault(); // Impedir envio do formulário se há campos faltando
         return;
     }
 
     // Verificar tamanho da imagem (limite de 5MB)
     if (imagem.size > 5 * 1024 * 1024) {
         alert("Desculpe, o arquivo é muito grande (limite de 5MB).");
+        event.preventDefault(); // Impedir envio do formulário se a imagem for grande demais
         return;
     }
 
@@ -32,36 +33,42 @@ document.getElementById('postForm').addEventListener('submit', function (event) 
     const extensao = imagem.name.split('.').pop().toLowerCase();
     if (!extensaoValida.includes(extensao)) {
         alert("Desculpe, apenas arquivos JPG, JPEG, PNG e GIF são permitidos.");
+        event.preventDefault(); // Impedir envio do formulário se a extensão for inválida
         return;
     }
 
     // Formatar o título
     const tituloFormatado = formatarTitulo(titulo);
 
-    // Criar um objeto FormData para enviar os dados do formulário
+    // Alterar o nome da imagem no objeto FormData
     const formData = new FormData();
     formData.append('Titulo', titulo);
     formData.append('Resumo', resumo);
     formData.append('Temas', temas);
     formData.append('img', imagem, tituloFormatado + '-capa.' + extensao); // Renomear a imagem
 
-    // Enviar dados para o arquivo PHP de processamento
+    // Submeter o formulário via JavaScript
     fetch('../Postagens/postagemCapa.php', {
         method: 'POST',
         body: formData
     })
-        .then(response => {
-            if (response.ok) {
-                window.location.href = '../Postagens/postagemConteudo.php'; // Redirecionar após o sucesso
-            } else {
-                throw new Error('Erro ao enviar os dados.');
-            }
-        })
-        .catch(error => {
-            console.error(error);
-            alert('Ocorreu um erro ao enviar os dados. Por favor, tente novamente.');
-        });
+    .then(response => {
+        if (response.ok) {
+            window.location.href = '../Postagens/postagemConteudo.html';
+            form.reset();
+        } else {
+            throw new Error('Erro ao enviar os dados.');
+        }
+    })
+    .catch(error => {
+        console.error(error);
+        alert('Ocorreu um erro ao enviar os dados. Por favor, tente novamente.');
+    });
+
+    event.preventDefault(); // Impedir o envio padrão do formulário, pois estamos lidando com isso via fetch
 });
+
+// Previsualização da imagem selecionada
 const inputImg = document.querySelector("#img");
 const PreImagem = document.querySelector(".ImagemPreview");
 const imagemTxt = "Coloque a Imagem";
@@ -90,4 +97,4 @@ inputImg.addEventListener("change", function(e) {
     } else {
         PreImagem.innerHTML = imagemTxt;
     }
-})
+});
