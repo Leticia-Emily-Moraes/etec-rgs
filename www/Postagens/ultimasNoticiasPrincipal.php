@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include_once('../assets/bd/conexao.php');
 
 $query = "SELECT n.Titulo, 

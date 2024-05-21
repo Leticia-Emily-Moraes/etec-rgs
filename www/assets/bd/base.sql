@@ -10,6 +10,7 @@ CREATE TABLE usuarios (
     NomeUser VARCHAR(50) NOT NULL,
     SenhaUser VARCHAR(100) NOT NULL, 
     Cargo VARCHAR(50) NOT NULL,
+    ImagemAutor VARCHAR(255) NOT NULL,
     UNIQUE (NomeUser), 
     INDEX (NomeUser)
 );
@@ -28,17 +29,39 @@ CREATE TABLE noticias (
 
 CREATE TABLE noticiasConteudo (
 	IdConteudo INT AUTO_INCREMENT NOT NULL,
-    FkNoticia INT NOT NULL,
-    Text1 VARCHAR(100) NOT NULL,
+    IdNoticia INT NOT NULL,
+    Text1 VARCHAR(300) NOT NULL,
     Imagem1 VARCHAR(255) NOT NULL,
-	Text2 VARCHAR(100),
+	Text2 VARCHAR(300),
     Imagem2 VARCHAR(255),
-    Text3 VARCHAR(100),
+    Text3 VARCHAR(300),
     Imagem3 VARCHAR(255),
-    Text4 VARCHAR(100),
+    Text4 VARCHAR(300),
     Imagem4 VARCHAR(255),
-    FOREIGN KEY (FkNoticia) REFERENCES noticias(IdNoticia),
+    FOREIGN KEY (IdNoticia) REFERENCES noticias(IdNoticia),
     PRIMARY KEY(IdConteudo)
+);
+
+CREATE TABLE galeriaDeImagens(
+	IdGaleria INT AUTO_INCREMENT NOT NULL,
+    IdNoticia INT NOT NULL,
+    Imagem1 VARCHAR(255) NOT NULL,
+    Imagem2 VARCHAR(255) NOT NULL,
+    Imagem3 VARCHAR(255) NOT NULL,
+    Imagem4 VARCHAR(255) NOT NULL,
+    Imagem5 VARCHAR(255) NOT NULL,
+    Imagem6 VARCHAR(255) NOT NULL,
+    Imagem7 VARCHAR(255) NOT NULL,
+    Imagem8 VARCHAR(255) NOT NULL,
+    Imagem9 VARCHAR(255) NOT NULL,
+    Imagem10 VARCHAR(255) NOT NULL,
+    Imagem11 VARCHAR(255) NOT NULL,
+    Imagem12 VARCHAR(255) NOT NULL,
+    Imagem13 VARCHAR(255) NOT NULL,
+    Imagem14 VARCHAR(255) NOT NULL,
+    Imagem15 VARCHAR(255) NOT NULL,
+    FOREIGN KEY (IdNoticia) REFERENCES noticias(IdNoticia),
+    PRIMARY KEY(IdGaleria)
 );
 
 INSERT INTO usuarios (NomeCompleto, NomeUser, SenhaUser, Cargo) VALUES ('Rodrigo Vicente','Root', 'Admin2024', 'Administrador');
@@ -46,3 +69,5 @@ INSERT INTO usuarios (NomeCompleto, NomeUser, SenhaUser, Cargo) VALUES ('Rodrigo
 SELECT * FROM usuarios;
 
 SELECT * FROM noticias;
+
+SELECT * FROM noticiasConteudo;

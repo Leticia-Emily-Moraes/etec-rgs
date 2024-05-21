@@ -21,16 +21,16 @@
 
 <body>
     <header id="header">
-        <a href="#"><img class="logo" src="../assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
+        <a href="Principal.html"><img class="logo" src="../assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
         <img id="menu" src="../assets/img/icons/iconsNav/Menu.svg" alt="">
         <img id="menuClose" src="../assets/img/icons/iconsNav/CloseMenu.svg" alt="">
         <nav id="navPrincipal">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Postar Noticia</a></li>
+                <li><a href="Principal.html">Início</a></li>
+                <li><a href="postagemCapa.html">Postar Noticia</a></li>
                 <li><a href="#">Ver Postagens</a></li>
                 <li><a href="#">Autores</a></li>
-                <li><a href="#">Logout<img src="../assets/img/icons/IconLogout.svg" alt=""></a></li>
+                <li><a href="logout.php">Logout<img src="../assets/img/icons/IconLogout.svg" alt=""></a></li>
             </ul>
         </nav>
         <!-- Final da Navbar -->
@@ -40,19 +40,16 @@
             <h2>Conteúdo da Noticia</h2>
             <form action="" method="post" enctype="multipart/form-data">
                 <div>
-                    <label for="Titulo">Texto:</label>
                     <textarea name="Desc" id="Desc" cols="20" rows="5"
-                        placeholder="Texto da sua Noticia"
-                        required></textarea>
-                        <button type="button">Adicionar Texto</button>
+                        placeholder="Texto da sua Noticia - máximo 300 caracteres" required maxlength="300"></textarea>
+                    <button type="button" id="add-Text">Adicionar Texto</button>
                 </div>
                 <div>
-                    <label for="img">Imagens:</label>
-                    <label for="img" translate="0" tabindex="0" id="imagem">
+                    <label for="imgConteudo" translate="0" tabindex="0" id="imagem">
                         <span class="ImagemPreview"></span>
                     </label>
-                    <input type="file" accept="image/*" id="img" name="img">
-                    <button type="button">Adicionar imagem</button>
+                    <input type="file" accept="image/*" id="imgConteudo" name="imgConteudo">
+                    <button type="button" id="add-Img">Adicionar imagem</button>
                 </div>
             </form>
         </section>
@@ -62,14 +59,81 @@
 
             </article>
             <article class="Previewbutton">
-                <button>Limpar</button>
-                <button>Limpar tudo</button>
-                <button>Publicar</button>
+                <button id="Limpar">Limpar</button>
+                <button id="LimparTudo">Limpar tudo</button>
+                <button id="PublicarNoticia">Publicar</button>
             </article>
         </section>
+        <section class="confirmacao">
+            <h2>Confirmação</h2>
+            <span>
+                <article class="ConfirmacaoCapa">
+                    <h2>Capa</h2>
+                    <div>
+                        <label for="Titulo">Titulo:</label>
+                        <p id="TituloCapaConfirm"></p>
+                    </div>
+                    <div>
+                        <label for="Resumo">Resumo:</label>
+                        <p id="ResumoCapaConfirm"></p>
+                    </div>
+                    <div>
+                        <label for="Temas">Tema:</label>
+                        <p id="TemasCapaConfirm"></p>
+                    </div>
+                    <div>
+                        <label for="img">Imagem:</label>
+                        <img id="ImagemCapaConfirm" src="" alt="">
+                    </div>
+                </article>
+                <article class="ConfirmacaoConteudo">
+                    <h2>Conteudo</h2>
+                    <aside>
+                        <div>
+                            <label for="Titulo">texto 1:</label>
+                            <p class="TextConteudoConfirm"></p>
+                        </div>
+                        <div>
+                            <label for="Titulo">texto 2:</label>
+                            <p class="TextConteudoConfirm"></p>
+                        </div>
+                        <div>
+                            <label for="Titulo">texto 3:</label>
+                            <p class="TextConteudoConfirm"></p>
+                        </div>
+                        <div>
+                            <label for="Titulo">texto 4:</label>
+                            <p class="TextConteudoConfirm"></p>
+                        </div>
+                    </aside>
+                    <aside>
+                        <div>
+                            <label for="img">Imagem 1:</label>
+                            <img class="ImagemConteudoConfirm" src="" alt="">
+                        </div>
+                        <div>
+                            <label for="img">Imagem 2:</label>
+                            <img class="ImagemConteudoConfirm" src="" alt="">
+                        </div>
+                        <div>
+                            <label for="img">Imagem 3:</label>
+                            <img class="ImagemConteudoConfirm" src="" alt="">
+                        </div>
+                        <div>
+                            <label for="img">Imagem 4:</label>
+                            <img class="ImagemConteudoConfirm" src="" alt="">
+                        </div>
+                    </aside>
+                </article>
+            </span>
+            <article class="ConfirmacaoButton">
+                <input type="submit" value="Cancelar" id="buttonCancelaNoticia">
+                <input type="submit" value="Confirmar" id="buttonConfirmaNoticia">
+        </section>
     </main>
-    <script src="../assets/js/postagem.js"></script>
+    <script src="../assets/js/postagemConteudo.js"></script>
     <script src="../assets/js/pattern.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>

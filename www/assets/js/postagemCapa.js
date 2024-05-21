@@ -1,13 +1,73 @@
 // Função para formatar o título
 function formatarTitulo(titulo) {
-    titulo = titulo.trim().replace(/\s+/g, '-'); // Substituir espaços por hífens
+    titulo = titulo.trim().replace(/\s+/g, '-'); // Substituir espaços por hífen
     titulo = titulo.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // Remover acentos
     return titulo.toLowerCase(); // Converter para minúsculas
 }
 
-// Evento de envio do formulário
-document.getElementById('postForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Impedir envio padrão do formulário
+const inputImg = document.querySelector("#img");
+const PreImagem = document.querySelector(".ImagemPreview");
+const imagemTxt = "Coloque a Imagem";
+PreImagem.innerHTML = imagemTxt;
+
+inputImg.addEventListener("change", function(e) {
+    const Mudanca = e.target;
+    const arquivo = Mudanca.files[0];
+
+    if (arquivo) {
+        const imagemTxt = "imagem colocada";
+        const leitor = new FileReader();
+        console.log(leitor);
+
+        leitor.readAsDataURL(arquivo);
+        leitor.addEventListener("load", function(e) {
+            const imagemCarregada = e.target;
+            const imagem = document.createElement('img');
+            imagem.src = imagemCarregada.result;
+            imagem.classList.add('ImgViewer');
+
+            PreImagem.innerHTML = " ";
+            PreImagem.appendChild(imagem);
+
+            // Armazenar imagem como base64 no localStorage
+            localStorage.setItem('imagemCapa', imagemCarregada.result);
+        });
+
+    } else {
+        PreImagem.innerHTML = imagemTxt;
+    }
+});
+
+function confirmacao(titulo, resumo, tema, imagem, callback) {
+    let confirmacao = document.querySelector(".confirmacao");
+    const pTitulo = document.querySelector('p#TituloConfirm');
+    const pResumo = document.querySelector('p#ResumoConfirm');
+    const pTema = document.querySelector('p#TemasConfirm');
+    const ImgCapa = document.querySelector('img#ImagemConfirm');
+    const botaoConfirmar = document.getElementById('buttonConfirmaNoticia');
+    const botaoCancela = document.getElementById('buttonCancelaNoticia');
+
+    confirmacao.style.display = "flex";
+    pTitulo.textContent = titulo;
+    pResumo.textContent = resumo;
+    pTema.textContent = tema;
+    ImgCapa.src = URL.createObjectURL(imagem);
+
+    botaoConfirmar.addEventListener('click', function() {
+        confirmacao.style.display = "none";
+        callback(true); // Chama o callback com true quando confirmado
+    });
+
+    botaoCancela.addEventListener('click', function() {
+        confirmacao.style.display = "none";
+        callback(false); // Chama o callback com false quando cancelado
+    });
+}
+
+const form = document.getElementById('postForm');
+form.addEventListener('submit', function(event) {
+    // Prevenir o envio padrão do formulário
+    event.preventDefault();
 
     // Obter dados do formulário
     const titulo = document.getElementById('Titulo').value;
@@ -38,56 +98,40 @@ document.getElementById('postForm').addEventListener('submit', function (event) 
     // Formatar o título
     const tituloFormatado = formatarTitulo(titulo);
 
-    // Criar um objeto FormData para enviar os dados do formulário
-    const formData = new FormData();
-    formData.append('Titulo', titulo);
-    formData.append('Resumo', resumo);
-    formData.append('Temas', temas);
-    formData.append('img', imagem, tituloFormatado + '-capa.' + extensao); // Renomear a imagem
+    // Armazenar dados no localStorage
+    localStorage.setItem('titulo', titulo);
+    localStorage.setItem('resumo', resumo);
+    localStorage.setItem('tema', temas);
 
-    // Enviar dados para o arquivo PHP de processamento
-    fetch('../Postagens/postagemCapa.php', {
-        method: 'POST',
-        body: formData
-    })
-        .then(response => {
-            if (response.ok) {
-                window.location.href = 'Principal.html'; // Redirecionar após o sucesso
-            } else {
-                throw new Error('Erro ao enviar os dados.');
-            }
-        })
-        .catch(error => {
-            console.error(error);
-            alert('Ocorreu um erro ao enviar os dados. Por favor, tente novamente.');
-        });
+    // Exibir popup de confirmação
+    confirmacao(titulo, resumo, temas, imagem, function(confirmado) {
+        if (confirmado) {
+            const formData = new FormData();
+            formData.append('Titulo', titulo);
+            formData.append('Resumo', resumo);
+            formData.append('Temas', temas);
+            formData.append('img', imagem, tituloFormatado + '-capa.' + extensao); // Renomear a imagem
+    
+            // Submeter o formulário via fetch
+            fetch('../Postagens/postagemCapa.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = '../Postagens/postagemConteudo.html';
+                    form.reset();
+                } else {
+                    throw new Error('Erro ao enviar os dados.');
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                alert('Ocorreu um erro ao enviar os dados. Por favor, tente novamente.');
+            });
+        } else {
+            // Se cancelado, não fazer nada
+            return;
+        }
+    });
 });
-const inputImg = document.querySelector("#img");
-const PreImagem = document.querySelector(".ImagemPreview");
-const imagemTxt = "Coloque a Imagem";
-PreImagem.innerHTML = imagemTxt;
-
-inputImg.addEventListener("change", function(e) {
-    const Mudanca = e.target;
-    const arquivo = Mudanca.files[0];
-
-    if (arquivo) {
-        const imagemTxt = "imagem colocada";
-        const leitor = new FileReader();
-        console.log(leitor);
-
-        leitor.readAsDataURL(arquivo);
-        leitor.addEventListener("load", function(e) {
-            const imagemCarregada = e.target;
-            const imagem = document.createElement('img');
-            imagem.src = imagemCarregada.result;
-            imagem.classList.add('ImgViewer');
-
-            PreImagem.innerHTML = " ";
-            PreImagem.appendChild(imagem);
-        });
-
-    } else {
-        PreImagem.innerHTML = imagemTxt;
-    }
-})

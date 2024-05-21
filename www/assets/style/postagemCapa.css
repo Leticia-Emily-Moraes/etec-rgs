@@ -5,16 +5,23 @@
     --Colorheader: #1806b9cc;
 }
 
-nav ul li a{
+main {
+    padding: 20px 0px;
+}
+
+nav ul li a {
     display: flex;
     align-items: center;
     gap: 5px;
+    width: 150px;
 }
-nav ul li a img{
+
+nav ul li a img {
     width: 20px;
     height: 20px;
 }
-main{
+
+main {
     width: 100%;
     height: 80%;
     display: flex;
@@ -22,7 +29,8 @@ main{
     align-items: center;
     font-family: var(--FontStandard);
 }
-main section{
+
+main section {
     width: 100%;
     height: 100%;
     padding: 0 50px;
@@ -31,35 +39,41 @@ main section{
     justify-content: center;
     align-items: center;
 }
-section h2{
+
+section h2 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
 }
-section form{
+
+section form {
     height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
-section form div{
+
+section form div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-section form div label{
+
+section form div label {
     text-align: justify;
     font-size: 25px;
 }
-section form div select{
+
+section form div select {
     width: 300px;
     height: 30px;
     margin: 10px;
     padding: 5px;
     border: 3px solid #7e74d8;
 }
-section form div input[type="text"]{
+
+section form div input[type="text"] {
     width: 300px;
     height: 30px;
     margin: 10px;
@@ -67,11 +81,13 @@ section form div input[type="text"]{
     border: 3px solid #7e74d8;
     font-size: 16px;
     font-family: var(--FontStandard);
-} 
-section form div input[type="file"]{
+}
+
+section form div input[type="file"] {
     display: none;
-} 
-section form div label#imagem{
+}
+
+section form div label#imagem {
     width: 300px;
     background-color: #ffffff;
     height: 100px;
@@ -85,24 +101,29 @@ section form div label#imagem{
     cursor: pointer;
     overflow: hidden;
 }
-section form div label#imagem:hover{
+
+section form div label#imagem:hover {
     background-color: #7e74d8cc;
     color: #ffffff;
     border: 3px dashed #ffffff;
     transition: all 200ms ease-in-out;
 }
-section form div label#imagem:active{
+
+section form div label#imagem:active {
     background-color: #573aff;
     color: #ffffff;
     border: 3px dashed #ffffff;
 }
-section form div label#imagem:focus{
+
+section form div label#imagem:focus {
     outline: 3px solid #7e74d8;
 }
-section form div label .ImagemPreview .ImgViewer{
+
+section form div label .ImagemPreview .ImgViewer {
     max-width: 100%;
 }
-section form div textarea{
+
+section form div textarea {
     width: 300px;
     height: 70px;
     margin: 10px;
@@ -112,7 +133,8 @@ section form div textarea{
     font-size: 16px;
     font-family: var(--FontStandard);
 }
-section form div input[type=submit]{
+
+section form div input[type=submit] {
     width: 150px;
     padding: 10px;
     border: 3px solid #7e74d8;
@@ -122,23 +144,126 @@ section form div input[type=submit]{
     font-weight: bold;
     align-self: center;
 }
-section form div input[type=submit]:hover{
+
+section form div input[type=submit]:hover {
     border: 3px solid #ffffff;
     border-radius: 5px;
-    background-color:#7e74d8 ;
+    background-color: #7e74d8;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
 }
-p.Erro{
+
+p.Erro {
     color: #ff0000;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
-p.Sucesso{
+
+p.Sucesso {
     color: #00ff00;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+}
+
+div.confirmacao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 550px;
+    max-height: 600px;
+    display: none;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 5px solid #573aff;
+    border-radius: 5px;
+}
+.confirmacao h2{
+    font-weight: 600;
+}
+.confirmacao .confirmacaoPostagem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.confirmacaoPostagem div:nth-child(4){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+.confirmacaoPostagem div:nth-child(4) img{
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.confirmacaoPostagem div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+}
+.confirmacaoPostagem div p{
+    width: 90%;
+    word-break: break-all;
+}
+
+.confirmacaoPostagem input[type=submit] {
+    width: 100px;
+    padding: 10px;
+    border: 3px solid #dd3c3c;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    align-self: center;
+}
+
+.confirmacaoPostagem input[type=submit]:last-child{
+    border: 3px solid #37d07c;
+}
+
+.confirmacaoPostagem input[type=submit]:hover {
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    background-color: #7e74d8;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1023px) {
+    nav ul li a {
+        width: auto !important;
+        display: flex;
+        align-items: center;
+        gap: -10px;
+    }
+
+    nav ul li a img {
+        height: 40px;
+    }
+
+    main {
+        flex-direction: row;
+        gap: 0;
+        align-items: flex-start;
+    }
 }
