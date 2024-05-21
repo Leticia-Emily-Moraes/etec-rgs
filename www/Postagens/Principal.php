@@ -2,6 +2,7 @@
 
 session_start();
 include_once('../assets/bd/conexao.php');
+include_once('Verifica.php');
 
 if (isset($_SESSION['userName'])) {
     $userName = $_SESSION['userName'];
@@ -34,7 +35,7 @@ if (isset($_SESSION['userName'])) {
     mysqli_stmt_fetch($stmt);
     mysqli_stmt_free_result($stmt);
 
-    //informações Gerias
+    //informações Gerais
 
     $query = "SELECT COUNT(IdNoticia) FROM noticias";
     $stmt = mysqli_prepare($conexao, $query);

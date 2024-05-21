@@ -30,7 +30,7 @@
                 <li><a href="postagemCapa.html">Postar Noticia</a></li>
                 <li><a href="#">Ver Postagens</a></li>
                 <li><a href="#">Autores</a></li>
-                <li><a href="#">Logout<img src="../assets/img/icons/IconLogout.svg" alt=""></a></li>
+                <li><a href="logout.php">Logout<img src="../assets/img/icons/IconLogout.svg" alt=""></a></li>
             </ul>
         </nav>
         <!-- Final da Navbar -->
@@ -63,6 +63,72 @@
                 <button id="LimparTudo">Limpar tudo</button>
                 <button id="PublicarNoticia">Publicar</button>
             </article>
+        </section>
+        <section class="confirmacao">
+            <h2>Confirmação</h2>
+            <span>
+                <article class="ConfirmacaoCapa">
+                    <h2>Capa</h2>
+                    <div>
+                        <label for="Titulo">Titulo:</label>
+                        <p id="TituloCapaConfirm"></p>
+                    </div>
+                    <div>
+                        <label for="Resumo">Resumo:</label>
+                        <p id="ResumoCapaConfirm"></p>
+                    </div>
+                    <div>
+                        <label for="Temas">Tema:</label>
+                        <p id="TemasCapaConfirm"></p>
+                    </div>
+                    <div>
+                        <label for="img">Imagem:</label>
+                        <img id="ImagemCapaConfirm" src="" alt="">
+                    </div>
+                </article>
+                <article class="ConfirmacaoConteudo">
+                    <h2>Conteudo</h2>
+                    <aside>
+                        <div>
+                            <label for="Titulo">texto 1:</label>
+                            <p class="TextConteudoConfirm"></p>
+                        </div>
+                        <div>
+                            <label for="Titulo">texto 2:</label>
+                            <p class="TextConteudoConfirm"></p>
+                        </div>
+                        <div>
+                            <label for="Titulo">texto 3:</label>
+                            <p class="TextConteudoConfirm"></p>
+                        </div>
+                        <div>
+                            <label for="Titulo">texto 4:</label>
+                            <p class="TextConteudoConfirm"></p>
+                        </div>
+                    </aside>
+                    <aside>
+                        <div>
+                            <label for="img">Imagem 1:</label>
+                            <img class="ImagemConteudoConfirm" src="" alt="">
+                        </div>
+                        <div>
+                            <label for="img">Imagem 2:</label>
+                            <img class="ImagemConteudoConfirm" src="" alt="">
+                        </div>
+                        <div>
+                            <label for="img">Imagem 3:</label>
+                            <img class="ImagemConteudoConfirm" src="" alt="">
+                        </div>
+                        <div>
+                            <label for="img">Imagem 4:</label>
+                            <img class="ImagemConteudoConfirm" src="" alt="">
+                        </div>
+                    </aside>
+                </article>
+            </span>
+            <article class="ConfirmacaoButton">
+                <input type="submit" value="Cancelar" id="buttonCancelaNoticia">
+                <input type="submit" value="Confirmar" id="buttonConfirmaNoticia">
         </section>
     </main>
     <script src="../assets/js/postagemConteudo.js"></script>

@@ -1,43 +1,42 @@
 <?php
-session_start();
 
 include_once('../assets/bd/conexao.php'); //Inclui o arquivo de conexão com o banco de dados
 
-$session_timeout = 3600; // Tempo para fazer login novamente (depois de uma hora)
+function autenticar($conexaoComBanco, $nomeDoUsuario, $Senha)
+{
+    $nomeDoUsuario = mysqli_real_escape_string($conexaoComBanco, $_POST['login']);
+    $Senha = mysqli_real_escape_string($conexaoComBanco, $_POST['Senha']);
+    $stmt = $conexaoComBanco->prepare("SELECT * FROM usuarios WHERE NomeUser = ? AND SenhaUser = ?");
+    $stmt->bind_param("ss", $nomeDoUsuario, $Senha);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $session_timeout)) { //Verifica a ultima vez que foi acessado e faz uma comparação com o tempo limite
-    session_unset(); //Limpa todas as sessoes 
-    session_destroy(); //Destroi a sessão
-    header('Location: LoginPost.php?timeout=true'); //Redireciona para a página de login com um parâmetro de timeout, para fazer o login novamente
-    exit(); // sai do if
+    if ($result->num_rows === 1) // Se encontrar algum usuário
+    {
+        $row = $result->fetch_assoc();
+        return $row['NomeUser'];
+    } else {
+        return false;
+    }
 }
 
-
-$_SESSION['last_activity'] = time(); //Atualiza a ultima atividade da sessão
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") //Verifica se o método de form é POST
+if ($_SERVER["REQUEST_METHOD"] === "POST") // Verifica se o método de form é POST
 {
-    $userName = mysqli_real_escape_string($conexao, $_POST['login']); 
-    $senha = mysqli_real_escape_string($conexao, $_POST['Senha']);
-    // Protege contra SQL Injection: Escape de Caracteres especiais
-    $query = "SELECT * FROM usuarios WHERE NomeUser = ? AND SenhaUser = ?"; // define a consulta no banco de dados
-    $stmt = mysqli_prepare($conexao, $query); // conecta no banco e roda a consulta definida acima
-    mysqli_stmt_bind_param($stmt, "ss", $userName, $senha); // passa os parametros para a consulta
-    mysqli_stmt_execute($stmt); // executa a consulta
-    $result = mysqli_stmt_get_result($stmt); // pega o resultado da consulta
+    $userName = $_POST['login'];
+    $senha = $_POST['Senha'];
 
-    if ($row = mysqli_fetch_assoc($result)) // Se encontrar algum usuário
-    {
-        $_SESSION['userName'] = $userName; // Cria uma sessão com o nome do usuário
-        $_SESSION['expire_time'] = time() + $session_timeout; // Define o tempo de expiração da sessão
+    if (autenticar($conexao, $userName, $senha)) {
+        session_start();
+        $_SESSION['userName'] = $userName;
+        setcookie('username', $userName, time() + (1 * 24 * 60 * 60), "/"); 
         header('Location: Principal.html');
         exit();
     } else {
         $erroLogin = "Usuário ou senha incorretos.";
     }
 
-    mysqli_stmt_close($stmt); // fecha a consulta
-    mysqli_close($conexao); // fecha a conexão com o banco de dados
+    // Fecha a consulta
+    mysqli_close($conexao); // Fecha a conexão com o banco de dados
 }
 ?>
 
@@ -57,9 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") //Verifica se o método de form é POS
         <section class="login">
             <h1>Entrar para publicar</h1>
             <form method="post" action="">
-                <?php if (isset($erroLogin)) : ?>
-                    <p class="ErroLogin"><?php echo $erroLogin; ?></p>
-                <?php endif; ?>
                 <div>
                     <label for="login">Nome de Login:</label>
                     <input type="text" name="login" id="login" placeholder="Digite seu nome de usuario" required>
@@ -68,6 +64,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") //Verifica se o método de form é POS
                     <label for="Senha">Senha de Login:</label>
                     <span><input type="password" name="Senha" id="Senha" placeholder="Digite sua senha" required minlength="8"><a href="#"><img src="../assets/img/icons/Visivel.svg" alt=""></a></span>
                 </div>
+                <?php if (isset($erroLogin)) : ?>
+                    <p class="ErroLogin"><?php echo $erroLogin; ?></p>
+                <?php endif; ?>
                 <div>
                     <input type="submit" value="Entrar">
                 </div>
