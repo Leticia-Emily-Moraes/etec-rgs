@@ -58,30 +58,37 @@
             <hr>
             <article>
                 <aside>
-                    <h2>Pesquise:</h2>
-                    <input type="text">
+                    <input type="text" id="termoPesquisa" placeholder="Pesquisar...">
                 </aside>
                 <aside>
                     <h2>Categorias:</h2>
                     <span>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Todas</label>
+                        <input type="radio" name="Categoria" id="Todas" value="Todas" checked>
+                        <label for="Todas">Todas</label>
                     </span>
                     <span>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Vestibulinho</label>
+                        <input type="radio" name="Categoria" id="Biblioteca" value="Biblioteca">
+                        <label for="Biblioteca">Biblioteca</label>
                     </span>
                     <span>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Esportes</label>
+                        <input type="radio" name="Categoria" id="Direção" value="Direção">
+                        <label for="Direção">Direção</label>
                     </span>
                     <span>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Biblioteca</label>
+                        <input type="radio" name="Categoria" id="Esportes" value="Esportes">
+                        <label for="Esportes">Esportes</label>
                     </span>
                     <span>
-                        <input type="checkbox" name="" id="">
-                        <label for="">Eventos</label>
+                        <input type="radio" name="Categoria" id="Eventos" value="Eventos">
+                        <label for="Eventos">Eventos</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="Categoria" id="Grêmio" value="Grêmio">
+                        <label for="Grêmio">Grêmio</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="Categoria" id="Vestibulinho" value="Vestibulinho">
+                        <label for="Vestibulinho">Vestibulinho</label>
                     </span>
                 </aside>
                 <aside>
@@ -97,76 +104,23 @@
                 <p>Ultimas Noticias da nossa etec</p>
                 <aside class="container">
                     <button class="SetaAnterior"><img src="assets/img/icons/SetaVolta.svg" alt=""></button>
-                    <div class="slider">
-                        <span>a</span>
-                        <span>b</span>
-                        <span>c</span>
-                        <span>d</span>
+                    <div class="slider" id="UltimasNoticias">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                     <button class="SetaProxima"><img src="assets/img/icons/SetaProximo.svg" alt=""></button>
                     </div>
-                </aside>
-            </article>
-            <article>
-                <h1>Bem-Vindo</h1>
-                <hr>
-                <p>Tudo que voce precisa saber sobre a ETEC</p>
-                <aside class="container">
-                    <button class="SetaAnterior"><img src="assets/img/icons/SetaVolta.svg" alt=""></button>
-                    <div class="slider">
-                        <span>a</span>
-                        <span>b</span>
-                        <span>c</span>
-                        <span>d</span>
-                    </div>
-                    <button class="SetaProxima"><img src="assets/img/icons/SetaProximo.svg" alt=""></button>
-                </aside>
-            </article>
-            <article>
-                <h1>Vestibulinho</h1>
-                <hr>
-                <p>Ultimas noticias sobre o Vestibulinho</p>
-                <aside class="container">
-                    <button class="SetaAnterior"><img src="assets/img/icons/SetaVolta.svg" alt=""></button>
-                    <div class="slider">
-                        <span>a</span>
-                        <span>b</span>
-                        <span>c</span>
-                        <span>d</span>
-                    </div>
-                    <button class="SetaProxima"><img src="assets/img/icons/SetaProximo.svg" alt=""></button>
-                </aside>
-            </article>
-            <article>
-                <h1>Biblioteca</h1>
-                <hr>
-                <p>Projetos da biblioteca da Etec Rio Grande da serra</p>
-                <aside class="container">
-                    <button class="SetaAnterior"><img src="assets/img/icons/SetaVolta.svg" alt=""></button>
-                    <div class="slider">
-                        <span>a</span>
-                        <span>b</span>
-                        <span>c</span>
-                        <span>d</span>
-                    </div>
-                    <button class="SetaProxima"><img src="assets/img/icons/SetaProximo.svg" alt=""></button>
                 </aside>
             </article>
             <article>
                 <h1>Todas</h1>
                 <hr>
                 <p>Todas as Noticias já postadas</p>
-                <aside class="container">
-                    <button class="SetaAnterior"><img src="assets/img/icons/SetaVolta.svg" alt=""></button>
-                    <div class="slider">
-                        <span>a</span>
-                        <span>b</span>
-                        <span>c</span>
-                        <span>d</span>
-                    </div>
-                    <button class="SetaProxima"><img src="assets/img/icons/SetaProximo.svg" alt=""></button>
+                <aside class="containerVerMais" id="ContainerTodas">
                 </aside>
-                <button>Ler Mais</button>
+                <button id="verMais">Ver Mais</button>
             </article>
         </section>
     </main>
@@ -192,11 +146,11 @@
                         src="assets/img/icons/iconsNav/YoutubeIcon.svg" alt=""><img
                         src="assets/img/icons/iconsNav/YoutubeIconHover.svg" alt="" class="iconHover"></a>
             </div>
-            <p>#SimÉPossível</p>
+            <p>#SimÉPossivel</p>
         </span>
         <span>
-            <h2>Notícias</h2>
-            <a href="">Últimas Notícias</a>
+            <h2>Noticias</h2>
+            <a href="">Ultimas Noticias</a>
             <a href="">Em breve</a>
             <a href="">Vestibulinho</a>
         </span>
@@ -204,11 +158,11 @@
             <h2>Nossa Etec</h2>
             <a href="">Nossa História</a>
             <a href="">Infraestrutura</a>
-            <a href="">Equipe Atual</a>
+            <a href="">Equipe atual</a>
         </span>
         <span>
             <h2>Cursos</h2>
-            <a href="">Com Ensino Médio</a>
+            <a href="">Com Ensino Medio</a>
             <a href="">Modulares e Noturnos</a>
             <a href="">Online</a>
         </span>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once('../assets/bd/conexao.php');
+include_once('../bd/conexao.php');
 
 $query = "SELECT n.Titulo, 
     n.Resumo, 
@@ -48,4 +48,5 @@ mysqli_close($conexao);
 
 // Enviar os resultados como JSON
 echo json_encode($resultados);
+
 ?>
