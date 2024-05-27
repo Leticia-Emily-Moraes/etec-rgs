@@ -5,16 +5,18 @@
     --Colorheader: #1806b9cc;
 }
 
-nav ul li a{
+nav ul li a {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-nav ul li a img{
+
+nav ul li a img {
     width: 20px;
     height: 20px;
 }
-main section{
+
+main section {
     width: 100%;
     padding: 20px;
     display: flex;
@@ -22,19 +24,22 @@ main section{
     justify-content: center;
     align-items: center;
 }
-section h2{
+
+section h2 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
 }
-main section article{
+
+main section article {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-main section .PreviewPost{
+
+main section .PreviewPost {
     width: 90%;
     min-height: 28rem;
     border: 3px solid #7e74d8;
@@ -45,33 +50,39 @@ main section .PreviewPost{
     justify-content: start;
     align-items: flex-start;
 }
-main section .PreviewPost img{
+
+main section .PreviewPost img {
     max-width: 100%;
     height: auto;
 }
-section form{
+
+section form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
-section form div{
+
+section form div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-section form div label{
+
+section form div label {
     text-align: justify;
     font-size: 25px;
 }
-section form div select{
+
+section form div select {
     width: 300px;
     height: 30px;
     margin: 10px;
     padding: 5px;
     border: 3px solid #7e74d8;
 }
-section form div input[type="text"]{
+
+section form div input[type="text"] {
     width: 300px;
     height: 30px;
     margin: 10px;
@@ -79,11 +90,13 @@ section form div input[type="text"]{
     border: 3px solid #7e74d8;
     font-size: 16px;
     font-family: var(--FontStandard);
-} 
-section form div input[type="file"]{
+}
+
+section form div input[type="file"] {
     display: none;
-} 
-section form div label#imagem{
+}
+
+section form div label#imagem {
     width: 300px;
     background-color: #ffffff;
     height: 100px;
@@ -97,24 +110,29 @@ section form div label#imagem{
     cursor: pointer;
     overflow: hidden;
 }
-section form div label#imagem:hover{
+
+section form div label#imagem:hover {
     background-color: #7e74d8cc;
     color: #ffffff;
     border: 3px dashed #ffffff;
     transition: all 200ms ease-in-out;
 }
-section form div label#imagem:active{
+
+section form div label#imagem:active {
     background-color: #573aff;
     color: #ffffff;
     border: 3px dashed #ffffff;
 }
-section form div label#imagem:focus{
+
+section form div label#imagem:focus {
     outline: 3px solid #7e74d8;
 }
-section form div label .ImagemPreview .ImgViewer{
+
+section form div label .ImagemPreview .ImgViewer {
     max-width: 100%;
 }
-section form div textarea{
+
+section form div textarea {
     width: 300px;
     height: 15rem;
     padding: 5px;
@@ -123,7 +141,9 @@ section form div textarea{
     font-size: 16px;
     font-family: var(--FontStandard);
 }
-section form div input[type=submit], button{
+
+section form div input[type=submit],
+button {
     width: 150px;
     padding: 10px;
     border: 3px solid #7e74d8;
@@ -134,49 +154,57 @@ section form div input[type=submit], button{
     align-self: center;
     margin: 5px 0px;
 }
-section form div input[type=submit]:disabled, button:disabled{
+
+section form div input[type=submit]:disabled,
+button:disabled {
     background-color: #ffffff;
     color: #000000;
     cursor: not-allowed;
     border: none;
 }
-section form div input[type=submit]:disabled:hover, button:disabled:hover{
+
+section form div input[type=submit]:disabled:hover,
+button:disabled:hover {
     background-color: #ffffff;
     border: none;
     color: #000000;
     cursor: not-allowed;
 
 }
-section form div input[type=submit]:hover, button:hover{
+
+section form div input[type=submit]:hover,
+button:hover {
     border: 3px solid #ffffff;
     border-radius: 5px;
-    background-color:#7e74d8 ;
+    background-color: #7e74d8;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
 }
-p.Erro{
+
+p.Erro {
     color: #ff0000;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
-p.Sucesso{
+
+p.Sucesso {
     color: #00ff00;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
+
 section.confirmacao {
     position: absolute;
-    top: 360px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    height: 550px;
-    max-height: 600px;
-    display: flex;
-    padding: 50px;
+    height: 75vh;
+    display: none;
+    padding: 25px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -186,17 +214,20 @@ section.confirmacao {
     border: 5px solid #573aff;
     border-radius: 5px;
 }
-.confirmacao h2{
+
+.confirmacao h2 {
     font-weight: 600;
 }
-section.confirmacao span{
+
+section.confirmacao span {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: start;
     width: 90%;
 }
-section.confirmacao span article{
+
+section.confirmacao span article {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -204,7 +235,8 @@ section.confirmacao span article{
     gap: 20px;
     width: 50%;
 }
-.ConfirmacaoCapa div{
+
+.ConfirmacaoCapa div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -212,21 +244,24 @@ section.confirmacao span article{
     gap: 20px;
     width: 300px;
 }
-.ConfirmacaoCapa div:last-child{
+
+.ConfirmacaoCapa div:last-child {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
-.ConfirmacaoCapa div:last-child img{
+
+.ConfirmacaoCapa div:last-child img {
     max-width: 150px;
     max-height: 150px;
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-.confirmacao .ConfirmacaoConteudo aside{
+
+.confirmacao .ConfirmacaoConteudo aside {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -234,6 +269,7 @@ section.confirmacao span article{
     align-items: center;
     gap: 10px;
 }
+
 .ConfirmacaoConteudo aside div {
     display: flex;
     max-width: 200px;
@@ -242,18 +278,21 @@ section.confirmacao span article{
     align-items: center;
     gap: 5px;
 }
-.ConfirmacaoConteudo aside div p{
-    word-break: break-all;
+
+.ConfirmacaoConteudo aside div p {
+    word-break: keep-all;
     text-align: center;
 }
-.confirmacao img{
+
+.confirmacao img {
     max-width: 150px;
     max-height: 150px;
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-.ConfirmacaoButton{
+
+.ConfirmacaoButton {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -261,8 +300,9 @@ section.confirmacao span article{
     gap: 20px;
     width: 90%;
 }
-.confirmacaoPostagem div p{
-    word-break: break-all;
+
+.confirmacaoPostagem div p {
+    word-break: keep-all;
 }
 
 .ConfirmacaoButton input[type=submit] {
@@ -276,7 +316,7 @@ section.confirmacao span article{
     align-self: center;
 }
 
-.ConfirmacaoButton input[type=submit]:last-child{
+.ConfirmacaoButton input[type=submit]:last-child {
     border: 3px solid #37d07c;
 }
 
@@ -288,7 +328,8 @@ section.confirmacao span article{
     font-weight: bold;
     cursor: pointer;
 }
-@media screen and (min-width: 1023px){
+
+@media screen and (min-width: 1023px) {
     nav ul li a {
         width: auto !important;
         display: flex;
@@ -299,23 +340,28 @@ section.confirmacao span article{
     nav ul li a img {
         height: 40px;
     }
-    main{
+
+    main {
         flex-direction: row;
         gap: 0;
         align-items: flex-start;
     }
-    section{
+
+    section {
         padding: 0;
     }
-    .Previewbutton{
+
+    .Previewbutton {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
-    section form div label#imagem{
+
+    section form div label#imagem {
         width: 400px;
     }
-    section form div textarea{
+
+    section form div textarea {
         width: 400px;
     }
 }

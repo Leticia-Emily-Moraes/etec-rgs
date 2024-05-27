@@ -1,5 +1,5 @@
 <?php
-include_once('../assets/bd/conexao.php');
+include_once('../bd/conexao.php');
 function verficaSessaoOuCookie()
 {
     session_start();
@@ -10,7 +10,7 @@ function verficaSessaoOuCookie()
             $_SESSION['userName'] = $userName; // Renova a sessão
         } else {
             // Redirecionar para a página de login se não estiver autenticado
-            header('Location: Principal.html');
+            header('Location: ../../Principal.html');
             exit;
         }
     } else {

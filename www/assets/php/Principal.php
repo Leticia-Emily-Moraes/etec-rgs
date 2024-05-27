@@ -1,7 +1,8 @@
 <?php
 
 session_start();
-include_once('../assets/bd/conexao.php');
+include_once('../bd/conexao.php');
+
 include_once('Verifica.php');
 
 if (isset($_SESSION['userName'])) {

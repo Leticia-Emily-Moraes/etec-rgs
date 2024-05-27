@@ -105,6 +105,11 @@ form.addEventListener('submit', function(event) {
 
     // Exibir popup de confirmação
     confirmacao(titulo, resumo, temas, imagem, function(confirmado) {
+        document.body.style.overflow = 'hidden';
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
         if (confirmado) {
             const formData = new FormData();
             formData.append('Titulo', titulo);
@@ -113,13 +118,13 @@ form.addEventListener('submit', function(event) {
             formData.append('img', imagem, tituloFormatado + '-capa.' + extensao); // Renomear a imagem
     
             // Submeter o formulário via fetch
-            fetch('../Postagens/postagemCapa.php', {
+            fetch('assets/php/postagemCapa.php', {
                 method: 'POST',
                 body: formData
             })
             .then(response => {
                 if (response.ok) {
-                    window.location.href = '../Postagens/postagemConteudo.html';
+                    window.location.href = 'postagemConteudo.html';
                     form.reset();
                 } else {
                     throw new Error('Erro ao enviar os dados.');

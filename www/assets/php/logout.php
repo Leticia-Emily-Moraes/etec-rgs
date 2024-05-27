@@ -8,6 +8,6 @@ session_destroy();
 setcookie('username', '', time() - 3600, "/");
 
 // Redirecionar para a página de login
-header('Location: LoginPost.php');
+header('Location: ../../LoginPost.php');
 exit;
 ?>

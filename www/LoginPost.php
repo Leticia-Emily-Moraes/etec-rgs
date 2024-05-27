@@ -1,6 +1,6 @@
 <?php
 
-include_once('../assets/bd/conexao.php'); //Inclui o arquivo de conexão com o banco de dados
+include_once('assets/bd/conexao.php'); //Inclui o arquivo de conexão com o banco de dados
 
 function autenticar($conexaoComBanco, $nomeDoUsuario, $Senha)
 {
@@ -47,8 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") // Verifica se o método de form é P
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postagens RGS - Login</title>
-    <link rel="shortcut icon" href="../assets/img/Favicons/etecRgs.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/style/LoginPost.css">
+    <link rel="shortcut icon" href="assets/img/Favicons/etecRgs.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style/LoginPost.css">
 </head>
 
 <body>
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") // Verifica se o método de form é P
                 </div>
                 <div>
                     <label for="Senha">Senha de Login:</label>
-                    <span><input type="password" name="Senha" id="Senha" placeholder="Digite sua senha" required minlength="8"><a href="#"><img src="../assets/img/icons/Visivel.svg" alt=""></a></span>
+                    <span><input type="password" name="Senha" id="Senha" placeholder="Digite sua senha" required minlength="8"><a href="#"><img src="assets/img/icons/Visivel.svg" alt=""></a></span>
                 </div>
                 <?php if (isset($erroLogin)) : ?>
                     <p class="ErroLogin"><?php echo $erroLogin; ?></p>
@@ -73,22 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") // Verifica se o método de form é P
             </form>
         </section>
         <section class="imagem">
-            <img src="../assets/img/pandoras/raposaEtec.png" class="img-fluid animated" alt="">
+            <img src="assets/img/pandoras/raposaEtec.png" class="img-fluid animated" alt="">
         </section>
     </main>
-    <script>
-        const inputSenha = document.querySelector('input[type="password"]');
-        const imgVisivel = document.querySelector('img');
-        imgVisivel.addEventListener('click', () => {
-            if (inputSenha.type === 'password') {
-                inputSenha.type = 'text';
-                imgVisivel.src = '../assets/img/icons/Invisivel.svg';
-            } else {
-                inputSenha.type = 'password';
-                imgVisivel.src = '../assets/img/icons/Visivel.svg';
-            }
-        });
-    </script>
 </body>
 
 </html>

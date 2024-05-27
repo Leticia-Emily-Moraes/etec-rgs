@@ -100,6 +100,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function publicarNoticia() {
+        document.body.style.overflow = 'hidden';
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
         if (texts.length < 1 || imgs.length < 1) {
             alert("Insira pelo menos um texto e uma imagem para publicar a notícia");
         } else {
@@ -135,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
             formData.append('imgConteudo[]', img);
         });
 
-        fetch('../Postagens/postagemConteudo.php', {
+        fetch('assets/php/postagemConteudo.php', {
             method: 'POST',
             body: formData
         })
@@ -143,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (response.ok) {
                 console.log(response.text());
                 alert('Notícia cadastrada com sucesso!');
-                window.location.href = '../Postagens/postagemConteudo.php';
+                window.location.href = 'Principal.html';
             } else {
                 throw new Error('Erro ao enviar os dados.');
             }
