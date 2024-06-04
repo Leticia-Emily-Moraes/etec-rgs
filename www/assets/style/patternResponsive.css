@@ -27,18 +27,17 @@
         font-size: 1.2rem;
     }
 
-    header {
+    #header {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
-        background-color: #1806b9cc;
         height: 15vh;
     }
 
-    header #menu,
-    header #menuClose {
+    #header #menu,
+    #header #menuClose {
         display: none;
         visibility: hidden;
     }
@@ -47,18 +46,18 @@
         position: static;
         font-size: 24px;
         background-color: transparent;
-        height: 15vh;
+        height: 100%;
         width: 70%;
         text-align: center;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         padding: 10px;
     }
 
     .logo {
-        width: 110%;
+        height: 100%;
     }
 
     nav#navPrincipal ul {
@@ -90,9 +89,8 @@
     .RedesSociais a:hover {
         background-size: 0px 2px;
     }
-
     nav#navPrincipal ul img {
-        width: 60px;
+        width: 45px;
         padding: 10px;
     }
 
@@ -133,7 +131,7 @@
         display: block;
     }
     footer {
-        margin-top: 15vh;
+
         width: 100%;
         display: flex;
         flex-direction: row;

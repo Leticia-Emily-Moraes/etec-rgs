@@ -57,47 +57,52 @@
                         </li>
                     </ul>
                 </li>
-                <li class="RedesSociais">
-                    <a href="https://www.instagram.com/etecrgs/" target="_blank">
-                        <img src="assets/img/icons/iconsNav/instagram.svg" alt="">
-                        <img src="assets/img/icons/iconsNav/instagramHover.svg" alt="" class="iconHover">
-                    </a>
-                </li>
-                <li class="RedesSociais">
-                    <a href="https://www.facebook.com/etecrgs/?locale=pt_BR" target="_blank">
-                        <img src="assets/img/icons/iconsNav/facebook.svg" alt="">
-                        <img src="assets/img/icons/iconsNav/facebookHover.svg" alt="" class="iconHover">
-                    </a>
-                </li>
-                <li class="RedesSociais">
-                    <a href="https://www.youtube.com/c/PEDAGARGSETEC" target="_blank">
-                        <img src="assets/img/icons/iconsNav/YoutubeIcon.svg" alt="">
-                        <img src="assets/img/icons/iconsNav/YoutubeIconHover.svg" alt="" class="iconHover">
-                    </a>
-                </li>
+                <span>
+                    <li class="RedesSociais">
+                        <a href="https://www.instagram.com/etecrgs/" target="_blank">
+                            <img src="assets/img/icons/iconsNav/instagram.svg" alt="">
+                            <img src="assets/img/icons/iconsNav/instagramHover.svg" alt="" class="iconHover">
+                        </a>
+                    </li>
+                    <li class="RedesSociais">
+                        <a href="https://www.facebook.com/etecrgs/?locale=pt_BR" target="_blank">
+                            <img src="assets/img/icons/iconsNav/facebook.svg" alt="">
+                            <img src="assets/img/icons/iconsNav/facebookHover.svg" alt="" class="iconHover">
+                        </a>
+                    </li>
+                    <li class="RedesSociais">
+                        <a href="https://www.youtube.com/c/PEDAGARGSETEC" target="_blank">
+                            <img src="assets/img/icons/iconsNav/YoutubeIcon.svg" alt="">
+                            <img src="assets/img/icons/iconsNav/YoutubeIconHover.svg" alt="" class="iconHover">
+                        </a>
+                    </li>
+                </span>
             </ul>
         </nav>
     </header>
-    <nav class="navSegundaria" id="navSegundaria">
-        <ul>
-            <li><a href="#container">Home</a></li>
-            <li><a href="#NoticiasR">Novidades e atualizações</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#APM">APM</a></li>
-        </ul>
-    </nav>
     <main>
+        <section class="bannerPrincipal">
+            <span>
+                <h1>Etec</h1>
+                <h2>Rio Grande da Serra</h2>
+            </span>
+            <span>
+                <h2>Ensinos técnico, médio, integrado</h2>
+                <h3>Gratuitos e de Qualidade</h3>
+            </span>
+
+        </section>
         <section class="container" id="container">
             <section id="slider">
                 <a class="slides" href="" target="_blank">
                     <span>
                         <h1>Participação de nossa Etec na 11ª edição do TECSESP.</h1>
-                        <p>A ETEC de Rio Grande da Serra brilhou na 11ª edição do TECSESP no sábado, no dia 04/05, com duas vitórias consecutivas nas partidas de futebol. Esses triunfos não apenas demonstraram a habilidade da equipe, mas também asseguraram sua classificação para a próxima fase do evento esportivo.</p>
+                        <p>A ETEC de Rio Grande da Serra brilhou na 11ª edição do TECSESP no sábado, no dia 04/05, com
+                            duas vitórias consecutivas nas partidas de futebol. Esses triunfos não apenas demonstraram a
+                            habilidade da equipe, mas também asseguraram sua classificação para a próxima fase do evento
+                            esportivo.</p>
                     </span>
-                    <picture>
-                        <source srcset="assets/img/Noticias/Tecsesp1Retangulo.png" media="(min-width: 767px)" />
-                        <img src="assets/img/Noticias/Tecsesp1Quadrado.png" alt="">
-                    </picture>
+                    <img src="assets/img/Noticias/Tecsesp1Quadrado.png" alt="">
                 </a>
                 <a class="slides">
                     <span>
@@ -106,10 +111,7 @@
                             de Rio Grande da Serra, somente até dia 09/05, corra e faça já sua inscrição para ser um dos
                             nossos alunos!!!</p>
                     </span>
-                    <picture>
-                        <source srcset="assets/img/Noticias/VestibulinhoRetangular.png" media="(min-width: 767px)" />
-                        <img src="assets/img/Noticias/VestibulinhoQuadrado.png" alt="">
-                    </picture>
+                    <img src="assets/img/Noticias/VestibulinhoQuadrado.png" alt="">
                 </a>
                 <a class="slides" href="" target="_blank">
                     <span>
@@ -119,10 +121,8 @@
                             com os pais dos 2º anos noturnos. Agradecemos a presença dos pais que compareceram às
                             reuniões!</p>
                     </span>
-                    <picture>
-                        <source srcset="assets/img/Noticias/ReuniaoPrimeiroBimestreRetangulo.png" media="(min-width: 767px)" />
-                        <img src="assets/img/Noticias/ReuniaoPrimeiroBimestreQuadrado.png" alt="">
-                    </picture>
+
+                    <img src="assets/img/Noticias/ReuniaoPrimeiroBimestreQuadrado.png" alt="">
                 </a>
             </section>
             <button id="SetaAnterior"><img src="assets/img/icons/SetaVolta.svg" alt=""></button>
@@ -134,27 +134,37 @@
             <p>As últimas novidades da ETEC de Rio Grande da Serra</p>
             <article class="separa">
                 <aside class="BlocoNoticia">
-                    <img src="assets/img/Noticias/EscutaAtivaCelular.png" alt="">
-                    <span>
-                        <h2>Escuta Ativa</h2>
-                        <h4 class="data">17/04</h4>
-                        <p>Foi iniciado o projeto Escuta Ativa, onde o Professor Mestre
+                    <div class="title-img">
+                        <h1 id="titulo">Escuta Ativa</h1>
+                        <img id="imagemCapa" src="assets/img/Noticias/EscutaAtivaCelular.png" alt="Imagem da capa">
+                    </div>
+                    <div class="content-noticia">
+                        <span class="separador">
+                            <p id="categoria">.</p>
+                            <p id="dataPublicacao">17/04</p>
+                        </span>
+                        <p id="resumo">Foi iniciado o projeto Escuta Ativa, onde o Professor Mestre
                             Fellipe Barbosa e Professora Madalena Divino escutam os alunos, aguarde e logo será a sua
                             sala.</p>
-                    </span>
+                        <p id="autor"></p>
+                    </div>
                 </aside>
                 <aside class="BlocoNoticia">
-                    <img src="assets/img/Noticias/CirculoDeLeituraRetangular.png" alt="">
-                    <span>
-                        <h2>Circulo de leitura</h2>
-                        <h4 class="data">02/04</h4>
-                        <p>O Programa estimula o protagonismo juvenil, uma vez que são os jovens multiplicadores
+                    <div class="title-img">
+                        <h1 id="titulo">Circulo de leitura</h1>
+                        <img id="imagemCapa" src="assets/img/Noticias/CirculoDeLeituraRetangular.png" alt="Imagem da capa">
+                    </div>
+                    <div class="content-noticia">
+                        <span class="separador">
+                            <p id="categoria">.</p>
+                            <p id="dataPublicacao">02/04</p>
+                        </span>
+                        <p id="resumo">O Programa estimula o protagonismo juvenil, uma vez que são os jovens multiplicadores
                             formados na metodologia dos Círculos de Leitura que conduzem os grupos nas suas escolas.
                             Estes alunos são multiplicadores entre os seus pares, assegurando a continuidade do projeto
-                            nas escolas.
-                        </p>
-                        <!-- <a href="">Ler mais</a> -->
-                    </span>
+                            nas escolas.</p>
+                        <p id="autor"></p>
+                        </div>
                 </aside>
             </article>
         </section>
