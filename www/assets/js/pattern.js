@@ -1,8 +1,9 @@
 class Menu {
-    constructor(menuSelector, menuBtnSelector, menuCloseBtnSelector) {
+    constructor(menuSelector, menuBtnSelector, menuCloseBtnSelector, header) {
         this.menu = document.querySelector(menuSelector);
         this.menuBtn = document.querySelector(menuBtnSelector);
         this.menuCloseBtn = document.querySelector(menuCloseBtnSelector);
+        this.header = document.querySelector(header);
         this.outsideClick = this.outsideClick.bind(this);
         this.toggleMenu = this.toggleMenu.bind(this);
         this.menuBtn.addEventListener('click', this.toggleMenu);
@@ -26,18 +27,24 @@ class Menu {
         this.menu.classList.add('open');
         this.menuBtn.style.display = 'none';
         this.menuCloseBtn.style.display = 'block';
+        this.header.style.background = '#273c75'
+        document.body.style.overflow = 'hidden';
+
     }
 
     closeMenu() {
         this.menu.classList.remove('open');
         this.menuBtn.style.display = 'block';
         this.menuCloseBtn.style.display = 'none';
+        this.header.style.background = 'transparent';
+        document.body.style.overflow = 'auto';
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const menu = new Menu('#navPrincipal', '#menu', '#menuClose');
+    const menu = new Menu('#navPrincipal', '#menu', '#menuClose', '#header');
 
+    const header = document.getElementById('header')
     const preloader = document.getElementById('preloader');
     if (preloader) {
         window.addEventListener('load', () => {
@@ -57,7 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
         });
-        window.addEventListener('scroll', toggleBackToTop);
+        window.addEventListener('scroll', function(){
+            toggleBackToTop();
+            if(window.scrollY >= 100){
+                header.style.background = '#273c75'
+                header.style.boxShadow = "0 10px 10px -10px #7cb7ef";
+            }else{
+                header.style.background = 'transparent'
+                header.style.boxShadow = "none";
+            }
+
+        });
     }
 
 });

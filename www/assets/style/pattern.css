@@ -1,7 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --FontStandard: 'Roboto', sans-serif;
+    --FontStandard: 'Poppins', sans-serif;
     --Colorheader: #1806b9cc;
 }
 
@@ -15,7 +15,6 @@ body {
     font-family: var(--FontStandard);
     color: #2f2d2d;
     width: 100%;
-    height: 100vh;
     background-color: #F9F8FF;
     transition: all 0.5s;
     display: flex;
@@ -31,17 +30,20 @@ body::-webkit-scrollbar {
     width: 15px;
     height: 15px;
     background-color: rgb(187, 185, 185);
+    transition: all 0.5s;
 }
 
 body::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: rgba(180, 179, 179, 0.24);
+    transition: all 0.5s;
 }
 
 body::-webkit-scrollbar-thumb {
     background-image: linear-gradient(45deg, #112cf8, #58bfff);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
+    transition: all 0.5s;
 }
 
 
@@ -92,25 +94,26 @@ body::-webkit-scrollbar-thumb {
 
 #header {
     width: 100%;
+    height: 15vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #3863ff;
-    height: 15vh;
-    transition: top 0.5s;
+    background-color: #273c7500;
+    padding: 10px 0px;
     position: fixed;
-    z-index: 20;
+    z-index: 10;
+    transition: background .5s, box-shadow .5s;
+    border-bottom: none;
+    box-shadow: none;
 }
-
-#header.headerFixo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+#header.rolagem{
+    background-color: #273c75;
+    padding: 10px 4%;
+    /* linha de sombreamento do menu*/
+    border-bottom: 1px solid var(--light-grey);
+    box-shadow: 0 10px 10px -10px #7cb7ef;
 }
-
 #menu {
     width: 40px;
     display: block;
@@ -135,25 +138,26 @@ body::-webkit-scrollbar-thumb {
 
 .logo {
     width: 100%;
+    height: 100%;
 }
 
 #navPrincipal {
     position: fixed;
     top: 15vh;
-    background-color: #3266ff;
+    background-color: #273c75;
     width: 50%;
-    font-size: 14px;
+    font-size: 12px;
     text-align: right;
     align-self: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     padding-right: 25px;
     transition: right 0.5s ease;
     height: 100%;
     right: -100%;
-    z-index: 20;
+    z-index: 100;
 }
 
 nav#navPrincipal ul {
@@ -169,11 +173,18 @@ nav#navPrincipal ul {
 
 nav#navPrincipal ul li {
     padding: 15px 0px;
-    width: 50%;
+    width: 100%;
+    text-align: center;
+}
+nav#navPrincipal span{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .RedesSociais a img {
-    width: 40%;
+    width: 25px;
+    
 }
 .RedesSociais a img.iconHover {
     display: none;
@@ -223,24 +234,32 @@ nav#navPrincipal ul li#dropdown {
 nav#navPrincipal ul li#dropdown ul {
     position: absolute;
     top: 80%;
-    right: 70%;
-    width: auto;
+    right: -50%;
+    width: 200px;
     background-color: #ffffff;
     border: 1px solid #cccccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: none;
-    padding: 10px;
+    padding: 0px 10px;
     z-index: 15;
-    transition: right 0.5s ease;
+    flex-direction: column;
+    justify-content: center;
+}
+nav#navPrincipal ul li#dropdown ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 nav#navPrincipal ul li#dropdown ul li a {
     color: #2c4964;
     font-size: 0.9rem;
+    text-align: center;
 }
 
 nav#navPrincipal ul li#dropdown ul li a:hover {
-    color: #5846f9;
+    color: #3a59ae;;
 }
 
 nav#navPrincipal ul li#dropdown:hover ul {
@@ -258,17 +277,15 @@ nav.navSegundaria {
 
 main {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    top: 15vh;
-    gap: 10px;
+    gap: 20px;
+    align-items: stretch;
 }
 
 footer {
-    margin-top: 15vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -276,8 +293,7 @@ footer {
     align-items: flex-start;
     gap: 20px;
     padding: 50px;
-    background: linear-gradient(45deg, rgba(146,36,255,0.9) 18%, rgba(91,53,255,0.9) 39%, rgba(71,118,255,0.9) 67%, rgba(77,185,255,0.9) 89%), url('../img/fundos/footer-bg.jpg') center center no-repeat;
-    background-size: cover;
+    background-color: #192A56;
     color: #ffffff;
 }
 
@@ -358,7 +374,7 @@ footer span.FRedesSociais img {
     width: 50px;
     z-index: 996;
     height: 50px;
-    background-color: #3863ff;
+    background-color: #192A56;
     border-radius: 5px;
     border: 2px solid #ffffff;
     font-size: 2em;
@@ -371,7 +387,7 @@ footer span.FRedesSociais img {
 }
 
 #backToTop:hover {
-    background-color:#002093;
+    background-color:#253a70;
 }
 
 #backToTop.active {
