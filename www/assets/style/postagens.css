@@ -186,9 +186,8 @@ section article .containerVerMais span .content-noticia,
 
 section article .containerVerMais span .title-img img,
 .slider span .title-img img {
-    width: 80%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 section article .containerVerMais span .title-img h1,
@@ -199,12 +198,21 @@ section article .containerVerMais span .title-img h1,
 }
 
 section article .containerVerMais span .title-img h1,
-section article .containerVerMais span .content-noticia p ,
-.slider span .title-img h1,
-.slider span .content-noticia p {
-    color: #000000;
+.slider span .title-img h1{
     text-align: left;
+    color: #54617a;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
 }
+section article .containerVerMais span .content-noticia p ,
+.slider span .content-noticia p{
+    color: #8d99ae;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1rem;
+}
+
 .containerVerMais span .content-noticia .separador{
     width: 100%;
     display: flex;

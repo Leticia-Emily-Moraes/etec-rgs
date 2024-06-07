@@ -1,3 +1,25 @@
+header#header {
+    background-color: #273c7500;
+}
+header#header.rolagem{
+    background-color: #273c75;
+    /* linha de sombreamento do menu*/
+    border-bottom: 1px solid var(--light-grey);
+    box-shadow: 0 10px 10px -10px #7cb7ef;
+}
+
+main {
+    position: static !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: stretch;
+    padding: 0px !important;
+    margin-bottom: 0vh !important;
+}
+
 .bannerPrincipal {
     height: 100vh;
     background-image: url(../img/etecAzul.jpg);
@@ -18,7 +40,6 @@
     top: 0;
     padding: 20px;
 }
-
 
 .bannerPrincipal span {
     display: flex;
@@ -81,7 +102,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     padding: 5px 10px;
     color: #000000;
     border-radius: 10px;
@@ -90,15 +110,21 @@
 
 .slides span h1 {
     color: #000000;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 600;
     letter-spacing: 1px;
     padding: 10px;
+    margin-bottom: 2rem;
+    text-decoration: underline;
 }
+
 
 .slides span p {
     letter-spacing: 1px;
     text-align: justify;
+    font-size: 16px;
+    line-height: 1.3rem;
 }
 
 .slides img {
@@ -182,12 +208,12 @@
 
 .BlocoNoticia {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     background-color: #ffffff;
     gap: 20px;
@@ -199,39 +225,38 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    gap: 20px;
+    gap: 10px;
 }
 
 .BlocoNoticia .title-img img{
-    width: 80%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 .BlocoNoticia .title-img h1{
-    font-size: 1.2rem;
     text-align: left;
-
+    color: #54617a;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
 }
 
-.BlocoNoticia .title-img h1,
 .BlocoNoticia .content-noticia p {
-    color: #000000;
+    color: #8d99ae;
     text-align: left;
+    font-size: 16px;
+    line-height: 1rem;
 }
 .BlocoNoticia .content-noticia .separador{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 10px;
     border-radius: 0;
     background-color: #00000000;
     box-shadow: none;
     height: auto;
-    gap: 0;
 }
 
 
@@ -253,17 +278,6 @@
     padding-right: 5px;
     align-self: baseline;
 }
-
-.BlocoNoticia .content-noticia p{
-    font-size: 16px;
-
-}
-
-.BlocoNoticia .content-noticia p:last-child{
-    font-size: 14px;
-
-}
-
 
 .servicos {
     width: 100%;
@@ -294,7 +308,7 @@
 .servicos hr {
     width: 50px;
     height: 3px;
-    background-color: #5846F9;
+    background-color: #273c75;
     border: none;
     border-radius: 20px;
 }
@@ -395,7 +409,7 @@
 .APM hr {
     width: 50px;
     height: 3px;
-    background-color: #5846F9;
+    background-color: #273c75;
     border: none;
     border-radius: 20px;
 }
@@ -462,7 +476,8 @@
 .contato {
     width: 100%;
     height: 100%;
-    background-color: #273c75;
+    color: #FFFFFF;
+    background-color: #22517d;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -470,6 +485,7 @@
     gap: 20px;
     padding: 20px;
     text-align: center;
+    font-size: small;
 }
 
 .contato .titulo {
@@ -498,13 +514,25 @@
 .contato aside {
     width: 100%;
     height: 150px;
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 30px 5px;
     gap: 10px;
+}
+
+/* Hr dos contatos */
+.contato {
+    .endereco hr{
+        width: 5%;
+    }
+    .email hr{
+        width: 5%;
+    }
+    .telefone hr{
+        width: 5%;
+    }
 }
 
 .contato aside.iframe {
@@ -553,7 +581,7 @@
 }
 
 .contato .enviarEmail form button[type=submit] {
-    background-color: #5846f9;
+    background-color: #74b9ff;
     border: 0;
     padding: 10px 24px;
     color: #fff;
@@ -561,10 +589,16 @@
     font-size: 1.2em;
     font-weight: 400;
     font-family: var(--FontStandard);
+    width: calc(95% - 15px);
 }
 
 .contato .enviarEmail form button[type=submit]:hover {
-    background-color: #7b27d8;
+    background-color: #00cec9;
+}
+
+#piperTitulo{
+    display: none;
+    font-size: 90px;
 }
 
 @media screen and (min-width: 767px) {
@@ -572,7 +606,7 @@
         flex-direction: row;
         gap: 1rem;
     }
-
+    
     .separa {
         width: 100%;
         display: flex;
@@ -584,6 +618,7 @@
         width: 45%;
         height: 550px;
     }
+
 
     .servicos aside {
         width: 100%;
@@ -634,7 +669,6 @@
 
     .contato aside {
         width: 100%;
-        background-color: #ffffff;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -656,7 +690,7 @@
     }
 
     .enviarEmail input {
-        width: 45%;
+        width: calc(95% - 15px);
     }
 
     .enviarEmail form input#grande {
@@ -678,14 +712,13 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         gap: 30px;
         transition: transform 0.5s ease;
         padding: 0 50px;
         flex: 0 0 100%;
         color: #000000;
-        text-decoration: none;
     }
     
     .slides span {
@@ -693,7 +726,6 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
         padding: 5px 10px;
         color: #000000;
         border-radius: 10px;
@@ -775,7 +807,6 @@
 
     .contato aside {
         width: 50%;
-        background-color: #ffffff;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -808,7 +839,7 @@
     }
 
     .enviarEmail input {
-        width: 45%;
+        width: calc(95% - 15px);
     }
 
     .enviarEmail form input#grande {

@@ -36,7 +36,6 @@ class Menu {
         this.menu.classList.remove('open');
         this.menuBtn.style.display = 'block';
         this.menuCloseBtn.style.display = 'none';
-        this.header.style.background = 'transparent';
         document.body.style.overflow = 'auto';
     }
 }
@@ -67,11 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', function(){
             toggleBackToTop();
             if(window.scrollY >= 100){
-                header.style.background = '#273c75'
-                header.style.boxShadow = "0 10px 10px -10px #7cb7ef";
+                header.classList.add('rolagem');
             }else{
-                header.style.background = 'transparent'
-                header.style.boxShadow = "none";
+                header.classList.remove('rolagem');
             }
 
         });
