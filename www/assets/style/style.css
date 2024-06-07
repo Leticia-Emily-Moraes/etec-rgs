@@ -1,3 +1,25 @@
+header#header {
+    background-color: #273c7500;
+}
+header#header.rolagem{
+    background-color: #273c75;
+    /* linha de sombreamento do menu*/
+    border-bottom: 1px solid var(--light-grey);
+    box-shadow: 0 10px 10px -10px #7cb7ef;
+}
+
+main {
+    position: static !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: stretch;
+    padding: 0px !important;
+    margin-bottom: 0vh !important;
+}
+
 .bannerPrincipal {
     height: 100vh;
     background-image: url(../img/etecAzul.jpg);
@@ -186,12 +208,12 @@
 
 .BlocoNoticia {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     background-color: #ffffff;
     gap: 20px;
@@ -204,7 +226,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    gap: 20px;
+    gap: 10px;
 }
 
 .BlocoNoticia .title-img img{
@@ -231,12 +253,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 10px;
     border-radius: 0;
     background-color: #00000000;
     box-shadow: none;
     height: auto;
-    gap: 0;
 }
 
 
@@ -258,19 +278,6 @@
     padding-right: 5px;
     align-self: baseline;
 }
-
-.BlocoNoticia .content-noticia p{
-    font-size: 16px;
-
-}
-
-.BlocoNoticia .content-noticia p:last-child{
-    font-size: 14px;
-    font-weight: 100;
-    color: #8d99ae;
-
-}
-
 
 .servicos {
     width: 100%;
