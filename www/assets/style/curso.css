@@ -12,13 +12,15 @@ main {
 main h1 {
     font-size: 1.75rem;
     text-align: center;
+    font-weight: 700;
+    color: black;
     text-transform: uppercase;
 }
 
 main hr {
     width: 50px;
     height: 3px;
-    background-color: #5846F9;
+    background-color: #273C75;
     border: none;
     border-radius: 20px;
 }
@@ -47,12 +49,11 @@ main section article {
     gap: 20px;
 }
 
-/* main section article aside {
-
-} */
 main section article aside h2 {
     text-align: center;
-    margin-bottom: 10px;
+    margin: 10px 0px;
+    font-weight: 600;
+    color: #273C75;
 }
 
 main section article aside p {
@@ -131,9 +132,8 @@ main section article aside p {
     text-align: center;
     padding: 5px;
     font-size: 1.3rem;
-    border-bottom: 2px solid #000000;
-    border-right: 2px solid #000000;
-    box-shadow: 5px 5px 5px #00000033;
+    border: 2px dashed #273C75;
+    box-shadow: 2px 2px 10px #273C7533;
 }
 @media screen and (min-width: 1023px) {
 
