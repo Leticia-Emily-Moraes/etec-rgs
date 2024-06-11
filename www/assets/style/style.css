@@ -1,8 +1,12 @@
 header#header {
     background-color: #273c7500;
+    height: 20vh;
+    transition: 1s;
+
 }
 header#header.rolagem{
     background-color: #273c75;
+    height: 10vh;
     /* linha de sombreamento do menu*/
     border-bottom: 1px solid var(--light-grey);
     box-shadow: 0 10px 10px -10px #7cb7ef;
@@ -35,7 +39,7 @@ main {
     color: #f5f6fa;
     text-transform: capitalize;
     letter-spacing: 2px;
-    gap: 1.7rem;
+    gap: 3rem;
     position: relative;
     top: 0;
     padding: 20px;
@@ -46,6 +50,7 @@ main {
     flex-direction: column;
     text-align: center;
     gap: 15px;
+    animation: appear ease-in-out 1.5s;
 }
 
 .bannerPrincipal span:first-child {
@@ -560,7 +565,7 @@ main {
 .enviarEmail input {
     padding: 10px 15px;
     display: block;
-    width: 100%;
+    width: 150%;
     font-family: var(--FontStandard);
     color: #212529;
     background-color: #fff;
@@ -571,7 +576,7 @@ main {
 .enviarEmail textarea {
     font-family: var(--FontStandard);
     padding: 10px 15px;
-    width: 100%;
+    width: 150%;
     color: #212529;
     background-color: #fff;
     border: 1px solid #ced4da;
@@ -590,6 +595,7 @@ main {
     font-weight: 400;
     font-family: var(--FontStandard);
     width: calc(95% - 15px);
+    cursor: pointer;
 }
 
 .contato .enviarEmail form button[type=submit]:hover {
@@ -866,44 +872,13 @@ main {
     }
 }
 
-
-/* .bannerPrincipal{
-    height: 100vh;
-    background-image: url(../img/etecAzul.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    /* PARA O TEXTO */
-/* display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #f5f6fa;
-    text-transform:capitalize;
-    letter-spacing: 2px;
-    gap: 1rem ;
+@keyframes appear {
+    from{
+        opacity: 0;
+        translate: -100vw 0;
+    }
+    to{
+        opacity: 1;
+        translate: 0 0;
+    }
 }
-
-.bannerPrincipal h1{
-    font-size: 60px;
-    font-weight: 900;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.bannerPrincipal h3{
-    font-weight: 100;
-}
-
-/* LINHA EM BAIXO DA BARRA DE NAVBAR */
-/* .nav-division {
-    border: none;
-    height: 20px;
-    width: 100%;
-    height: 50px;
-    margin-top: 0;
-    border-bottom: 1px solid var(--light-grey);
-    box-shadow: 0 10px 10px -10px #bddeed;
-    margin: -50px auto 10px;
-} */

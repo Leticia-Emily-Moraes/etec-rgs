@@ -27,7 +27,7 @@ class Menu {
         this.menu.classList.add('open');
         this.menuBtn.style.display = 'none';
         this.menuCloseBtn.style.display = 'block';
-        this.header.style.background = '#273c75'
+        this.header.classList.add('rolagem')
         document.body.style.overflow = 'hidden';
 
     }
@@ -36,6 +36,7 @@ class Menu {
         this.menu.classList.remove('open');
         this.menuBtn.style.display = 'block';
         this.menuCloseBtn.style.display = 'none';
+        this.header.classList.remove('rolagem')
         document.body.style.overflow = 'auto';
     }
 }
