@@ -64,7 +64,7 @@ CREATE TABLE galeriaDeImagens(
     PRIMARY KEY(IdGaleria)
 );
 
-INSERT INTO usuarios (NomeCompleto, NomeUser, SenhaUser, Cargo) VALUES ('Rodrigo Vicente','Root', 'Admin2024', 'Administrador');
+INSERT INTO usuarios (NomeCompleto, NomeUser, SenhaUser, Cargo, ImagemAutor) VALUES ('Rodrigo Vicente','Root', 'Admin2024', 'Administrador', 'assets/img/equipe/UserTemporario.png');
 
 SELECT * FROM usuarios;
 

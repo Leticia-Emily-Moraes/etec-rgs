@@ -1,0 +1,1 @@
+INSERT INTO usuarios ( NomeCompleto, NomeUser, SenhaUser, Cargo, ImagemAutor) VALUES ( 'jbjb', 'hvbnbjv', '$2y$10$5zqq3xySAJk1RaoNuK1x8.h3Mws3opZ.s3IPAPnJnSjfmIOV6oHAu', 'Escolha o Cargo', 'assets/img/equipe/jbjb.jpg');
