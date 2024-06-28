@@ -1,120 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Etec RGS - Cursos - Informática para Internet</title>
 
-    <link rel="shortcut icon" href="../assets/img/Favicons/etecRgs.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../assets/img/Favicons/etecRgs.ico"
+      type="image/x-icon"
+    />
     <!-- Arquivo reset CSS -->
-    <link rel="stylesheet" href="../assets/style/reset.css">
+    <link
+      rel="stylesheet"
+      href="../assets/style/reset.css"
+    />
     <!-- Arquivo CSS -->
-    <link rel="stylesheet" href="../assets/style/pattern.css">
+    <link
+      rel="stylesheet"
+      href="../assets/style/pattern.css"
+    />
     <!-- Arquivo CSS responsivo -->
-    <link rel="stylesheet" href="../assets/style/patternResponsive.css">
+    <link
+      rel="stylesheet"
+      href="../assets/style/patternResponsive.css"
+    />
     <!-- Arquivo CSS do próprio -->
-    <link rel="stylesheet" href="../assets/style/curso.css">
+    <link
+      rel="stylesheet"
+      href="../assets/style/curso.css"
+    />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <header id="header">
-        <a href="../index.html"><img class="logo" src="../assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
-        <img id="menu" src="../assets/img/icons/iconsNav/Menu.svg" alt="">
-        <img id="menuClose" src="../assets/img/icons/iconsNav/CloseMenu.svg" alt="">
+      <a href="../index.html"
+        ><img
+          class="logo"
+          src="../assets/img/icons/iconsNav/etecRgs.png"
+          alt=""
+      /></a>
+      <img
+        id="menu"
+        src="../assets/img/icons/iconsNav/Menu.svg"
+        alt=""
+      />
+      <img
+        id="menuClose"
+        src="../assets/img/icons/iconsNav/CloseMenu.svg"
+        alt=""
+      />
 
-        <nav id="navPrincipal">
+      <nav id="navPrincipal">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../Noticias.html">Notícias</a></li>
+          <li><a href="../historiaEtec.html">Nossa História</a></li>
+          <li><a href="../cursos.html">Cursos</a></li>
+          <li><a href="../index.html#contato">Contato</a></li>
+          <li id="dropdown">
+            <a href="#"><span>Documentação</span></a>
             <ul>
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="../manutencao.html">Notícias</a></li>
-                <li><a href="../historiaEtec.html">Nossa História</a></li>
-                <li><a href="../cursos.html">Cursos</a></li>
-                <li><a href="../index.html#contato">Contato</a></li>
-                <li id="dropdown"><a href="#"><span>Documentação</span></a>
-                    <ul>
-                        <li><a href="../assets/docs/Horario.html">Horários</a></li>
-                        <li><a href="../assets/docs/RegimentoComumDasEtecs.html" target="_blank">Regimento Comum das
-                                Etecs</a></li>
-                        <li><a href="../assets/docs/Calendario2024.html" target="_blank">Calendário Anual</a></li>
-                    </ul>
-                </li>
-                <li class="RedesSociais"><a href="https://www.instagram.com/etecrgs/" target="_blank"><img
-                            src="../assets/img/icons/iconsNav/instagram.svg" alt=""><img
-                            src="../assets/img/icons/iconsNav/instagramHover.svg" alt="" class="iconHover"></a></li>
-                <li class="RedesSociais"><a href="https://www.facebook.com/etecrgs/?locale=pt_BR" target="_blank"><img
-                            src="../assets/img/icons/iconsNav/facebook.svg" alt=""><img
-                            src="../assets/img/icons/iconsNav/facebookHover.svg" alt="" class="iconHover"></a></li>
-                <li class="RedesSociais"><a href="https://www.youtube.com/c/PEDAGARGSETEC" target="_blank"><img
-                            src="../assets/img/icons/iconsNav/YoutubeIcon.svg" alt=""><img
-                            src="../assets/img/icons/iconsNav/YoutubeIconHover.svg" alt="" class="iconHover"></a></li>
+              <li><a href="../assets/docs/Horario.html">Horários</a></li>
+              <li>
+                <a
+                  href="../assets/docs/RegimentoComumDasEtecs.html"
+                  target="_blank"
+                  >Regimento Comum das Etecs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/docs/Calendario2024.html"
+                  target="_blank"
+                  >Calendário Anual</a
+                >
+              </li>
             </ul>
-        </nav>
-        <!-- Final da Navbar -->
+          </li>
+          <li class="RedesSociais">
+            <a
+              href="https://www.instagram.com/etecrgs/"
+              target="_blank"
+              ><img
+                src="../assets/img/icons/iconsNav/instagram.svg"
+                alt="" /><img
+                src="../assets/img/icons/iconsNav/instagramHover.svg"
+                alt=""
+                class="iconHover"
+            /></a>
+          </li>
+          <li class="RedesSociais">
+            <a
+              href="https://www.facebook.com/etecrgs/?locale=pt_BR"
+              target="_blank"
+              ><img
+                src="../assets/img/icons/iconsNav/facebook.svg"
+                alt="" /><img
+                src="../assets/img/icons/iconsNav/facebookHover.svg"
+                alt=""
+                class="iconHover"
+            /></a>
+          </li>
+          <li class="RedesSociais">
+            <a
+              href="https://www.youtube.com/c/PEDAGARGSETEC"
+              target="_blank"
+              ><img
+                src="../assets/img/icons/iconsNav/YoutubeIcon.svg"
+                alt="" /><img
+                src="../assets/img/icons/iconsNav/YoutubeIconHover.svg"
+                alt=""
+                class="iconHover"
+            /></a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <h1>Informática para Internet</h1>
-        <hr>
-        <p>Sobre o curso de Informática para Internet da Etec</p>
-        <section>
-            <article class="text">
-                <aside>
-                    <h2>Horários das aulas na Etec de Rio Grande da Serra</h2>
-                    <p>
-                        Ensino Médio integrado ao técnico em Informática para Internet - vespertino : 13:20hs ás 18:40hs
-                    </p>
-                </aside>
-                <aside>
-                    <h2>O que é o técnico?</h2>
-                    <p>O técnico em Informática para Internet desenvolve programas de computador e aplicativos para
-                        dispositivos móveis, utiliza ferramentas de desenvolvimento de sistemas para construir soluções
-                        que auxiliam o processo de criação de interfaces e aplicativos empregados no comércio e
-                        marketing eletrônicos.</p>
-                </aside>
-                <aside>
-                    <h2>Importância.</h2>
-                    <p>Cria websites de acordo com as necessidades do cliente, identificando e sugerindo as melhores
-                        soluções; faz a manutenção de portais, sites e intranets; cuida da identidade visual das páginas
-                        de uma empresa; faz a customização de plataformas de conteúdo para web, como blogs e sites de
-                        comércio eletrônico; cria e realiza manutenção de bancos de dados para websites; adapta as
-                        páginas para abrigar vídeos, áudios e funções que facilitem a acessibilidade, como comandos de
-                        voz, por exemplo; trata e otimiza imagens para uso na internet; e prepara o layout de mensagens
-                        que são enviadas por e-mail (newsletter ou e-mail marketing), entre outras atividades.</p>
-                </aside>
-                <aside>
-                    <h2>Onde se aplica?</h2>
-                    <p>O Técnico em Informática para internet é o profissional que desenvolve e realiza manutenções em
-                        websites, portais na Internet e Intranet. Utiliza ferramentas de desenvolvimento de projetos
-                        para construir soluções que auxiliam o processo de criação de interfaces e aplicativos
-                        empregados no comércio e marketing eletrônicos.</p>
-                </aside>
-                <aside>
-                    <h2>Habilidades que se desenvolve no Técnico: </h2>
-                    <p>O processo de criação de sites e o de desenvolvimento de programas que podem ser utilizados em
-                        páginas na internet. Para programar, o aluno vai estudar raciocínio lógico e linguagens de
-                        programação, que utiliza comandos para desenvolver funcionalidades e dar forma a um site. Além
-                        disso, o estudante aprenderá um pouco de design com o objetivo de tornar a página mais agradável
-                        e fácil de ser utilizada. O aluno aprenderá ainda como criar e alterar bancos de dados que vão
-                        alimentar os sites. Noções de marketing digital para a web e de empreendedorismo também serão
-                        ensinadas ao longo do curso.</p>
-                </aside>
-                <aside>
-                    <h2>Onde se pode trabalha com o técnico?</h2>
-                    <p>Empresas de desenvolvimento de sites ou de sistemas e empresas de marketing digital. O técnico
-                        também pode trabalhar por conta própria, como freelancer, prestando serviço a outras empresas.
-                    </p>
-                </aside>
-            </article>
-            <article class="imagens">
-                <img src="../assets/img/imgcursos/info/Info01.jpg" alt="">
-                <img src="../assets/img/imgcursos/info/Info02.jpg" alt="">
-                <img src="../assets/img/imgcursos/info/Info04.jpg" alt="">
-                <img src="../assets/img/imgcursos/info/Info03.jpg" alt="">
-                <img src="../assets/img/imgcursos/info/Info05.jpg" alt="">
-                <img src="../assets/img/imgcursos/info/Info06.jpg" alt="">
-            </article>
-            <!-- <article class="coord">
+      <h1>Informática para Internet</h1>
+      <hr />
+      <p>Sobre o curso de Informática para Internet da Etec</p>
+      <section>
+        <article class="text">
+          <aside>
+            <h2>Horários das aulas na Etec de Rio Grande da Serra</h2>
+            <p>
+              Ensino Médio integrado ao técnico em Informática para Internet -
+              vespertino : 13:20hs ás 18:40hs
+            </p>
+          </aside>
+          <aside>
+            <h2>O que é o técnico?</h2>
+            <p>
+              O técnico em Informática para Internet desenvolve programas de
+              computador e aplicativos para dispositivos móveis, utiliza
+              ferramentas de desenvolvimento de sistemas para construir soluções
+              que auxiliam o processo de criação de interfaces e aplicativos
+              empregados no comércio e marketing eletrônicos.
+            </p>
+          </aside>
+          <aside>
+            <h2>Importância.</h2>
+            <p>
+              Cria websites de acordo com as necessidades do cliente,
+              identificando e sugerindo as melhores soluções; faz a manutenção
+              de portais, sites e intranets; cuida da identidade visual das
+              páginas de uma empresa; faz a customização de plataformas de
+              conteúdo para web, como blogs e sites de comércio eletrônico; cria
+              e realiza manutenção de bancos de dados para websites; adapta as
+              páginas para abrigar vídeos, áudios e funções que facilitem a
+              acessibilidade, como comandos de voz, por exemplo; trata e otimiza
+              imagens para uso na internet; e prepara o layout de mensagens que
+              são enviadas por e-mail (newsletter ou e-mail marketing), entre
+              outras atividades.
+            </p>
+          </aside>
+          <aside>
+            <h2>Onde se aplica?</h2>
+            <p>
+              O Técnico em Informática para internet é o profissional que
+              desenvolve e realiza manutenções em websites, portais na Internet
+              e Intranet. Utiliza ferramentas de desenvolvimento de projetos
+              para construir soluções que auxiliam o processo de criação de
+              interfaces e aplicativos empregados no comércio e marketing
+              eletrônicos.
+            </p>
+          </aside>
+          <aside>
+            <h2>Habilidades que se desenvolve no Técnico:</h2>
+            <p>
+              O processo de criação de sites e o de desenvolvimento de programas
+              que podem ser utilizados em páginas na internet. Para programar, o
+              aluno vai estudar raciocínio lógico e linguagens de programação,
+              que utiliza comandos para desenvolver funcionalidades e dar forma
+              a um site. Além disso, o estudante aprenderá um pouco de design
+              com o objetivo de tornar a página mais agradável e fácil de ser
+              utilizada. O aluno aprenderá ainda como criar e alterar bancos de
+              dados que vão alimentar os sites. Noções de marketing digital para
+              a web e de empreendedorismo também serão ensinadas ao longo do
+              curso.
+            </p>
+          </aside>
+          <aside>
+            <h2>Onde se pode trabalha com o técnico?</h2>
+            <p>
+              Empresas de desenvolvimento de sites ou de sistemas e empresas de
+              marketing digital. O técnico também pode trabalhar por conta
+              própria, como freelancer, prestando serviço a outras empresas.
+            </p>
+          </aside>
+        </article>
+        <article class="imagens">
+          <img
+            src="../assets/img/imgcursos/info/Info01.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/info/Info02.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/info/Info04.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/info/Info03.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/info/Info05.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/info/Info06.jpg"
+            alt=""
+          />
+        </article>
+        <!-- <article class="coord">
                 <aside class="imgCoord">
 
                 </aside>
@@ -125,88 +231,121 @@
                     <p>Um textinho do coordenador</p>
                 </aside>
             </article> -->
-            <article class="materias">
-                <h1>Materias Técnicas</h1>
-                <aside>
-                    <h2>1º ano/Módulo</h2>
-                    <hr>
-                    <p>Interfaces Web I</p>
-                    <p>Fundamentos da Informática</p>
-                    <p>Arte Digital</p>
-                    <p>Análise e Projetos Web</p>
-                    <p>Programação e Algoritmos</p>
-                    <p>Ética e Cidadania Organizacional</p>
-                </aside>
-                <aside>
-                    <h2>2º ano/Módulo</h2>
-                    <hr>
-                    <p>Interfaces Web II</p>
-                    <p>Banco de Dados</p>
-                    <p>Computação em Nuvem para Web I</p>
-                    <p>Sistemas Web I</p>
-                    <p>Desenvolvimento para Dispositivos Móveis I</p>
-                </aside>
-                <aside>
-                    <h2>3º ano/Módulo</h2>
-                    <hr>
-                    <p>Computação em Nuvem para Web II</p>
-                    <p>Sistemas Web II</p>
-                    <p>Desenvolvimento para Dispositivos Móveis II</p>
-                    <p>Usabilidade, Design de Interação e Acessibilidade Digital</p>
-                    <p>Gestão de Conteúdo Web</p>
-                    <p>Introdução à Internet das Coisas, Redes de Computadores e Segurança da Informação</p>
-                    <p>Planejamento e Desenvolvimento do Trabalho de Conclusão de Curso (TCC) em Informática para
-                        Internet</p>
-                </aside>
-            </article>
-        </section>
+        <article class="materias">
+          <h1>Materias Técnicas</h1>
+          <aside>
+            <h2>1º ano/Módulo</h2>
+            <hr />
+            <p>Interfaces Web I</p>
+            <p>Fundamentos da Informática</p>
+            <p>Arte Digital</p>
+            <p>Análise e Projetos Web</p>
+            <p>Programação e Algoritmos</p>
+            <p>Ética e Cidadania Organizacional</p>
+          </aside>
+          <aside>
+            <h2>2º ano/Módulo</h2>
+            <hr />
+            <p>Interfaces Web II</p>
+            <p>Banco de Dados</p>
+            <p>Computação em Nuvem para Web I</p>
+            <p>Sistemas Web I</p>
+            <p>Desenvolvimento para Dispositivos Móveis I</p>
+          </aside>
+          <aside>
+            <h2>3º ano/Módulo</h2>
+            <hr />
+            <p>Computação em Nuvem para Web II</p>
+            <p>Sistemas Web II</p>
+            <p>Desenvolvimento para Dispositivos Móveis II</p>
+            <p>Usabilidade, Design de Interação e Acessibilidade Digital</p>
+            <p>Gestão de Conteúdo Web</p>
+            <p>
+              Introdução à Internet das Coisas, Redes de Computadores e
+              Segurança da Informação
+            </p>
+            <p>
+              Planejamento e Desenvolvimento do Trabalho de Conclusão de Curso
+              (TCC) em Informática para Internet
+            </p>
+          </aside>
+        </article>
+      </section>
     </main>
     <footer>
-        <span>
-            <h2>ETEC</h2>
-            <p>Av. Francisco Morais Ramos, 777</p>
-            <p>Jardim Novo Horizonte</p>
-            <p>Rio Grande da Serra - SP</p>
-            <p><strong>Telefone:</strong> (11) 4826-8325</p>
-            <p><strong>Email:</strong> e282acad@cps.sp.gov.br</p>
-        </span>
-        <span class="FRedesSociais">
-            <h2>Redes Sociais</h2>
-            <div>
-                <a href="https://www.instagram.com/etecrgs/" target="_blank"><img
-                        src="../assets/img/icons/iconsNav/instagram.svg" alt=""><img
-                        src="../assets/img/icons/iconsNav/instagramHover.svg" alt="" class="iconHover"></a>
-                <a href="https://www.facebook.com/etecrgs/?locale=pt_BR" target="_blank"><img
-                        src="../assets/img/icons/iconsNav/facebook.svg" alt=""><img
-                        src="../assets/img/icons/iconsNav/facebookHover.svg" alt="" class="iconHover"></a>
-                <a href="https://www.youtube.com/c/PEDAGARGSETEC" target="_blank"><img
-                        src="../assets/img/icons/iconsNav/YoutubeIcon.svg" alt=""><img
-                        src="../assets/img/icons/iconsNav/YoutubeIconHover.svg" alt="" class="iconHover"></a>
-            </div>
-            <p>#SimÉPossivel</p>
-        </span>
-        <span>
-            <h2>Noticias</h2>
-            <a href="">Ultimas Noticias</a>
-            <a href="">Em breve</a>
-            <a href="">Vestibulinho</a>
-        </span>
-        <span>
-            <h2>Nossa Etec</h2>
-            <a href="">Nossa História</a>
-            <a href="">Infraestrutura</a>
-            <a href="">Equipe atual</a>
-        </span>
-        <span>
-            <h2>Cursos</h2>
-            <a href="">Com Ensino Medio</a>
-            <a href="">Modulares e Noturnos</a>
-            <a href="">Online</a>
-        </span>
+      <span>
+        <h2>ETEC</h2>
+        <p>Av. Francisco Morais Ramos, 777</p>
+        <p>Jardim Novo Horizonte</p>
+        <p>Rio Grande da Serra - SP</p>
+        <p><strong>Telefone:</strong> (11) 4826-8325</p>
+        <p><strong>Email:</strong> e282acad@cps.sp.gov.br</p>
+      </span>
+      <span class="FRedesSociais">
+        <h2>Redes Sociais</h2>
+        <div>
+          <a
+            href="https://www.instagram.com/etecrgs/"
+            target="_blank"
+            ><img
+              src="../assets/img/icons/iconsNav/instagram.svg"
+              alt="" /><img
+              src="../assets/img/icons/iconsNav/instagramHover.svg"
+              alt=""
+              class="iconHover"
+          /></a>
+          <a
+            href="https://www.facebook.com/etecrgs/?locale=pt_BR"
+            target="_blank"
+            ><img
+              src="../assets/img/icons/iconsNav/facebook.svg"
+              alt="" /><img
+              src="../assets/img/icons/iconsNav/facebookHover.svg"
+              alt=""
+              class="iconHover"
+          /></a>
+          <a
+            href="https://www.youtube.com/c/PEDAGARGSETEC"
+            target="_blank"
+            ><img
+              src="../assets/img/icons/iconsNav/YoutubeIcon.svg"
+              alt="" /><img
+              src="../assets/img/icons/iconsNav/YoutubeIconHover.svg"
+              alt=""
+              class="iconHover"
+          /></a>
+        </div>
+        <p>#SimÉPossivel</p>
+      </span>
+      <span>
+        <h2>Noticias</h2>
+        <a href="">Ultimas Noticias</a>
+        <a href="">Em breve</a>
+        <a href="">Vestibulinho</a>
+      </span>
+      <span>
+        <h2>Nossa Etec</h2>
+        <a href="">Nossa História</a>
+        <a href="">Infraestrutura</a>
+        <a href="">Equipe atual</a>
+      </span>
+      <span>
+        <h2>Cursos</h2>
+        <a href="">Com Ensino Medio</a>
+        <a href="">Modulares e Noturnos</a>
+        <a href="">Online</a>
+      </span>
     </footer>
-    <a id="backToTop" href="#header"><img src="../assets/img/icons/SetaParaCima.svg" alt=""></a>
+    <a
+      id="backToTop"
+      href="#header"
+      ><img
+        src="../assets/img/icons/SetaParaCima.svg"
+        alt=""
+    /></a>
     <div id="preloader"></div>
 
     <script src="../assets/js/pattern.js"></script>
     <script src="../assets/js/Cursos.js"></script>
-</body>
+  </body>
+</html>

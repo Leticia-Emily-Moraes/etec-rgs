@@ -29,7 +29,7 @@ CREATE TABLE noticias (
 
 CREATE TABLE noticiasConteudo (
 	IdConteudo INT AUTO_INCREMENT NOT NULL,
-    IdNoticia INT NOT NULL,
+    IdNoticiaConteudo INT NOT NULL,
     Text1 VARCHAR(300) NOT NULL,
     Imagem1 VARCHAR(255) NOT NULL,
 	Text2 VARCHAR(300),
@@ -38,7 +38,7 @@ CREATE TABLE noticiasConteudo (
     Imagem3 VARCHAR(255),
     Text4 VARCHAR(300),
     Imagem4 VARCHAR(255),
-    FOREIGN KEY (IdNoticia) REFERENCES noticias(IdNoticia),
+    FOREIGN KEY (IdNoticiaConteudo) REFERENCES noticias(IdNoticia),
     PRIMARY KEY(IdConteudo)
 );
 
@@ -63,8 +63,6 @@ CREATE TABLE galeriaDeImagens(
     FOREIGN KEY (IdNoticia) REFERENCES noticias(IdNoticia),
     PRIMARY KEY(IdGaleria)
 );
-
-INSERT INTO usuarios (NomeCompleto, NomeUser, SenhaUser, Cargo, ImagemAutor) VALUES ('Rodrigo Vicente','Root', 'Admin2024', 'Administrador', 'assets/img/equipe/UserTemporario.png');
 
 SELECT * FROM usuarios;
 

@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    adicionarAutor();
+    verificarPermissaoAdicionar(function (permitido) {
+        if (permitido) {
+            adicionarAutor();
+        } else {
+            alert('Você não tem permissão para adicionar autores.');
+            window.location.href = 'autores.html'; 
+        }
+    });
 
     const inputImg = document.querySelector("#img");
     const PreImagem = document.querySelector(".ImagemPreview");
@@ -30,6 +37,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+function verificarPermissaoAdicionar(callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'assets/php/verificaParaAdicionar.php', true);
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            var resposta = JSON.parse(xhr.responseText);
+            if (resposta.erro) {
+                console.error(resposta.erro);
+                callback(false);
+            } else {
+                const cargoUsuarioLogado = resposta.cargoUsuarioLogado;
+                callback(cargoUsuarioLogado === 'Administrador' || cargoUsuarioLogado === 'Gestão');
+            }
+        } else {
+            console.error("Falha na requisição. Status retornado: " + xhr.status);
+            callback(false);
+        }
+    };
+    xhr.onerror = function () {
+        console.error("Erro ao fazer a requisição.");
+        callback(false);
+    };
+    xhr.send();
+}
+
 function adicionarAutor() {
     const form = document.getElementById('postForm');
     form.addEventListener('submit', function (event) {
@@ -41,7 +73,7 @@ function adicionarAutor() {
         const Cargo = document.getElementById('Cargo').value;
         const imagem = document.getElementById('img').files[0];
 
-        if (!NomeCompleto || !NomeUser || !SenhaUser || !Cargo || !imagem) {
+        if (!NomeCompleto || !NomeUser || !SenhaUser || Cargo === "Escolha o Cargo" || !imagem) {
             alert("Por favor, preencha todos os campos.");
             return;
         }
@@ -58,30 +90,37 @@ function adicionarAutor() {
             return;
         }
 
-        const tituloFormatado = formatarTitulo(NomeCompleto);
-
-        const formData = new FormData();
-        formData.append('NomeCompleto', NomeCompleto);
-        formData.append('NomeUser', NomeUser);
-        formData.append('SenhaUser', SenhaUser);
-        formData.append('Cargo', Cargo);
-        formData.append('img', imagem, tituloFormatado + '.' + extensao);
-
-        fetch('assets/php/addAutor.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('Dados enviados com sucesso!');
-                window.location.href = 'assets/php/addAutor.php';
-            } else {
-                return response.text().then(text => { throw new Error(text) });
+        verificarPermissaoAdicionar(function (permitido) {
+            if (!permitido) {
+                alert('Você não tem permissão para adicionar este tipo de autor.');
+                return;
             }
-        })
-        .catch(error => {
-            console.error('Erro ao enviar os dados:', error);
-            alert('Ocorreu um erro ao enviar os dados. Por favor, tente novamente.');
+
+            const tituloFormatado = formatarTitulo(NomeCompleto);
+
+            const formData = new FormData();
+            formData.append('NomeCompleto', NomeCompleto);
+            formData.append('NomeUser', NomeUser);
+            formData.append('SenhaUser', SenhaUser);
+            formData.append('Cargo', Cargo);
+            formData.append('img', imagem, tituloFormatado + '.' + extensao);
+
+            fetch('assets/php/addAutor.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // console.log('Dados enviados com sucesso!');
+                    // window.location.href = 'autores.html';
+                } else {
+                    return response.text().then(text => { throw new Error(text) });
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao enviar os dados:', error);
+                alert('Ocorreu um erro ao enviar os dados. Por favor, tente novamente.');
+            });
         });
     });
 }

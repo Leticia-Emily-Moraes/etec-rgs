@@ -1,7 +1,3 @@
-main {
-    padding: 20px 0px;
-}
-
 nav ul li a {
     display: flex;
     align-items: center;
@@ -29,7 +25,6 @@ h1 {
     text-align: center;
     text-transform: uppercase;
 }
-
 hr {
     width: 50px;
     height: 3px;
@@ -37,7 +32,50 @@ hr {
     border: none;
     border-radius: 20px;
 }
-
+.perfis{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 30px;
+}
+.perfis aside{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #3265ff63;
+    border-radius: 20px;
+    padding: 30px;
+    gap: 20px;
+    position: relative;
+    height: 100%;
+}
+.perfis aside button#Deletar{
+    color: #c00000;
+    padding: 5px;
+    background-color: transparent;
+    border: 2px solid #c00000;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: 700;
+}
+.perfis aside button#Deletar:hover{
+    background-color: #c00000;
+    color: #FFFFFF;
+    border-color: #c00000;
+}
+.perfis aside img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 main section {
     width: 100%;
     display: flex;
@@ -46,7 +84,7 @@ main section {
     align-items: center;
 }
 
-.perfis aside span {
+.perfis aside span{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,87 +111,38 @@ section a:hover {
     background-color: #1a4fbd;
 }
 
-section form {
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
-
-section form div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-section form div label {
-    text-align: justify;
-    font-size: 25px;
-}
-
-section form div select {
-    width: 300px;
-    height: 30px;
-    margin: 10px;
-    padding: 5px;
-    border: 3px solid #3266ff;
-}
-
-section form div input[type="text"] {
-    width: 300px;
-    height: 30px;
-    margin: 10px;
-    padding: 5px;
-    border: 3px solid #3266ff;
-    font-size: 16px;
-    font-family: var(--FontStandard);
-}
-
-section form div input[type="file"] {
+#confirmacao{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    max-height: 600px;
     display: none;
-}
-
-section form div label#imagem {
-    width: 300px;
-    background-color: #ffffff;
-    height: 100px;
-    margin: 10px;
-    padding: 5px;
-    border: 3px dashed #3266ff;
-    color: #3266ff;
-    display: flex;
+    padding: 50px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    overflow: hidden;
+    gap: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 5px solid #573aff;
+    border-radius: 5px;
 }
 
-section form div label#imagem:hover {
-    background-color: #3266ffcc;
-    color: #ffffff;
-    border: 3px dashed #ffffff;
-    transition: all 200ms ease-in-out;
+#confirmacao div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-section form div label#imagem:active {
-    background-color: #573aff;
-    color: #ffffff;
-    border: 3px dashed #ffffff;
-}
-
-section form div label#imagem:focus {
-    outline: 3px solid #3266ff;
-}
-
-section form div label .ImagemPreview .ImgViewer {
-    max-width: 100%;
-}
-
-section form div input[type=submit] {
-    width: 150px;
+#confirmacao div button{
+    width: 100px;
     padding: 10px;
-    border: 3px solid #3266ff;
+    border: 3px solid #dd3c3c;
     border-radius: 5px;
     background-color: #ffffff;
     color: #000000;
@@ -161,10 +150,14 @@ section form div input[type=submit] {
     align-self: center;
 }
 
-section form div input[type=submit]:hover {
+#confirmacao div button:first-child{
+    border: 3px solid #37d07c;
+}
+
+#confirmacao div button:hover {
     border: 3px solid #ffffff;
     border-radius: 5px;
-    background-color: #3266ff;
+    background-color: #7e74d8;
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
@@ -189,5 +182,16 @@ section form div input[type=submit]:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .perfis{
+        
+        max-width: 970px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .perfis aside{
+        max-width: 450px;
+        max-height: 250px;
     }
 }

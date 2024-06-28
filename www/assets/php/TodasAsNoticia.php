@@ -11,7 +11,8 @@ $noticias_por_pagina = 4;
 $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $offset = ($page - 1) * $noticias_por_pagina;
 
-$query = "SELECT n.Titulo, 
+$query = "SELECT n.IdNoticia,
+    n.Titulo, 
     n.Resumo, 
     n.Categoria,
     n.ImagemCapa,
@@ -28,9 +29,10 @@ mysqli_stmt_execute($stmt);
 
 if ($stmt) {
     $ultimasNoticias = array();
-    mysqli_stmt_bind_result($stmt, $titulo, $resumo, $categoria, $imagemCapa, $dataPublicacao, $autor);
+    mysqli_stmt_bind_result($stmt, $ID, $titulo, $resumo, $categoria, $imagemCapa, $dataPublicacao, $autor);
     while (mysqli_stmt_fetch($stmt)) {
         $ultimasNoticias[] = array(
+            'ID' => $ID,
             'Titulo' => $titulo,
             'Resumo' => $resumo,
             'Categoria' => $categoria,

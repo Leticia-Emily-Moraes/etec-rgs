@@ -7,7 +7,8 @@ include_once('../bd/conexao.php');
 // Obtém o termo de pesquisa e a página a partir da solicitação GET
 $termoPesquisa = isset($_GET['termo']) ? '%' . $_GET['termo'] . '%' : '';
 
-$query = "SELECT n.Titulo, 
+$query = "SELECT n.IdNoticia,
+n.Titulo, 
 n.Resumo, 
 n.Categoria,
 n.ImagemCapa,
@@ -24,9 +25,10 @@ mysqli_stmt_execute($stmt);
 
 if ($stmt) {
     $noticiasPorPesquisa = array();
-    mysqli_stmt_bind_result($stmt, $titulo, $resumo, $categoria, $imagemCapa, $dataPublicacao, $autor);
+    mysqli_stmt_bind_result($stmt, $ID, $titulo, $resumo, $categoria, $imagemCapa, $dataPublicacao, $autor);
     while (mysqli_stmt_fetch($stmt)) {
         $noticiasPorPesquisa[] = array(
+            'ID' => $ID,
             'Titulo' => $titulo,
             'Resumo' => $resumo,
             'Categoria' => $categoria,

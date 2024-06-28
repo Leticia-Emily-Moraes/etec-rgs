@@ -1,118 +1,225 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Etec RGS - Cursos - Edificações</title>
 
-    <link rel="shortcut icon" href="../assets/img/Favicons/etecRgs.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../assets/img/Favicons/etecRgs.ico"
+      type="image/x-icon"
+    />
     <!-- Arquivo reset CSS -->
-    <link rel="stylesheet" href="../assets/style/reset.css">
+    <link
+      rel="stylesheet"
+      href="../assets/style/reset.css"
+    />
     <!-- Arquivo CSS -->
-    <link rel="stylesheet" href="../assets/style/pattern.css">
+    <link
+      rel="stylesheet"
+      href="../assets/style/pattern.css"
+    />
     <!-- Arquivo CSS responsivo -->
-    <link rel="stylesheet" href="../assets/style/patternResponsive.css">
+    <link
+      rel="stylesheet"
+      href="../assets/style/patternResponsive.css"
+    />
     <!-- Arquivo CSS do próprio -->
-    <link rel="stylesheet" href="../assets/style/curso.css">
+    <link
+      rel="stylesheet"
+      href="../assets/style/curso.css"
+    />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <header id="header">
-        <a href="../index.html"><img class="logo" src="../assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
-        <img id="menu" src="../assets/img/icons/iconsNav/Menu.svg" alt="">
-        <img id="menuClose" src="../assets/img/icons/iconsNav/CloseMenu.svg" alt="">
+      <a href="../index.html"
+        ><img
+          class="logo"
+          src="../assets/img/icons/iconsNav/etecRgs.png"
+          alt=""
+      /></a>
+      <img
+        id="menu"
+        src="../assets/img/icons/iconsNav/Menu.svg"
+        alt=""
+      />
+      <img
+        id="menuClose"
+        src="../assets/img/icons/iconsNav/CloseMenu.svg"
+        alt=""
+      />
 
-        <nav id="navPrincipal">
+      <nav id="navPrincipal">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../Noticias.html">Notícias</a></li>
+          <li><a href="../historiaEtec.html">Nossa História</a></li>
+          <li><a href="../cursos.html">Cursos</a></li>
+          <li><a href="../index.html#contato">Contato</a></li>
+          <li id="dropdown">
+            <a href="#"><span>Documentação</span></a>
             <ul>
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="../manutencao.html">Notícias</a></li>
-                <li><a href="../historiaEtec.html">Nossa História</a></li>
-                <li><a href="../cursos.html">Cursos</a></li>
-                <li><a href="../index.html#contato">Contato</a></li>
-                <li id="dropdown"><a href="#"><span>Documentação</span></a>
-                    <ul>
-                        <li><a href="../assets/docs/Horario.html">Horários</a></li>
-                        <li><a href="../assets/docs/RegimentoComumDasEtecs.html" target="_blank">Regimento Comum das
-                                Etecs</a></li>
-                        <li><a href="../assets/docs/Calendario2024.html" target="_blank">Calendário Anual</a></li>
-                    </ul>
-                </li>
-                <li class="RedesSociais"><a href="https://www.instagram.com/etecrgs/" target="_blank"><img
-                            src="../assets/img/icons/iconsNav/instagram.svg" alt=""><img
-                            src="../assets/img/icons/iconsNav/instagramHover.svg" alt="" class="iconHover"></a></li>
-                <li class="RedesSociais"><a href="https://www.facebook.com/etecrgs/?locale=pt_BR" target="_blank"><img
-                            src="../assets/img/icons/iconsNav/facebook.svg" alt=""><img
-                            src="../assets/img/icons/iconsNav/facebookHover.svg" alt="" class="iconHover"></a></li>
-                <li class="RedesSociais"><a href="https://www.youtube.com/c/PEDAGARGSETEC" target="_blank"><img
-                            src="../assets/img/icons/iconsNav/YoutubeIcon.svg" alt=""><img
-                            src="../assets/img/icons/iconsNav/YoutubeIconHover.svg" alt="" class="iconHover"></a></li>
+              <li><a href="../assets/docs/Horario.html">Horários</a></li>
+              <li>
+                <a
+                  href="../assets/docs/RegimentoComumDasEtecs.html"
+                  target="_blank"
+                  >Regimento Comum das Etecs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../assets/docs/Calendario2024.html"
+                  target="_blank"
+                  >Calendário Anual</a
+                >
+              </li>
             </ul>
-        </nav>
-        <!-- Final da Navbar -->
+          </li>
+          <li class="RedesSociais">
+            <a
+              href="https://www.instagram.com/etecrgs/"
+              target="_blank"
+              ><img
+                src="../assets/img/icons/iconsNav/instagram.svg"
+                alt="" /><img
+                src="../assets/img/icons/iconsNav/instagramHover.svg"
+                alt=""
+                class="iconHover"
+            /></a>
+          </li>
+          <li class="RedesSociais">
+            <a
+              href="https://www.facebook.com/etecrgs/?locale=pt_BR"
+              target="_blank"
+              ><img
+                src="../assets/img/icons/iconsNav/facebook.svg"
+                alt="" /><img
+                src="../assets/img/icons/iconsNav/facebookHover.svg"
+                alt=""
+                class="iconHover"
+            /></a>
+          </li>
+          <li class="RedesSociais">
+            <a
+              href="https://www.youtube.com/c/PEDAGARGSETEC"
+              target="_blank"
+              ><img
+                src="../assets/img/icons/iconsNav/YoutubeIcon.svg"
+                alt="" /><img
+                src="../assets/img/icons/iconsNav/YoutubeIconHover.svg"
+                alt=""
+                class="iconHover"
+            /></a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <h1>Edificações</h1>
-        <hr>
-        <p>Sobre o curso de Edificações da Etec</p>
-        <section>
-            <article class="text">
-                <aside>
-                    <h2>Horários das aulas na Etec de Rio Grande da Serra</h2>
-                    <p>
-                        Ensino Médio integrado ao técnico em Edificações - matutino : 7:00hs ás 12:20hs
-                    </p>
-                </aside>
-                <aside>
-                    <h2>O que é o técnico?</h2>
-                    <p>O Técnico em Edificações é o profissional que desenvolve e executa projetos de edificações
-                        conforme normas técnicas de segurança, de acordo com legislação específica, conforme limites
-                        regulamentares e normativa ambiental. Planeja a execução, elabora orçamento e memorial
-                        descritivo de obras. Supervisiona a execução de diferentes etapas do processo construtivo.
-                        Presta assistência técnica no estudo e desenvolvimento de projetos, pesquisas e controle
-                        tecnológico de materiais na área da Construção Civil. Orienta e coordena a execução de serviços
-                        de manutenção de equipamentos e de instalações em edificações. Orienta na assistência técnica
-                        para compra, venda e utilização de produtos e equipamentos especializados.</p>
-                </aside>
-                <aside>
-                    <h2>Importância.</h2>
-                    <p>Dentro de empresas de construção, o técnico em edificações pode atuar diretamente nos canteiros
-                        de obras. Ele supervisiona equipes de trabalho, coordena a execução das etapas construtivas,
-                        verifica a aplicação correta dos projetos e garante o cumprimento das normas técnicas e de
-                        segurança.</p>
-                </aside>
-                <aside>
-                    <h2>Onde se aplica?</h2>
-                    <p>Em escritórios, auxilia e elabora projetos de arquitetura e engenharia civil, dentro dos limites
-                        regulamentados. Em obras, atua no planejamento e fiscalização das obras de construção civil.
-                        Também pode trabalhar com assessoria técnica, consultor de tecnologias ou na prestação de
-                        serviços de manutenção e reparos prediais.</p>
-                </aside>
-                <aside>
-                    <h2>Habilidades que se desenvolve no Técnico: </h2>
-                    <p>As principais disciplinas do curso são Desenho, para elaboração e desenvolvimento de projetos de
-                        engenharia e arquitetura, Tecnologia dos Materiais de Construção, para selecionar e controlar a
-                        qualidade dos materiais, Tecnologia das Construções, para supervisionar e aprimorar os processos
-                        de construção, Planejamento e Controle das Obras, para assegurar o cumprimento dos prazos e
-                        custos. Entre outras disciplinas, o aluno utiliza Matemática, para calcular proporções, áreas e
-                        volumes, e Química, para o aluno entender as propriedades dos materiais.</p>
-                </aside>
-                <aside>
-                    <h2>Onde se pode trabalha com o técnico?</h2>
-                    <p>Escritórios de engenharia civil e arquitetura, obras, laboratórios, comércio, autônomo.</p>
-                </aside>
-            </article>
-            <article class="imagens">
-                <img src="../assets/img/imgcursos/Edf/Edf01.jpg" alt="">
-                <img src="../assets/img/imgcursos/Edf/Edf02.jpg" alt="">
-                <img src="../assets/img/imgcursos/Edf/Edf03.jpg" alt="">
-                <img src="../assets/img/imgcursos/Edf/Edf04.jpg" alt="">
-                <img src="../assets/img/imgcursos/Edf/Edf05.jpg" alt="">
-                <img src="../assets/img/imgcursos/Edf/Edf06.jpg" alt="">
-            </article>
-            <!-- <article class="coord">
+      <h1>Edificações</h1>
+      <hr />
+      <p>Sobre o curso de Edificações da Etec</p>
+      <section>
+        <article class="text">
+          <aside>
+            <h2>Horários das aulas na Etec de Rio Grande da Serra</h2>
+            <p>
+              Ensino Médio integrado ao técnico em Edificações - matutino :
+              7:00hs ás 12:20hs
+            </p>
+          </aside>
+          <aside>
+            <h2>O que é o técnico?</h2>
+            <p>
+              O Técnico em Edificações é o profissional que desenvolve e executa
+              projetos de edificações conforme normas técnicas de segurança, de
+              acordo com legislação específica, conforme limites regulamentares
+              e normativa ambiental. Planeja a execução, elabora orçamento e
+              memorial descritivo de obras. Supervisiona a execução de
+              diferentes etapas do processo construtivo. Presta assistência
+              técnica no estudo e desenvolvimento de projetos, pesquisas e
+              controle tecnológico de materiais na área da Construção Civil.
+              Orienta e coordena a execução de serviços de manutenção de
+              equipamentos e de instalações em edificações. Orienta na
+              assistência técnica para compra, venda e utilização de produtos e
+              equipamentos especializados.
+            </p>
+          </aside>
+          <aside>
+            <h2>Importância.</h2>
+            <p>
+              Dentro de empresas de construção, o técnico em edificações pode
+              atuar diretamente nos canteiros de obras. Ele supervisiona equipes
+              de trabalho, coordena a execução das etapas construtivas, verifica
+              a aplicação correta dos projetos e garante o cumprimento das
+              normas técnicas e de segurança.
+            </p>
+          </aside>
+          <aside>
+            <h2>Onde se aplica?</h2>
+            <p>
+              Em escritórios, auxilia e elabora projetos de arquitetura e
+              engenharia civil, dentro dos limites regulamentados. Em obras,
+              atua no planejamento e fiscalização das obras de construção civil.
+              Também pode trabalhar com assessoria técnica, consultor de
+              tecnologias ou na prestação de serviços de manutenção e reparos
+              prediais.
+            </p>
+          </aside>
+          <aside>
+            <h2>Habilidades que se desenvolve no Técnico:</h2>
+            <p>
+              As principais disciplinas do curso são Desenho, para elaboração e
+              desenvolvimento de projetos de engenharia e arquitetura,
+              Tecnologia dos Materiais de Construção, para selecionar e
+              controlar a qualidade dos materiais, Tecnologia das Construções,
+              para supervisionar e aprimorar os processos de construção,
+              Planejamento e Controle das Obras, para assegurar o cumprimento
+              dos prazos e custos. Entre outras disciplinas, o aluno utiliza
+              Matemática, para calcular proporções, áreas e volumes, e Química,
+              para o aluno entender as propriedades dos materiais.
+            </p>
+          </aside>
+          <aside>
+            <h2>Onde se pode trabalha com o técnico?</h2>
+            <p>
+              Escritórios de engenharia civil e arquitetura, obras,
+              laboratórios, comércio, autônomo.
+            </p>
+          </aside>
+        </article>
+        <article class="imagens">
+          <img
+            src="../assets/img/imgcursos/Edf/Edf01.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/Edf/Edf02.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/Edf/Edf03.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/Edf/Edf04.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/Edf/Edf05.jpg"
+            alt=""
+          />
+          <img
+            src="../assets/img/imgcursos/Edf/Edf06.jpg"
+            alt=""
+          />
+        </article>
+        <!-- <article class="coord">
                 <aside class="imgCoord">
 
                 </aside>
@@ -123,86 +230,121 @@
                     <p>Um textinho do coordenador</p>
                 </aside>
             </article> -->
-            <article class="materias">
-                <h1>Materias Técnicas</h1>
-                <aside>
-                    <h2>1º ano/Módulo</h2>
-                    <hr>
-                    <p>Desenho Básico Aplicado à Edificações</p>
-                    <p>Estudos de Viabilidade e Planejamento Técnico e Econômico na Construção Civil</p>
-                    <p>Estudos de Solos e Fundações</p>
-                    <p>Informática Aplicada à Construção Civil</p>
-                    <p>Instalações Prediais – Hidráulica</p>
-                </aside>
-                <aside>
-                    <h2>2º ano/Módulo</h2>
-                    <hr>
-                    <p>Elaboração de Projetos Técnicos</p>
-                    <p>Ética e Cidadania Organizacional</p>
-                    <p>Técnicas e Práticas Construtivas de Infraestrutura, Superestrutura e Vedação</p>
-                    <p>Topografia Aplicada à Construção Civil</p>
-                    <p>Tecnologia dos Materiais de Construção Civil I</p>
-                </aside>
-                <aside>
-                    <h2>3º ano/Módulo</h2>
-                    <hr>
-                    <p>Tecnologia dos Materiais de Construção Civil II</p>
-                    <p>Controles de Obras</p>
-                    <p>Desenvolvimento de Projetos Técnicos</p>
-                    <p>Estruturas na Construção Civil</p>
-                    <p>Instalações Prediais Elétricas e Especiais</p>
-                    <p>Planejamento e Desenvolvimento do Trabalho de Conclusão de Curso (TCC) em Edificações</p>
-                    <p>Técnicas e Práticas Construtivas de Cobertura e Acabamento</p>
-                </aside>
-            </article>
-        </section>
+        <article class="materias">
+          <h1>Materias Técnicas</h1>
+          <aside>
+            <h2>1º ano/Módulo</h2>
+            <hr />
+            <p>Desenho Básico Aplicado à Edificações</p>
+            <p>
+              Estudos de Viabilidade e Planejamento Técnico e Econômico na
+              Construção Civil
+            </p>
+            <p>Estudos de Solos e Fundações</p>
+            <p>Informática Aplicada à Construção Civil</p>
+            <p>Instalações Prediais – Hidráulica</p>
+          </aside>
+          <aside>
+            <h2>2º ano/Módulo</h2>
+            <hr />
+            <p>Elaboração de Projetos Técnicos</p>
+            <p>Ética e Cidadania Organizacional</p>
+            <p>
+              Técnicas e Práticas Construtivas de Infraestrutura, Superestrutura
+              e Vedação
+            </p>
+            <p>Topografia Aplicada à Construção Civil</p>
+            <p>Tecnologia dos Materiais de Construção Civil I</p>
+          </aside>
+          <aside>
+            <h2>3º ano/Módulo</h2>
+            <hr />
+            <p>Tecnologia dos Materiais de Construção Civil II</p>
+            <p>Controles de Obras</p>
+            <p>Desenvolvimento de Projetos Técnicos</p>
+            <p>Estruturas na Construção Civil</p>
+            <p>Instalações Prediais Elétricas e Especiais</p>
+            <p>
+              Planejamento e Desenvolvimento do Trabalho de Conclusão de Curso
+              (TCC) em Edificações
+            </p>
+            <p>Técnicas e Práticas Construtivas de Cobertura e Acabamento</p>
+          </aside>
+        </article>
+      </section>
     </main>
     <footer>
-        <span>
-            <h2>ETEC</h2>
-            <p>Av. Francisco Morais Ramos, 777</p>
-            <p>Jardim Novo Horizonte</p>
-            <p>Rio Grande da Serra - SP</p>
-            <p><strong>Telefone:</strong> (11) 4826-8325</p>
-            <p><strong>Email:</strong> e282acad@cps.sp.gov.br</p>
-        </span>
-        <span class="FRedesSociais">
-            <h2>Redes Sociais</h2>
-            <div>
-                <a href="https://www.instagram.com/etecrgs/" target="_blank"><img
-                        src="../assets/img/icons/iconsNav/instagram.svg" alt=""><img
-                        src="../assets/img/icons/iconsNav/instagramHover.svg" alt="" class="iconHover"></a>
-                <a href="https://www.facebook.com/etecrgs/?locale=pt_BR" target="_blank"><img
-                        src="../assets/img/icons/iconsNav/facebook.svg" alt=""><img
-                        src="../assets/img/icons/iconsNav/facebookHover.svg" alt="" class="iconHover"></a>
-                <a href="https://www.youtube.com/c/PEDAGARGSETEC" target="_blank"><img
-                        src="../assets/img/icons/iconsNav/YoutubeIcon.svg" alt=""><img
-                        src="../assets/img/icons/iconsNav/YoutubeIconHover.svg" alt="" class="iconHover"></a>
-            </div>
-            <p>#SimÉPossivel</p>
-        </span>
-        <span>
-            <h2>Noticias</h2>
-            <a href="">Ultimas Noticias</a>
-            <a href="">Em breve</a>
-            <a href="">Vestibulinho</a>
-        </span>
-        <span>
-            <h2>Nossa Etec</h2>
-            <a href="">Nossa História</a>
-            <a href="">Infraestrutura</a>
-            <a href="">Equipe atual</a>
-        </span>
-        <span>
-            <h2>Cursos</h2>
-            <a href="">Com Ensino Medio</a>
-            <a href="">Modulares e Noturnos</a>
-            <a href="">Online</a>
-        </span>
+      <span>
+        <h2>ETEC</h2>
+        <p>Av. Francisco Morais Ramos, 777</p>
+        <p>Jardim Novo Horizonte</p>
+        <p>Rio Grande da Serra - SP</p>
+        <p><strong>Telefone:</strong> (11) 4826-8325</p>
+        <p><strong>Email:</strong> e282acad@cps.sp.gov.br</p>
+      </span>
+      <span class="FRedesSociais">
+        <h2>Redes Sociais</h2>
+        <div>
+          <a
+            href="https://www.instagram.com/etecrgs/"
+            target="_blank"
+            ><img
+              src="../assets/img/icons/iconsNav/instagram.svg"
+              alt="" /><img
+              src="../assets/img/icons/iconsNav/instagramHover.svg"
+              alt=""
+              class="iconHover"
+          /></a>
+          <a
+            href="https://www.facebook.com/etecrgs/?locale=pt_BR"
+            target="_blank"
+            ><img
+              src="../assets/img/icons/iconsNav/facebook.svg"
+              alt="" /><img
+              src="../assets/img/icons/iconsNav/facebookHover.svg"
+              alt=""
+              class="iconHover"
+          /></a>
+          <a
+            href="https://www.youtube.com/c/PEDAGARGSETEC"
+            target="_blank"
+            ><img
+              src="../assets/img/icons/iconsNav/YoutubeIcon.svg"
+              alt="" /><img
+              src="../assets/img/icons/iconsNav/YoutubeIconHover.svg"
+              alt=""
+              class="iconHover"
+          /></a>
+        </div>
+        <p>#SimÉPossivel</p>
+      </span>
+      <span>
+        <h2>Noticias</h2>
+        <a href="">Ultimas Noticias</a>
+        <a href="">Em breve</a>
+        <a href="">Vestibulinho</a>
+      </span>
+      <span>
+        <h2>Nossa Etec</h2>
+        <a href="">Nossa História</a>
+        <a href="">Infraestrutura</a>
+        <a href="">Equipe atual</a>
+      </span>
+      <span>
+        <h2>Cursos</h2>
+        <a href="">Com Ensino Medio</a>
+        <a href="">Modulares e Noturnos</a>
+        <a href="">Online</a>
+      </span>
     </footer>
-    <a id="backToTop"><img src="../assets/img/icons/SetaParaCima.svg" alt=""></a>
+    <a id="backToTop"
+      ><img
+        src="../assets/img/icons/SetaParaCima.svg"
+        alt=""
+    /></a>
     <div id="preloader"></div>
 
     <script src="../assets/js/pattern.js"></script>
     <script src="../assets/js/Cursos.js"></script>
-</body>
+  </body>
+</html>

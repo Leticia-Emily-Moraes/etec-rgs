@@ -14,7 +14,7 @@
     <!-- Arquivo CSS responsivo -->
     <link rel="stylesheet" href="assets/style/patternResponsive.css">
     <!-- Arquivo CSS proprio -->
-    <link rel="stylesheet" href="assets/style/autores.css">
+    <link rel="stylesheet" href="assets/style/delAutor.css">
 
 
 </head>
@@ -29,7 +29,7 @@
                 <li><a href="Principal.html">Início</a></li>
                 <li><a href="postagemCapa.html">Postar Noticia</a></li>
                 <li><a href="postagens.html">Ver Postagens</a></li>
-                <li><a href="#">Autores</a></li>
+                <li><a href="autores.html">Autores</a></li>
                 <li><a href="assets/php/logout.php">Logout<img src="assets/img/icons/IconLogout.svg" alt=""></a></li>
             </ul>
         </nav>
@@ -43,6 +43,7 @@
         </section>
         <section class="perfis">
             <aside>
+                <button id="Deletar">X</button>
                 <img src="assets/img/equipe/UserTemporario.png" alt="">
                 <span>
                     <h2>Nome do Autor</h2>
@@ -53,7 +54,16 @@
             </aside>
         </section>
     </main>
+    <div id="confirmacao">
+        <p>Realmente deseja excluir <span id="Nome do autor"></span></p>
+        <div>
+            <button id="confirma">Confirmar</button>
+            <button id="cancelar">Cancelar</button>
+        </div>
+    </div>
     <script src="assets/js/pattern.js"></script>
+    <script src="assets/js/delAutor.js"></script>
+    
 </body>
 
 </html>

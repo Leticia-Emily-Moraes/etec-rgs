@@ -52,8 +52,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Falha ao mover o arquivo para o diretório de destino.";
     }
-} else {
-    echo "Método de requisição inválido. Método recebido: " . $_SERVER["REQUEST_METHOD"];
 }
 
 $conexao->close();

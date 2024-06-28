@@ -6,41 +6,23 @@ include_once('Verifica.php');
 
 $autores = array();
 
-// Consulta para obter todos os usuários
-$query = "SELECT IdUsuario, NomeCompleto, Cargo, ImagemAutor FROM usuarios";
+// Consulta para obter todos os usuários com suas informações básicas e última notícia
+$query = "SELECT u.IdUsuario, u.NomeCompleto, u.Cargo, u.ImagemAutor,
+                 COUNT(n.IdNoticia) AS Postagens,
+                 (SELECT Titulo FROM noticias WHERE Autor = u.IdUsuario ORDER BY HoraPublicado DESC LIMIT 1) AS UltimaPostagem
+          FROM usuarios u
+          LEFT JOIN noticias n ON u.IdUsuario = n.Autor
+          GROUP BY u.IdUsuario, u.NomeCompleto, u.Cargo, u.ImagemAutor
+          ORDER BY u.NomeCompleto";
+
 $stmt = mysqli_prepare($conexao, $query);
 if ($stmt) {
     mysqli_stmt_execute($stmt);
-    mysqli_stmt_bind_result($stmt, $idUser, $nomePessoal, $cargoUser, $ImagemUser);
+    mysqli_stmt_bind_result($stmt, $idUser, $nomePessoal, $cargoUser, $ImagemUser, $nPostagensAutor, $uPostagemAutor);
 
     while (mysqli_stmt_fetch($stmt)) {
-        // Consulta para obter o número de postagens do usuário
-        $subQuery1 = "SELECT COUNT(IdNoticia) FROM noticias WHERE Autor = ?";
-        $subStmt1 = mysqli_prepare($conexao, $subQuery1);
-        if ($subStmt1) {
-            mysqli_stmt_bind_param($subStmt1, "i", $idUser);
-            mysqli_stmt_execute($subStmt1);
-            mysqli_stmt_bind_result($subStmt1, $nPostagensAutor);
-            mysqli_stmt_fetch($subStmt1);
-            mysqli_stmt_close($subStmt1);
-        } else {
-            $nPostagensAutor = 0;
-        }
-
-        // Consulta para obter a última postagem do usuário
-        $subQuery2 = "SELECT Titulo FROM noticias WHERE Autor = ? ORDER BY HoraPublicado DESC LIMIT 1";
-        $subStmt2 = mysqli_prepare($conexao, $subQuery2);
-        if ($subStmt2) {
-            mysqli_stmt_bind_param($subStmt2, "i", $idUser);
-            mysqli_stmt_execute($subStmt2);
-            mysqli_stmt_bind_result($subStmt2, $uPostagemAutor);
-            mysqli_stmt_fetch($subStmt2);
-            mysqli_stmt_close($subStmt2);
-        } else {
-            $uPostagemAutor = 'Nenhuma postagem';
-        }
-
         $autor = array(
+            'IdUsuario' => $idUser,
             'Nome' => $nomePessoal,
             'Cargo' => $cargoUser,
             'Postagens' => $nPostagensAutor,
@@ -59,5 +41,5 @@ if ($stmt) {
 
 mysqli_close($conexao);
 
-echo json_encode($autores); // Retorna o array de autores
+echo json_encode($autores); // Retorna o array de autores com todas as informações
 ?>

@@ -28,21 +28,21 @@
       rel="stylesheet"
       href="assets/style/patternResponsive.css"
     />
-    <!-- Arquivo CSS proprio -->
     <link
       rel="stylesheet"
-      href="assets/style/postagens.css"
+      href="assets/style/noticia.css"
     />
   </head>
 
   <body>
     <header id="header">
-      <a href="#"
-        ><img
+      <a href="index.html">
+        <img
           class="logo"
           src="assets/img/icons/iconsNav/etecRgs.png"
           alt=""
-      /></a>
+        />
+      </a>
       <img
         id="menu"
         src="assets/img/icons/iconsNav/Menu.svg"
@@ -55,112 +55,126 @@
       />
       <nav id="navPrincipal">
         <ul>
-          <li><a href="Principal.html">Início</a></li>
-          <li><a href="postagemCapa.html">Postar Noticia</a></li>
-          <li><a href="postagens.html">Ver Postagens</a></li>
-          <li><a href="autores.html">Autores</a></li>
           <li>
-            <a href="assets/php/logout.php"
-              >Logout<img
-                src="assets/img/icons/IconLogout.svg"
-                alt=""
-            /></a>
+            <a href="index.html">Início</a>
           </li>
+          <li>
+            <a href="noticias.html">Notícias</a>
+          </li>
+          <li>
+            <a href="historiaEtec.html">Nossa História</a>
+          </li>
+          <li>
+            <a href="cursos.html">Cursos</a>
+          </li>
+          <li>
+            <a href="index.html#contato">Contato</a>
+          </li>
+          <li id="dropdown">
+            <a href="#">
+              <span>Documentação</span>
+            </a>
+            <ul>
+              <li>
+                <a href="assets/docs/Horario.html">Horários</a>
+              </li>
+              <li>
+                <a
+                  href="assets/docs/RegimentoComumDasEtecs.pdf"
+                  target="_blank"
+                  >Regimento Comum da Etec</a
+                >
+              </li>
+              <li>
+                <a
+                  href="assets/docs/Calendario2024.pdf"
+                  target="_blank"
+                  >Calendário Anual</a
+                >
+              </li>
+            </ul>
+          </li>
+          <span>
+            <li class="RedesSociais">
+              <a
+                href="https://www.instagram.com/etecrgs/"
+                target="_blank"
+              >
+                <img
+                  src="assets/img/icons/iconsNav/instagram.svg"
+                  alt=""
+                />
+                <img
+                  src="assets/img/icons/iconsNav/instagramHover.svg"
+                  alt=""
+                  class="iconHover"
+                />
+              </a>
+            </li>
+            <li class="RedesSociais">
+              <a
+                href="https://www.facebook.com/etecrgs/?locale=pt_BR"
+                target="_blank"
+              >
+                <img
+                  src="assets/img/icons/iconsNav/facebook.svg"
+                  alt=""
+                />
+                <img
+                  src="assets/img/icons/iconsNav/facebookHover.svg"
+                  alt=""
+                  class="iconHover"
+                />
+              </a>
+            </li>
+            <li class="RedesSociais">
+              <a
+                href="https://www.youtube.com/c/PEDAGARGSETEC"
+                target="_blank"
+              >
+                <img
+                  src="assets/img/icons/iconsNav/YoutubeIcon.svg"
+                  alt=""
+                />
+                <img
+                  src="assets/img/icons/iconsNav/YoutubeIconHover.svg"
+                  alt=""
+                  class="iconHover"
+                />
+              </a>
+            </li>
+          </span>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="filtros">
-        <h1>Filtros</h1>
+      <section class="Noticia">
+        <h1 id="tituloNoticia">Nome da Noticia</h1>
         <hr />
-        <article>
-          <aside>
-            <h2>Pesquise:</h2>
-            <input
-              type="text"
-              id="termoPesquisa"
-              placeholder="Pesquisar..."
-            />
-          </aside>
-          <aside>
-            <h2>Categorias:</h2>
-            <span>
-              <input
-                type="radio"
-                name="Categoria"
-                id="Todas"
-                value="Todas"
-                checked
-              />
-              <label for="Todas">Todas</label>
-            </span>
-            <span>
-              <input
-                type="radio"
-                name="Categoria"
-                id="Biblioteca"
-                value="Biblioteca"
-              />
-              <label for="Biblioteca">Biblioteca</label>
-            </span>
-            <span>
-              <input
-                type="radio"
-                name="Categoria"
-                id="Direção"
-                value="Direção"
-              />
-              <label for="Direção">Direção</label>
-            </span>
-            <span>
-              <input
-                type="radio"
-                name="Categoria"
-                id="Esportes"
-                value="Esportes"
-              />
-              <label for="Esportes">Esportes</label>
-            </span>
-            <span>
-              <input
-                type="radio"
-                name="Categoria"
-                id="Eventos"
-                value="Eventos"
-              />
-              <label for="Eventos">Eventos</label>
-            </span>
-            <span>
-              <input
-                type="radio"
-                name="Categoria"
-                id="Grêmio"
-                value="Grêmio"
-              />
-              <label for="Grêmio">Grêmio</label>
-            </span>
-            <span>
-              <input
-                type="radio"
-                name="Categoria"
-                id="Vestibulinho"
-                value="Vestibulinho"
-              />
-              <label for="Vestibulinho">Vestibulinho</label>
-            </span>
-          </aside>
+        <img
+          src=""
+          alt=""
+          id="imagemCapa"
+        />
+        <h2 id="sinopseNoticia">Sinopse</h2>
+        <article
+          id="conteudoNoticia"
+          class="conteudoNoticia"
+        >
+          <hr />
         </article>
       </section>
-      <section class="Noticias">
-        <article>
-          <h1>Todas</h1>
+      <section>
+        <article id="Infos">
+          <h2>Informações</h2>
           <hr />
-          <p>Todas as Noticias já postadas</p>
-          <aside
-            class="containerVerMais"
-            id="ContainerTodas"
-          ></aside>
-          <button id="verMais">Ver Mais</button>
+          <p id="nomeAutor"></p>
+          <p id="DataDaPostagem"></p>
+          <p id="tema"></p>
+        </article>
+        <article class="recomenda">
+          <span></span>
+          <span></span>
         </article>
       </section>
     </main>
@@ -236,6 +250,6 @@
     <div id="preloader"></div>
 
     <script src="assets/js/pattern.js"></script>
-    <script src="assets/js/postagens.js"></script>
+    <script src="assets/js/noticia.js"></script>
   </body>
 </html>
