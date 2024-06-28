@@ -17,25 +17,28 @@ main {
 
 .Cursos {
     width: 100%;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     padding: 10px;
     text-align: center;
 }
 
 h1 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
+    color: #3a3a3a;
+    font-weight: 600;
 }
 
 hr {
-    width: 50px;
-    height: 3px;
-    background-color: #5846F9;
+    width: 30%;
+    height: 2px;
+    background-color: #0170b9;
     border: none;
     border-radius: 20px;
 }
@@ -43,7 +46,7 @@ hr {
 .Cursos p {
     text-align: center;
     letter-spacing: .5px;
-    margin-bottom: 20px;
+    margin-bottom: 3rem;
 }
 
 .containerCards {
