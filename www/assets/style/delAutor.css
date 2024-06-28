@@ -1,0 +1,197 @@
+nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 150px;
+}
+
+nav ul li a img {
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: var(--FontStandard);
+}
+
+h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+hr {
+    width: 50px;
+    height: 3px;
+    background-color: #3266ff;
+    border: none;
+    border-radius: 20px;
+}
+.perfis{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 30px;
+}
+.perfis aside{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #3265ff63;
+    border-radius: 20px;
+    padding: 30px;
+    gap: 20px;
+    position: relative;
+    height: 100%;
+}
+.perfis aside button#Deletar{
+    color: #c00000;
+    padding: 5px;
+    background-color: transparent;
+    border: 2px solid #c00000;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: 700;
+}
+.perfis aside button#Deletar:hover{
+    background-color: #c00000;
+    color: #FFFFFF;
+    border-color: #c00000;
+}
+.perfis aside img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+main section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.perfis aside span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+
+}
+
+section a {
+    padding: 10px 15px;
+    background-color: #3266ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--FontStandard);
+    font-size: 1rem;
+    transition: background-color .5s;
+    margin: 10px 0px;
+    text-decoration: none;
+}
+
+section a:hover {
+    background-color: #1a4fbd;
+}
+
+#confirmacao{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 200px;
+    max-height: 600px;
+    display: none;
+    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 5px solid #573aff;
+    border-radius: 5px;
+}
+
+#confirmacao div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#confirmacao div button{
+    width: 100px;
+    padding: 10px;
+    border: 3px solid #dd3c3c;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    align-self: center;
+}
+
+#confirmacao div button:first-child{
+    border: 3px solid #37d07c;
+}
+
+#confirmacao div button:hover {
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+    background-color: #7e74d8;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1023px) {
+    nav ul li a {
+        width: auto !important;
+        display: flex;
+        align-items: center;
+        gap: -10px;
+    }
+
+    nav ul li a img {
+        height: 40px;
+    }
+
+    main {
+        flex-direction: row;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .perfis{
+        
+        max-width: 970px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .perfis aside{
+        max-width: 450px;
+        max-height: 250px;
+    }
+}

@@ -71,6 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     fclose($arquivo_sql);
     // Processa as imagens do conteúdo
     $imgsArray = [];
+    $imgsArrayBanco = [];
     if (isset($_FILES['imgConteudo'])) {
         foreach ($_FILES['imgConteudo']['tmp_name'] as $key => $tmp_name) {
             if ($_FILES['imgConteudo']['error'][$key] !== UPLOAD_ERR_OK) {
@@ -81,8 +82,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $extensao = pathinfo($imgConteudo, PATHINFO_EXTENSION);
             $novo_nome_imagem = $titulo_formatado . '-' . ($key + 1) . '-Conteudo.' . $extensao;
             $caminho_imagem = $caminho_pasta . $novo_nome_imagem;
+            $caminho_imagem_banco = $caminho_pasta_Banco . $novo_nome_imagem;
             $imgsArray[] = $caminho_imagem;
-
+            $imgsArrayBanco[] = $caminho_imagem_banco;
             if (!move_uploaded_file($tmp_name, $caminho_imagem)) {
                 handleError("Erro ao enviar a imagem: Não foi possível mover o arquivo.");
             }
@@ -104,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     mysqli_stmt_close($stmt);
     // Registra o comando de inserção de conteúdo em um arquivo
-    $sql_insert_conteudo_log = "INSERT INTO noticiasConteudo (IdConteudo, IdNoticia, Text1, Imagem1, Text2, Imagem2, Text3, Imagem3, Text4, Imagem4) VALUES ($NumeroDePostagens, $NumeroDePostagens, '$textsArray[0]', '$imgsArray[0]', '$textsArray[1]', '$imgsArray[1]', '$textsArray[2]', '$imgsArray[2]', '$textsArray[3]', '$imgsArray[3]');";
+    $sql_insert_conteudo_log = "INSERT INTO noticiasConteudo (IdConteudo, IdNoticia, Text1, Imagem1, Text2, Imagem2, Text3, Imagem3, Text4, Imagem4) VALUES ($NumeroDePostagens, $NumeroDePostagens, '$textsArray[0]', '$imgsArrayBanco[0]', '$textsArray[1]', '$imgsArrayBanco[1]', '$textsArray[2]', '$imgsArrayBanco[2]', '$textsArray[3]', '$imgsArrayBanco[3]');";
     $arquivo_sql_conteudo = fopen("../bd/baseNoticiaConteudo.sql", "a");
     fwrite($arquivo_sql_conteudo, $sql_insert_conteudo_log . "\n");
     fclose($arquivo_sql_conteudo);

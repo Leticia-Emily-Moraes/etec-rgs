@@ -1,143 +1,241 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Etec RGS</title>
 
-    <link rel="shortcut icon" href="assets/img/Favicons/etecRgs.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/img/Favicons/etecRgs.ico"
+      type="image/x-icon"
+    />
     <!-- Arquivo reset CSS -->
-    <link rel="stylesheet" href="assets/style/reset.css">
+    <link
+      rel="stylesheet"
+      href="assets/style/reset.css"
+    />
     <!-- Arquivo CSS -->
-    <link rel="stylesheet" href="assets/style/pattern.css">
+    <link
+      rel="stylesheet"
+      href="assets/style/pattern.css"
+    />
     <!-- Arquivo CSS responsivo -->
-    <link rel="stylesheet" href="assets/style/patternResponsive.css">
+    <link
+      rel="stylesheet"
+      href="assets/style/patternResponsive.css"
+    />
     <!-- Arquivo CSS proprio -->
-    <link rel="stylesheet" href="assets/style/postagens.css">
+    <link
+      rel="stylesheet"
+      href="assets/style/postagens.css"
+    />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <header id="header">
-        <a href="#"><img class="logo" src="assets/img/icons/iconsNav/etecRgs.png" alt=""></a>
-        <img id="menu" src="assets/img/icons/iconsNav/Menu.svg" alt="">
-        <img id="menuClose" src="assets/img/icons/iconsNav/CloseMenu.svg" alt="">
-        <nav id="navPrincipal">
-            <ul>
-                <li><a href="Principal.html">Início</a></li>
-                <li><a href="postagemCapa.html">Postar Noticia</a></li>
-                <li><a href="#">Ver Postagens</a></li>
-                <li><a href="#">Autores</a></li>
-                <li><a href="logout.php">Logout<img src="assets/img/icons/IconLogout.svg" alt=""></a></li>
-            </ul>
-        </nav>
-        <!-- Final da Navbar -->
+      <a href="#"
+        ><img
+          class="logo"
+          src="assets/img/icons/iconsNav/etecRgs.png"
+          alt=""
+      /></a>
+      <img
+        id="menu"
+        src="assets/img/icons/iconsNav/Menu.svg"
+        alt=""
+      />
+      <img
+        id="menuClose"
+        src="assets/img/icons/iconsNav/CloseMenu.svg"
+        alt=""
+      />
+      <nav id="navPrincipal">
+        <ul>
+          <li><a href="Principal.html">Início</a></li>
+          <li><a href="postagemCapa.html">Postar Noticia</a></li>
+          <li><a href="postagens.html">Ver Postagens</a></li>
+          <li><a href="autores.html">Autores</a></li>
+          <li>
+            <a href="assets/php/logout.php"
+              >Logout<img
+                src="assets/img/icons/IconLogout.svg"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section class="filtros">
-            <h1>Filtros</h1>
-            <hr>
-            <article>
-                <aside>
-                    <h2>Pesquise:</h2>
-                    <input type="text">
-                </aside>
-                <aside>
-                    <h2>Categorias:</h2>
-                    <span>
-                        <input type="radio" name="Categoria" id="Todas" value="Todas" checked>
-                        <label for="Todas">Todas</label>
-                    </span>
-                    <span>
-                        <input type="radio" name="Categoria" id="Biblioteca" value="Biblioteca">
-                        <label for="Biblioteca">Biblioteca</label>
-                    </span>
-                    <span>
-                        <input type="radio" name="Categoria" id="Direção" value="Direção">
-                        <label for="Direção">Direção</label>
-                    </span>
-                    <span>
-                        <input type="radio" name="Categoria" id="Esportes" value="Esportes">
-                        <label for="Esportes">Esportes</label>
-                    </span>
-                    <span>
-                        <input type="radio" name="Categoria" id="Eventos" value="Eventos">
-                        <label for="Eventos">Eventos</label>
-                    </span>
-                    <span>
-                        <input type="radio" name="Categoria" id="Grêmio" value="Grêmio">
-                        <label for="Grêmio">Grêmio</label>
-                    </span>
-                    <span>
-                        <input type="radio" name="Categoria" id="Vestibulinho" value="Vestibulinho">
-                        <label for="Vestibulinho">Vestibulinho</label>
-                    </span>
-                </aside>
-                <aside>
-                    <h2>De qual mês:</h2>
-                    <input type="month" name="" id="">
-                </aside>
-            </article>
-        </section>
-        <section class="Noticias">
-            <article>
-                <h1>Todas</h1>
-                <hr>
-                <p>Todas as Noticias já postadas</p>
-                <aside class="containerVerMais" id="ContainerTodas">
-                </aside>
-                <button id="verMais">Ver Mais</button>
-            </article>
-        </section>
+      <section class="filtros">
+        <h1>Filtros</h1>
+        <hr />
+        <article>
+          <aside>
+            <h2>Pesquise:</h2>
+            <input
+              type="text"
+              id="termoPesquisa"
+              placeholder="Pesquisar..."
+            />
+          </aside>
+          <aside>
+            <h2>Categorias:</h2>
+            <span>
+              <input
+                type="radio"
+                name="Categoria"
+                id="Todas"
+                value="Todas"
+                checked
+              />
+              <label for="Todas">Todas</label>
+            </span>
+            <span>
+              <input
+                type="radio"
+                name="Categoria"
+                id="Biblioteca"
+                value="Biblioteca"
+              />
+              <label for="Biblioteca">Biblioteca</label>
+            </span>
+            <span>
+              <input
+                type="radio"
+                name="Categoria"
+                id="Direção"
+                value="Direção"
+              />
+              <label for="Direção">Direção</label>
+            </span>
+            <span>
+              <input
+                type="radio"
+                name="Categoria"
+                id="Esportes"
+                value="Esportes"
+              />
+              <label for="Esportes">Esportes</label>
+            </span>
+            <span>
+              <input
+                type="radio"
+                name="Categoria"
+                id="Eventos"
+                value="Eventos"
+              />
+              <label for="Eventos">Eventos</label>
+            </span>
+            <span>
+              <input
+                type="radio"
+                name="Categoria"
+                id="Grêmio"
+                value="Grêmio"
+              />
+              <label for="Grêmio">Grêmio</label>
+            </span>
+            <span>
+              <input
+                type="radio"
+                name="Categoria"
+                id="Vestibulinho"
+                value="Vestibulinho"
+              />
+              <label for="Vestibulinho">Vestibulinho</label>
+            </span>
+          </aside>
+        </article>
+      </section>
+      <section class="Noticias">
+        <article>
+          <h1>Todas</h1>
+          <hr />
+          <p>Todas as Noticias já postadas</p>
+          <aside
+            class="containerVerMais"
+            id="ContainerTodas"
+          ></aside>
+          <button id="verMais">Ver Mais</button>
+        </article>
+      </section>
     </main>
     <footer>
-        <span>
-            <h2>ETEC</h2>
-            <p>Av. Francisco Morais Ramos, 777</p>
-            <p>Jardim Novo Horizonte</p>
-            <p>Rio Grande da Serra - SP</p>
-            <p><strong>Telefone:</strong> (11) 4826-8325</p>
-            <p><strong>Email:</strong> e282acad@cps.sp.gov.br</p>
-        </span>
-        <span class="FRedesSociais">
-            <h2>Redes Sociais</h2>
-            <div>
-                <a href="https://www.instagram.com/etecrgs/" target="_blank"><img
-                        src="assets/img/icons/iconsNav/instagram.svg" alt=""><img
-                        src="assets/img/icons/iconsNav/instagramHover.svg" alt="" class="iconHover"></a>
-                <a href="https://www.facebook.com/etecrgs/?locale=pt_BR" target="_blank"><img
-                        src="assets/img/icons/iconsNav/facebook.svg" alt=""><img
-                        src="assets/img/icons/iconsNav/facebookHover.svg" alt="" class="iconHover"></a>
-                <a href="https://www.youtube.com/c/PEDAGARGSETEC" target="_blank"><img
-                        src="assets/img/icons/iconsNav/YoutubeIcon.svg" alt=""><img
-                        src="assets/img/icons/iconsNav/YoutubeIconHover.svg" alt="" class="iconHover"></a>
-            </div>
-            <p>#SimÉPossivel</p>
-        </span>
-        <span>
-            <h2>Noticias</h2>
-            <a href="">Ultimas Noticias</a>
-            <a href="">Em breve</a>
-            <a href="">Vestibulinho</a>
-        </span>
-        <span>
-            <h2>Nossa Etec</h2>
-            <a href="">Nossa História</a>
-            <a href="">Infraestrutura</a>
-            <a href="">Equipe atual</a>
-        </span>
-        <span>
-            <h2>Cursos</h2>
-            <a href="">Com Ensino Medio</a>
-            <a href="">Modulares e Noturnos</a>
-            <a href="">Online</a>
-        </span>
+      <span>
+        <h2>ETEC</h2>
+        <p>Av. Francisco Morais Ramos, 777</p>
+        <p>Jardim Novo Horizonte</p>
+        <p>Rio Grande da Serra - SP</p>
+        <p><strong>Telefone:</strong> (11) 4826-8325</p>
+        <p><strong>Email:</strong> e282acad@cps.sp.gov.br</p>
+      </span>
+      <span class="FRedesSociais">
+        <h2>Redes Sociais</h2>
+        <div>
+          <a
+            href="https://www.instagram.com/etecrgs/"
+            target="_blank"
+            ><img
+              src="assets/img/icons/iconsNav/instagram.svg"
+              alt="" /><img
+              src="assets/img/icons/iconsNav/instagramHover.svg"
+              alt=""
+              class="iconHover"
+          /></a>
+          <a
+            href="https://www.facebook.com/etecrgs/?locale=pt_BR"
+            target="_blank"
+            ><img
+              src="assets/img/icons/iconsNav/facebook.svg"
+              alt="" /><img
+              src="assets/img/icons/iconsNav/facebookHover.svg"
+              alt=""
+              class="iconHover"
+          /></a>
+          <a
+            href="https://www.youtube.com/c/PEDAGARGSETEC"
+            target="_blank"
+            ><img
+              src="assets/img/icons/iconsNav/YoutubeIcon.svg"
+              alt="" /><img
+              src="assets/img/icons/iconsNav/YoutubeIconHover.svg"
+              alt=""
+              class="iconHover"
+          /></a>
+        </div>
+        <p>#SimÉPossivel</p>
+      </span>
+      <span>
+        <h2>Noticias</h2>
+        <a href="">Ultimas Noticias</a>
+        <a href="">Em breve</a>
+        <a href="">Vestibulinho</a>
+      </span>
+      <span>
+        <h2>Nossa Etec</h2>
+        <a href="">Nossa História</a>
+        <a href="">Infraestrutura</a>
+        <a href="">Equipe atual</a>
+      </span>
+      <span>
+        <h2>Cursos</h2>
+        <a href="">Com Ensino Medio</a>
+        <a href="">Modulares e Noturnos</a>
+        <a href="">Online</a>
+      </span>
     </footer>
-    <a id="backToTop"><img src="assets/img/icons/SetaParaCima.svg" alt=""></a>
+    <a id="backToTop"
+      ><img
+        src="assets/img/icons/SetaParaCima.svg"
+        alt=""
+    /></a>
     <div id="preloader"></div>
 
     <script src="assets/js/pattern.js"></script>
     <script src="assets/js/postagens.js"></script>
-</body>
+  </body>
+</html>

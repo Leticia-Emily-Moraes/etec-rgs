@@ -1,0 +1,2 @@
+INSERT INTO usuarios ( NomeCompleto, NomeUser, SenhaUser, Cargo, ImagemAutor) VALUES ( 'Rodrigo Vicente', 'Root', '$2y$10$sLgSh0gbxHYQLQvUHaAbsuiUSMrFnQeHwUi3W3hdKx9BHV33ITbLm', 'Administrador', 'assets/img/equipe/rodrigo-vicente.png');
+INSERT INTO usuarios ( NomeCompleto, NomeUser, SenhaUser, Cargo, ImagemAutor) VALUES ( 'Fellipe Oliveira de Barbosa', 'fellipeoligeo', '$2y$10$kFqrpdmcegRh5U8/WrioJeIs8RA5/RUdXc7nQ99vNHXfMxyytRN4W', 'Gestão', 'assets/img/equipe/fellipe-barbosa-de-oliveira.png');

@@ -1,34 +1,46 @@
 <?php
 
-include_once('assets/bd/conexao.php'); //Inclui o arquivo de conexão com o banco de dados
+include_once('assets/bd/conexao.php');
 
-function autenticar($conexaoComBanco, $nomeDoUsuario, $Senha)
+function autenticar($conexaoComBanco, $nomeDoUsuario, $senha)
 {
-    $nomeDoUsuario = mysqli_real_escape_string($conexaoComBanco, $_POST['login']);
-    $Senha = mysqli_real_escape_string($conexaoComBanco, $_POST['Senha']);
-    $stmt = $conexaoComBanco->prepare("SELECT * FROM usuarios WHERE NomeUser = ? AND SenhaUser = ?");
-    $stmt->bind_param("ss", $nomeDoUsuario, $Senha);
+    $stmt = $conexaoComBanco->prepare("SELECT * FROM usuarios WHERE NomeUser = ?");
+    $stmt->bind_param("s", $nomeDoUsuario);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    if ($result->num_rows === 1) // Se encontrar algum usuário
+    if ($result->num_rows === 1)
     {
         $row = $result->fetch_assoc();
-        return $row['NomeUser'];
-    } else {
-        return false;
+        if (password_verify($senha, $row['SenhaUser'])) {
+            return $row['NomeUser'];
+        }
     }
+    return false;
 }
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") // Verifica se o método de form é POST
+if ($_SERVER["REQUEST_METHOD"] === "POST")
 {
     $userName = $_POST['login'];
     $senha = $_POST['Senha'];
+    $userName = mysqli_real_escape_string($conexao, $userName);
+    $senha = mysqli_real_escape_string($conexao, $senha);
 
     if (autenticar($conexao, $userName, $senha)) {
         session_start();
         $_SESSION['userName'] = $userName;
-        setcookie('username', $userName, time() + (1 * 24 * 60 * 60), "/"); 
+
+        $cookieParams = session_get_cookie_params();
+        setcookie(
+            'username',
+            $userName,
+            time() + (1 * 24 * 60 * 60),
+            $cookieParams['path'],
+            $cookieParams['domain'],
+            true,
+            true 
+        );
+
         header('Location: Principal.html');
         exit();
     } else {
@@ -39,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") // Verifica se o método de form é P
     mysqli_close($conexao); // Fecha a conexão com o banco de dados
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -68,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") // Verifica se o método de form é P
                     <p class="ErroLogin"><?php echo $erroLogin; ?></p>
                 <?php endif; ?>
                 <div>
-                    <input type="submit" value="Entrar">
+                    <input id="submit" type="submit" value="Entrar">
                 </div>
             </form>
         </section>
@@ -76,6 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") // Verifica se o método de form é P
             <img src="assets/img/pandoras/raposaEtec.png" class="img-fluid animated" alt="">
         </section>
     </main>
+    <script src="assets/js/LoginPost.js"></script>
 </body>
 
 </html>

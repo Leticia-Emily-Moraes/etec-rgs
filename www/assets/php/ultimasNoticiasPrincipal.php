@@ -3,7 +3,9 @@ session_start();
 
 include_once('../bd/conexao.php');
 
-$query = "SELECT n.Titulo, 
+$query = "SELECT 
+    n.IdNoticia
+    n.Titulo, 
     n.Resumo, 
     n.Categoria,
     n.ImagemCapa,
@@ -22,11 +24,12 @@ if ($stmt) {
     $resultados = array();
 
     // Associar os resultados da consulta ao statement
-    mysqli_stmt_bind_result($stmt, $titulo, $resumo, $categoria, $imagemCapa, $dataPublicacao, $autor);
+    mysqli_stmt_bind_result($stmt, $ID, $titulo, $resumo, $categoria, $imagemCapa, $dataPublicacao, $autor);
 
     // Percorrer os resultados e alimentar o array
     while (mysqli_stmt_fetch($stmt)) {
         $resultados[] = array(
+            'ID' => $ID,
             'Titulo' => $titulo,
             'Resumo' => $resumo,
             'Categoria' => $categoria,
@@ -48,5 +51,3 @@ mysqli_close($conexao);
 
 // Enviar os resultados como JSON
 echo json_encode($resultados);
-
-?>

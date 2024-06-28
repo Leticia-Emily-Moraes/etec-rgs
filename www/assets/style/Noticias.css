@@ -19,9 +19,11 @@ section {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 5px;
 }
 
 .filtros article {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -30,6 +32,7 @@ section {
     background-color: #00000000;
     box-shadow: none;
     gap: 8px;
+    padding: 0;
 }
 
 .filtros article aside {
@@ -38,7 +41,7 @@ section {
     justify-content: space-between;
     align-items: start;
     gap: 5px;
-    width: 50%;
+    width: 80%;
 }
 .filtros article aside span{
     display: flex;
@@ -58,6 +61,13 @@ section {
     background-color: #fff;
     border: 1px solid #ced4da;
     border-radius: 5px;
+}
+
+.filtros aside:nth-child(2) div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 15px;
+    width: 100%;
 }
 
 section article {
@@ -120,8 +130,10 @@ section article .container {
 section article .containerVerMais {
     width: 90%;
     height: auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
 }
 
@@ -131,10 +143,10 @@ section article .containerVerMais {
     display: flex;
     flex-direction: row;
     transition: transform 0.5s ease-in-out;
-    gap: 10px;
+    gap: 20px;
 }
 
-section article .containerVerMais>span{
+section article .containerVerMais>span .noticia{
     width: 100%;
     height: 100%;
     display: flex;
@@ -145,9 +157,20 @@ section article .containerVerMais>span{
     border-radius: 10px;
     background-color: #ffffff;
     gap: 20px;
+}
+section article .containerVerMais>span{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    border-radius: 10px;
+    background-color: #ffffff;
+    gap: 20px;
     box-shadow: 0px 0px 5px #00000050;
 }
-.slider span {
+.slider span{
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease;
@@ -156,17 +179,28 @@ section article .containerVerMais>span{
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    border-radius: 10px;
+    gap: 20px;
+}
+.slider span div.noticia{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
     padding: 20px;
     border-radius: 10px;
     background-color: #ffffff;
     gap: 20px;
-    box-shadow: 0px 0px 2px #00000050;
+    border: 4px solid #1a50bd2a;
+    overflow: hidden;
 }
 
-section article .containerVerMais span .title-img,
-section article .containerVerMais span .content-noticia,
-.slider span .title-img,
-.slider span .content-noticia {
+section article .containerVerMais span .noticia .title-img,
+section article .containerVerMais span .noticia .content-noticia,
+.slider span .noticia .title-img,
+.slider span .noticia .content-noticia {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -175,35 +209,35 @@ section article .containerVerMais span .content-noticia,
     gap: 20px;
 }
 
-section article .containerVerMais span .title-img img,
-.slider span .title-img img {
+section article .containerVerMais span .noticia .title-img img,
+.slider span .noticia .title-img img {
     width: 100%;
     object-fit: cover;
 }
 
-section article .containerVerMais span .title-img h1,
-.slider span .title-img h1 {
+section article .containerVerMais span .noticia .title-img h1,
+.slider span .noticia .title-img h1 {
     font-size: 1.2rem;
     text-align: left;
 
 }
 
-section article .containerVerMais span .title-img h1,
-.slider span .title-img h1{
+section article .containerVerMais span .noticia .title-img h1,
+.slider span .noticia .title-img h1{
     text-align: left;
     color: #54617a;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 400;
 }
-section article .containerVerMais span .content-noticia p ,
-.slider span .content-noticia p{
+section article .containerVerMais span .noticia .content-noticia p ,
+.slider span .noticia .content-noticia p{
     color: #8d99ae;
     text-align: left;
     font-size: 16px;
     line-height: 1rem;
 }
-.containerVerMais span .content-noticia .separador{
+.containerVerMais span .noticia .content-noticia .separador{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -216,7 +250,7 @@ section article .containerVerMais span .content-noticia p ,
     gap: 0;
 }
 
-.slider span .content-noticia .separador {
+.slider span .noticia .content-noticia .separador {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -230,8 +264,8 @@ section article .containerVerMais span .content-noticia p ,
     gap: 0;
 }
 
-section article .containerVerMais span .content-noticia .separador p:nth-child(1),
-.slider span .content-noticia .separador p:nth-child(1) {
+section article .containerVerMais span .noticia .content-noticia .separador p:nth-child(1),
+.slider span .noticia .content-noticia .separador p:nth-child(1) {
     background-color: #9adcff;
     padding: 5px 10px;
     border-radius: 10px;
@@ -239,27 +273,27 @@ section article .containerVerMais span .content-noticia .separador p:nth-child(1
     font-weight: bold;
 }
 
-section article .containerVerMais span .content-noticia .separador p:nth-child(2),
-.slider span .content-noticia .separador p:nth-child(2) {
+section article .containerVerMais span .noticia .content-noticia .separador p:nth-child(2),
+.slider span .noticia .content-noticia .separador p:nth-child(2) {
     display: flex;
     align-items: center;
 }
 
-section article .containerVerMais span .content-noticia .separador p:nth-child(2)::before,
-.slider span .content-noticia .separador p:nth-child(2)::before {
+section article .containerVerMais span .noticia .content-noticia .separador p:nth-child(2)::before,
+.slider span .noticia .content-noticia .separador p:nth-child(2)::before {
     content: url('../img/icons/data.svg');
     padding-right: 5px;
     align-self: baseline;
 }
 
-section article .containerVerMais span .content-noticia p,
-.slider span .content-noticia p {
+section article .containerVerMais span .noticia .content-noticia p,
+.slider span .noticia .content-noticia p {
     font-size: 16px;
 
 }
 
-section article .containerVerMais span .content-noticia p:last-child,
-.slider span .content-noticia p:last-child {
+section article .containerVerMais span .noticia .content-noticia p:last-child,
+.slider span .noticia .content-noticia p:last-child {
     font-size: 14px;
 
 }
@@ -269,7 +303,7 @@ section article aside button.SetaProxima {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #3700ff;
+    background-color: #6486ff;
     color: #000000;
     border: none;
     padding: 10px;
@@ -298,6 +332,24 @@ aside.container:hover button.SetaProxima {
 }
 
 @media screen and (min-width: 767px) {
+    section article .container {
+        width: 90%;
+        height: 60vh;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    section article .containerVerMais {
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 10px;
+    }
+
+    .slider span div.noticia {
+        width: 95%;
+    }
     .slider span {
         flex: 0 0 50%;
     }
@@ -332,7 +384,12 @@ aside.container:hover button.SetaProxima {
     .filtros article {
         flex-direction: column;
         justify-content: start;
-        align-items: start;
+        align-items: center;
         gap: 25px;
+    }
+
+    .filtros aside:nth-child(2) div{
+        display: flex;
+        flex-direction: column;
     }
 }

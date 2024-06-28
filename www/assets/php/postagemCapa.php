@@ -1,17 +1,14 @@
 <?php
-// Inicia a sessão
+
 session_start();
 
-// Define o fuso horário para São Paulo
 date_default_timezone_set('America/Sao_Paulo');
 
-// Inclui a verificação de sessão/cookie como a primeira coisa a ser feita
 include_once('Verifica.php');
 
-// Inclui a conexão com o banco de dados
 include_once('../bd/conexao.php');
 
-// Verifica se o usuário está logado
+
 if (!isset($_SESSION['userName'])) {
     header("Location: ../../LoginPost.php");
     exit();
@@ -81,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $autorID = (int)$row['IdUsuario'];
     mysqli_stmt_close($stmt);
 
-    // Conta artigos de notícias existentes
+
     $query = "SELECT COUNT(IdNoticia) FROM noticias";
     $stmt = mysqli_prepare($conexao, $query);
     if (!mysqli_stmt_execute($stmt)) {
@@ -94,11 +91,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Cria pasta para imagens do artigo de notícias
     $target_dir_Banco = "../www/assets/img/Noticias/";
     $target_dir = "../img/Noticias/";
-    $titulo_formatado = str_replace(' ', '-', $titulo_formatado);
+    $titulo_formatado = str_replace(' ', '-', $titulo_original);
     $titulo_formatado_CamelCase = toCamelCase($titulo_original);
     
 
-    $caminho_pasta = $target_dir . $titulo_formatado . '/';
+    $caminho_pasta = $target_dir . $titulo_formatado_CamelCase . '/';
     $caminho_pasta_Banco = $target_dir_Banco . $titulo_formatado_CamelCase . '/';
     $imagem_nome_modificado = $titulo_formatado . '-capa' . '.' . pathinfo($imagem_nome_original, PATHINFO_EXTENSION);
     $caminho_imagem = $caminho_pasta . $imagem_nome_modificado;

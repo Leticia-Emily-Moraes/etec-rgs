@@ -10,7 +10,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+    font-family: var(--FontStandard);
+}
 body {
     font-family: var(--FontStandard);
     color: #2f2d2d;
