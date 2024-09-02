@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mysqli_stmt_close($stmt);
 
     // Cria pasta para imagens do artigo de notícias
-    $target_dir_Banco = "../www/assets/img/Noticias/";
+    $target_dir_Banco = "../assets/img/Noticias/";
     $target_dir = "../img/Noticias/";
     $titulo_formatado = str_replace(' ', '-', $titulo_original);
     $titulo_formatado_CamelCase = toCamelCase($titulo_original);

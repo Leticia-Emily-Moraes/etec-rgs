@@ -36,7 +36,9 @@ class Menu {
         this.menu.classList.remove('open');
         this.menuBtn.style.display = 'block';
         this.menuCloseBtn.style.display = 'none';
-        this.header.classList.remove('rolagem')
+        if(window.scrollY <= 100){
+            this.header.classList.remove('rolagem')
+        }
         document.body.style.overflow = 'auto';
     }
 }

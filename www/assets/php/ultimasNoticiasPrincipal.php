@@ -4,7 +4,7 @@ session_start();
 include_once('../bd/conexao.php');
 
 $query = "SELECT 
-    n.IdNoticia
+    n.IdNoticia,
     n.Titulo, 
     n.Resumo, 
     n.Categoria,

@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
             true 
         );
 
-        header('Location: Principal.html');
+        header('Location: principal.html');
         exit();
     } else {
         $erroLogin = "Usuário ou senha incorretos.";

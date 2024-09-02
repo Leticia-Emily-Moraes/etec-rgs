@@ -4,7 +4,7 @@ main h1 {
     text-transform: uppercase;
     color: #3a3a3a;
     font-weight: 600;
-    margin-top: 5rem;
+    margin-top: 10px;
 }
 
 main hr {
@@ -46,7 +46,7 @@ main section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .Historia article span h2 {
@@ -144,9 +144,9 @@ main section {
 
 .QuemFez article aside {
     width: 100%;
-    height: 200px;
+    height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
@@ -251,6 +251,21 @@ main section {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 20px;
     }
+
+    .QuemFez article aside {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 8px #5846f9;
+    }
+    
 
     .Infraestrutura .ImgsInfra {
         width: 90%;
